@@ -1,0 +1,22 @@
+{
+  "Summary": "マテリアル、プロシージャルコンポーネント、メッシュ",
+  "Categorys": {
+    "Export": {
+      "Summary": "エクスポート可能なアセット。",
+      "Components": {
+        "AudioExportable": {
+          "Description": "オーディオデータを外部形式としてエクスポート可能にするコンポーネント。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "DesktopTextureProvider": {
+      "Description": "デスクトップの画面をテクスチャとして提供します。"
+    },
+    "NullTextureProvider": {
+      "Description": "常に無効なテクスチャを提供するプレースホルダー。"
+    }
+  }
+}
+

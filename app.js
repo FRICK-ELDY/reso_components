@@ -1,69 +1,6 @@
 (function () {
   "use strict";
 
-  // フォールバック用の既定データ（components.json が読めない場合に使用）
-  const DEFAULT_COMPONENT_DATA = {
-    "Categorys": {
-      "Assets": {
-        "Summary": "マテリアル、プロシージャルコンポーネント、メッシュ",
-        "Categorys": {
-          "Export": {
-            "Summary": "エクスポート可能なアセット。",
-            "Components": {
-              "AudioExportable": {
-                "Description": "オーディオデータを外部形式としてエクスポート可能にするコンポーネント。"
-              }
-            }
-          }
-        },
-        "Components": {
-          "DesktopTextureProvider": {
-            "Description": "デスクトップの画面をテクスチャとして提供します。"
-          },
-          "NullTextureProvider": {
-            "Description": "常に無効なテクスチャを提供するプレースホルダー。"
-          }
-        }
-      },
-      "Audio": {
-        "Summary": "オーディオ出力、リバーブゾーン",
-        "Components": {}
-      },
-      "Cloud": {
-        "Summary": "クラウドユーザー情報、サーバーステータス",
-        "Components": {}
-      },
-      "UIX": {
-        "Summary": "ResoniteのUIシステムであるUIX用のコンポーネントです。",
-        "Components": {}
-      },
-      "Rendering": {
-        "Summary": "レンダリングに関するコンポーネント。",
-        "Components": {}
-      },
-      "Transform": {
-        "Summary": "トランスフォーム（位置・回転・スケール）関連。",
-        "Components": {}
-      },
-      "Physics": {
-        "Summary": "物理演算に関連するコンポーネント。",
-        "Components": {}
-      },
-      "Userspace": {
-        "Summary": "ユーザースペース関連。",
-        "Components": {}
-      },
-      "World": {
-        "Summary": "ワールド関連。",
-        "Components": {}
-      }
-    },
-    "_meta": {
-      "source": "https://wiki.resonite.com/Category:Components/ja",
-      "note": "このファイルは手動でメンテナンスできます。キー名は\"Categorys\"/\"Components\"に合わせています。"
-    }
-  };
-
   /** @type {HTMLElement} */
   const treeContainer = document.getElementById("treeContainer");
   /** @type {HTMLInputElement} */
@@ -74,6 +11,13 @@
   const clearBtn = document.getElementById("clearBtn");
   /** @type {HTMLElement} */
   const tagBar = document.getElementById("tagBar");
+
+  // 分割JSONのベースディレクトリとファイル命名規則
+  const SPLIT_BASE_DIR = "./Assets/components/";
+  function fileNameForTag(tagName) {
+    const safe = String(tagName || "").replace(/\s+/g, "");
+    return `components_${safe}.json`;
+  }
 
   const CATEGORY_TAGS = [
     "all",
@@ -114,9 +58,10 @@
       currentViewData = data;
       renderTree(currentViewData);
     }).catch((err) => {
-      showError("初期データの読み込みに失敗しました。フォールバックに切り替えます。", err);
-      originalData = DEFAULT_COMPONENT_DATA;
-      currentViewData = DEFAULT_COMPONENT_DATA;
+      showError("初期データの読み込みに失敗しました。空のデータで起動します。", err);
+      const empty = { Categorys: {} };
+      originalData = empty;
+      currentViewData = empty;
       renderTree(currentViewData);
     });
   }
@@ -139,18 +84,16 @@
     });
 
     fileInput.addEventListener("change", async (e) => {
-      const file = e.target && e.target.files && e.target.files[0];
-      if (!file) return;
+      const files = (e.target && e.target.files) ? Array.from(e.target.files) : [];
+      if (!files.length) return;
       try {
-        const text = await file.text();
-        const json = JSON.parse(text);
-        validateMinimumSchema(json);
-        originalData = json;
-        currentViewData = json;
+        const merged = await mergeLocalJsonFiles(files);
+        originalData = merged;
+        currentViewData = merged;
         searchInput.value = "";
         renderTree(currentViewData);
       } catch (error) {
-        showError("選択したJSONの読み込みに失敗しました。フォーマットをご確認ください。", error);
+        showError("選択したJSONの読み込み/マージに失敗しました。ファイル内容と形式をご確認ください。", error);
       } finally {
         fileInput.value = "";
       }
@@ -188,25 +131,150 @@
   }
 
   async function loadInitialData() {
-    // file:// で開いた場合、fetch は失敗する可能性が高いのでフォールバック
-    if (location.protocol === "file:") {
-      return DEFAULT_COMPONENT_DATA;
-    }
-    try {
-      const res = await fetch("./components.json", { cache: "no-store" });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const json = await res.json();
-      validateMinimumSchema(json);
-      return json;
-    } catch (e) {
-      return DEFAULT_COMPONENT_DATA;
-    }
+    // 分割JSONのみを読み込み（存在する分だけマージ）。見つからなければ空データを返す。
+    const split = await tryLoadSplitCategoryData();
+    if (split) return split;
+    return { Categorys: {} };
   }
 
   function validateMinimumSchema(json) {
     if (!json || typeof json !== "object" || !json.Categorys || typeof json.Categorys !== "object") {
       throw new Error("必須キー \"Categorys\" が存在しません。");
     }
+  }
+
+  async function mergeLocalJsonFiles(files) {
+    // CATEGORY_TAGS からファイル名→カテゴリ名を推定
+    const entries = await Promise.all(files.map(async (file) => {
+      const text = await file.text();
+      const json = JSON.parse(text);
+      const tag = resolveTagFromFileName(file.name);
+      return { file, json, tag };
+    }));
+    const merged = { Categorys: {} };
+    for (const { json, tag } of entries) {
+      // 形式A: 単一カテゴリオブジェクト
+      const looksLikeCategory =
+        json && typeof json === "object" &&
+        (typeof json.Summary === "string" ||
+          (json.Components && typeof json.Components === "object") ||
+          (json.Categorys && typeof json.Categorys === "object"));
+      if (looksLikeCategory) {
+        const catName = tag || "Unknown";
+        merged.Categorys[catName] = {
+          Summary: json.Summary,
+          Categorys: json.Categorys,
+          Components: json.Components
+        };
+        continue;
+      }
+      // 形式B: { Categorys: { ... } }
+      if (json && typeof json === "object" && json.Categorys && typeof json.Categorys === "object") {
+        const keys = Object.keys(json.Categorys);
+        if (keys.length === 1 && tag && json.Categorys[tag]) {
+          merged.Categorys[tag] = json.Categorys[tag];
+        } else {
+          for (const k of keys) {
+            merged.Categorys[k] = json.Categorys[k];
+          }
+        }
+        continue;
+      }
+      // 不明形式は無視
+    }
+    return merged;
+  }
+
+  function resolveTagFromFileName(fileName) {
+    const lower = String(fileName || "").toLowerCase();
+    // CATEGORY_TAGS から逆引き
+    for (const tag of CATEGORY_TAGS) {
+      if (tag.toLowerCase() === "all") continue;
+      const expected = fileNameForTag(tag).toLowerCase();
+      if (lower === expected) return tag;
+    }
+    // "components_<name>.json" から抽出（スペース無し）
+    const m = lower.match(/^components_(.+)\.json$/i);
+    if (m && m[1]) {
+      const safe = m[1];
+      // CATEGORY_TAGS からスペース除去一致を探す
+      for (const tag of CATEGORY_TAGS) {
+        if (tag.toLowerCase() === "all") continue;
+        const safeTag = String(tag).replace(/\s+/g, "").toLowerCase();
+        if (safeTag === safe) return tag;
+      }
+      // 見つからなければそのまま復元（先頭を大文字化の簡易処理）
+      return m[1];
+    }
+    return null;
+  }
+  async function tryLoadSplitCategoryData() {
+    // file:// で開いた場合も、ローカルファイルをHTTPで配れないため fetch は失敗しがち
+    if (location.protocol === "file:") return null;
+
+    // "all" 以外のタグを対象に試行
+    const targets = CATEGORY_TAGS.filter(t => t.toLowerCase() !== "all");
+    const requests = targets.map(async (tag) => {
+      const url = SPLIT_BASE_DIR + fileNameForTag(tag);
+      try {
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        // それぞれのJSONをカテゴリオブジェクトに正規化する
+        const categoryObj = normalizeSplitCategoryJson(json, tag);
+        if (categoryObj) {
+          return { tag, obj: categoryObj, url };
+        }
+      } catch (e) {
+        // 見つからない/不正などはスキップ
+      }
+      return null;
+    });
+
+    const results = await Promise.allSettled(requests);
+    const merged = {};
+    const sources = [];
+    for (const r of results) {
+      if (r.status === "fulfilled" && r.value && r.value.obj) {
+        const catName = r.value.tag;
+        merged[catName] = r.value.obj;
+        if (r.value.url) sources.push(r.value.url);
+      }
+    }
+    if (Object.keys(merged).length === 0) return null;
+    return {
+      Categorys: merged,
+      _meta: {
+        source: sources
+      }
+    };
+  }
+
+  function normalizeSplitCategoryJson(json, categoryName) {
+    if (!json || typeof json !== "object") return null;
+    // パターンA: そのままカテゴリオブジェクト（Summary/Categorys/Components を持つ）
+    const looksLikeCategory =
+      typeof json.Summary === "string" ||
+      (json.Components && typeof json.Components === "object") ||
+      (json.Categorys && typeof json.Categorys === "object");
+    if (looksLikeCategory) {
+      return {
+        Summary: json.Summary,
+        Categorys: json.Categorys,
+        Components: json.Components
+      };
+    }
+    // パターンB: { Categorys: { <name>: {...} } } 形式
+    if (json.Categorys && typeof json.Categorys === "object") {
+      if (json.Categorys[categoryName]) {
+        return json.Categorys[categoryName];
+      }
+      const keys = Object.keys(json.Categorys);
+      if (keys.length === 1) {
+        return json.Categorys[keys[0]];
+      }
+    }
+    return null;
   }
 
   function renderTree(data) {

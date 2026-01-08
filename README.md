@@ -2,22 +2,54 @@
 
 このフォルダには、Resonite のコンポーネントカテゴリをローカルJSONで管理し、Webで閲覧できる最小構成が含まれます。
 
-- `components.json`: データ本体（雛形を収録）
 - `index.html` / `styles.css` / `app.js`: ビューア
+- `Assets/components/components_<Tag>.json`: データ（分割JSON）
 
 参考: データの出典（カテゴリ情報）
 - Resonite Wiki - カテゴリ:コンポーネント: `https://wiki.resonite.com/Category:Components/ja`
 
+### データ配置（分割JSON対応）
+
+本ビューアは分割JSONのみを読み込みます。
+
+1) 分割JSON（タグごと）
+- 置き場所: `./Assets/components/`
+- 命名: `components_<Tag>.json`
+  - 例: `components_Assets.json`, `components_Audio.json`, `components_CommonUI.json`（スペースは除去）
+- 形式は次のいずれか:
+  - A. 単一カテゴリオブジェクト:
+    ```json
+    {
+      "Summary": "説明",
+      "Categorys": { /* 子カテゴリ */ },
+      "Components": { /* コンポーネント */ }
+    }
+    ```
+  - B. ラップ形式:
+    ```json
+    {
+      "Categorys": {
+        "Assets": {
+          "Summary": "説明",
+          "Components": {}
+        }
+      }
+    }
+    ```
+  - どちらでも自動で正規化されます。
+
+注意: ルート直下の `./components.json` は使用しません（読み込み対象外）。
+
 ### 使い方
 
 1) ブラウザで `index.html` を開く
-- 直接開いた場合（file://）はセキュリティ制約により `components.json` のフェッチが失敗することがあります。その場合でも、内蔵のフォールバックデータで表示されます。
+- 直接開いた場合（file://）はブラウザの制約により `Assets/components` 配下のJSONをフェッチできないことがあります。その際は空表示になります。ローカルHTTPサーバで提供するか、次の手順2のファイル選択で読み込んでください。
 
 2) 自分のJSONを読み込む
 - 画面上部の「ファイル選択」から JSON を選ぶと、その場で差し替え表示されます。
 
 3) ローカルサーバで動かす（任意）
-- ローカルHTTPサーバを利用すると `components.json` を自動読込できます。
+- ローカルHTTPサーバを利用すると `components_*.json` を自動読込できます。
   - Node.js: `npx http-server .` など
   - Python: `py -m http.server 8080`
   - VSCode/Cursor の Live Server など
