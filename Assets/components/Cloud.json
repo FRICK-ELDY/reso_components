@@ -1,5 +1,75 @@
 {
-  "Summary": "クラウドユーザー情報、サーバーステータス",
-  "Components": {}
+  "Summary": "クラウド関連（インベントリ、リンク、セッションオーブ、ストレージ、ログイン、提出など）。",
+  "Categorys": {
+    "Indicators": {
+      "Summary": "クラウドの容量や状態などを表示する指標コンポーネント。",
+      "Components": {
+        "CloudServerStatus": {
+          "Description": "クラウドサーバーの稼働状況を表示します。"
+        },
+        "CloudUserInfo": {
+          "Description": "現在のクラウドユーザー情報を表示します。"
+        },
+        "OnlineUsersCount": {
+          "Description": "オンラインユーザー数を表示します。"
+        },
+        "RecordSyncStatus": {
+          "Description": "レコード同期の状態を表示します。"
+        },
+        "StorageUsageStatus": {
+          "Description": "ストレージの使用状況を表示します。"
+        },
+        "UserOnlineStatusSync": {
+          "Description": "ユーザーのオンライン状態を同期・表示します。"
+        }
+      }
+    },
+    "Variables": {
+      "Summary": "クラウドに関連する変数・状態を扱うコンポーネント。",
+      "Components": {
+        "ActiveUserCloudField<T>": {
+          "Description": "アクティブユーザーのクラウドフィールド値を参照します。"
+        },
+        "ActiveUserCloudValueVariable<T>": {
+          "Description": "アクティブユーザーのクラウド値を変数として読み書きします。"
+        },
+        "CloudValueField<T>": {
+          "Description": "クラウド値の特定フィールドを参照します。"
+        },
+        "CloudValueVariableDriver<T>": {
+          "Description": "クラウド値とローカル変数を相互同期するドライバーです。"
+        },
+        "CloudValueVariable<T>": {
+          "Description": "クラウド上の値を変数として扱います。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "CloudStorageSpaceIndicator": {
+      "Description": "クラウドストレージの使用量/空き容量を表示します。"
+    },
+    "FriendLink": {
+      "Description": "フレンドのプロフィールや関連リソースへのリンクを提供します。"
+    },
+    "HomeGroupOrbManager": {
+      "Description": "ホーム/グループのオーブ（ポータル）を管理します。"
+    },
+    "InventoryLink": {
+      "Description": "インベントリ（クラウドアイテム）へのリンクを提供します。"
+    },
+    "OneTimeVideoPlayerTrigger": {
+      "Description": "一度だけ再生される動画プレイヤーをトリガーします。"
+    },
+    "PatreonSkyController": {
+      "Description": "Patreon 連携に基づく空（スカイ）演出を制御します。"
+    },
+    "SessionOrbsController": {
+      "Description": "セッションオーブの表示や挙動を制御します。"
+    },
+    "WorldSubmitter": {
+      "Description": "ワールドをクラウドへ提出（アップロード）します。"
+    }
+  }
 }
 
