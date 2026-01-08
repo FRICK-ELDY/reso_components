@@ -3,7 +3,7 @@
 このフォルダには、Resonite のコンポーネントカテゴリをローカルJSONで管理し、Webで閲覧できる最小構成が含まれます。
 
 - `index.html` / `styles.css` / `app.js`: ビューア
-- `Assets/components/components_<Tag>.json`: データ（分割JSON）
+- `Assets/components/<Tag>.json`: データ（分割JSON）
 
 参考: データの出典（カテゴリ情報）
 - Resonite Wiki - カテゴリ:コンポーネント: `https://wiki.resonite.com/Category:Components/ja`
@@ -14,8 +14,8 @@
 
 1) 分割JSON（タグごと）
 - 置き場所: `./Assets/components/`
-- 命名: `components_<Tag>.json`
-  - 例: `components_Assets.json`, `components_Audio.json`, `components_CommonUI.json`（スペースは除去）
+- 命名: `<Tag>.json`
+  - 例: `Assets.json`, `Audio.json`, `CommonUI.json`（スペースは除去）
 - 形式は次のいずれか:
   - A. 単一カテゴリオブジェクト:
     ```json
@@ -49,7 +49,7 @@
 - 画面上部の「ファイル選択」から JSON を選ぶと、その場で差し替え表示されます。
 
 3) ローカルサーバで動かす（任意）
-- ローカルHTTPサーバを利用すると `components_*.json` を自動読込できます。
+- ローカルHTTPサーバを利用すると `<Tag>.json` を自動読込できます。
   - Node.js: `npx http-server .` など
   - Python: `py -m http.server 8080`
   - VSCode/Cursor の Live Server など

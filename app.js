@@ -16,7 +16,7 @@
   const SPLIT_BASE_DIR = "./Assets/components/";
   function fileNameForTag(tagName) {
     const safe = String(tagName || "").replace(/\s+/g, "");
-    return `components_${safe}.json`;
+    return `${safe}.json`;
   }
 
   const CATEGORY_TAGS = [
@@ -187,24 +187,22 @@
 
   function resolveTagFromFileName(fileName) {
     const lower = String(fileName || "").toLowerCase();
-    // CATEGORY_TAGS から逆引き
+    // CATEGORY_TAGS から逆引き（新規約 `<Tag>.json`）
     for (const tag of CATEGORY_TAGS) {
       if (tag.toLowerCase() === "all") continue;
       const expected = fileNameForTag(tag).toLowerCase();
       if (lower === expected) return tag;
     }
-    // "components_<name>.json" から抽出（スペース無し）
-    const m = lower.match(/^components_(.+)\.json$/i);
-    if (m && m[1]) {
-      const safe = m[1];
-      // CATEGORY_TAGS からスペース除去一致を探す
+    // `<name>.json` の name が既知のタグ（スペース除去一致）なら採用
+    const m2 = lower.match(/^(.+)\.json$/i);
+    if (m2 && m2[1]) {
+      const safe2 = m2[1];
       for (const tag of CATEGORY_TAGS) {
         if (tag.toLowerCase() === "all") continue;
         const safeTag = String(tag).replace(/\s+/g, "").toLowerCase();
-        if (safeTag === safe) return tag;
+        if (safeTag === safe2) return tag;
       }
-      // 見つからなければそのまま復元（先頭を大文字化の簡易処理）
-      return m[1];
+      return null;
     }
     return null;
   }
@@ -215,7 +213,8 @@
     // "all" 以外のタグを対象に試行
     const targets = CATEGORY_TAGS.filter(t => t.toLowerCase() !== "all");
     const requests = targets.map(async (tag) => {
-      const url = SPLIT_BASE_DIR + fileNameForTag(tag);
+      // 新命名規約 `<Tag>.json`
+      let url = SPLIT_BASE_DIR + fileNameForTag(tag);
       try {
         const res = await fetch(url, { cache: "no-store" });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
