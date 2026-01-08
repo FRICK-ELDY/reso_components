@@ -5,7 +5,626 @@
       "Summary": "エクスポート可能なアセット。",
       "Components": {
         "AudioExportable": {
-          "Description": "オーディオデータを外部形式としてエクスポート可能にするコンポーネント。"
+          "Description": "スロットをオーディオクリップ（AudioClip）ファイルとしてエクスポート可能にします。"
+        },
+        "BinaryExportable": {
+          "Description": "スロットをバイナリ（Binary）ファイルとしてエクスポート可能にします。"
+        },
+        "PackageExportable": {
+          "Description": "スロットをResonite Packageファイルとしてエクスポート可能にします。"
+        },
+        "TextExportable": {
+          "Description": "スロットをテキストファイルとしてエクスポート可能にします。"
+        },
+        "TextureExportable": {
+          "Description": "スロットを画像（StaticTexture2D）ファイルとしてエクスポート可能にします。"
+        },
+        "VideoExportable": {
+          "Description": "スロットをビデオ（VideoTexture）ファイルとしてエクスポート可能にします。"
+        },
+        "VolumeExportable": {
+          "Description": "スロットを3D画像（Texture3D）ファイルとしてエクスポート可能にします。"
+        },
+        "GaussianSplatExportable": {
+          "Description": "スロットをガウシアンスプラット（Gaussian Splat）ファイルとしてエクスポート可能にします。"
+        }
+      }
+    },
+    "Loading": {
+      "Summary": "UsersAssetLoadProgress<A> の読み込み進捗",
+      "Components": {
+        "UsersAssetLoadProgress<A>": {
+          "Description": "セッション内のユーザーごとに指定アセット（A:IAsset）の読み込み進捗と状態を取得します。"
+        }
+      }
+    },
+    "Material Property Blocks": {
+      "Summary": "特定のマテリアルプロパティのブロック",
+      "Components": {
+        "MainAndMaskTexturePropertyBlock": {
+          "Description": "メインテクスチャとマスクテクスチャのプロパティを一括で上書きします。"
+        },
+        "MainTexturePropertyBlock": {
+          "Description": "メインテクスチャ関連のプロパティを上書きします。"
+        },
+        "Projection360PropertyBlock": {
+          "Description": "360度投影用のマテリアルプロパティを上書きします。"
+        }
+      }
+    },
+    "Materials": {
+      "Summary": "マテリアル一覧",
+      "Categorys": {
+        "Filters": {
+          "Summary": "画像フィルタ系マテリアル。",
+          "Components": {
+            "BlurMaterial": {
+              "Description": "画像をぼかします。"
+            },
+            "ChannelMatrixMaterial": {
+              "Description": "チャンネル行列で色変換を行います。"
+            },
+            "DepthMaterial": {
+              "Description": "深度情報を可視化します。"
+            },
+            "GammaMaterial": {
+              "Description": "ガンマ補正を適用します。"
+            },
+            "GrayscaleMaterial": {
+              "Description": "グレースケール化します。"
+            },
+            "HSV Material": {
+              "Description": "HSV の調整を行います。"
+            },
+            "InvertMaterial": {
+              "Description": "色を反転します。"
+            },
+            "LUT Material": {
+              "Description": "LUT による色変換を適用します。"
+            },
+            "PixelateMaterial": {
+              "Description": "ピクセル化（モザイク）処理を適用します。"
+            },
+            "PosterizeMaterial": {
+              "Description": "ポスタライズ処理を適用します。"
+            },
+            "RefractMaterial": {
+              "Description": "屈折表現のフィルタを適用します。"
+            },
+            "ThresholdMaterial": {
+              "Description": "二値化（しきい値）処理を適用します。"
+            }
+          }
+        },
+        "PBS": {
+          "Summary": "PBS（物理ベースシェーディング）関連のマテリアル。",
+          "Components": {
+            "PBS_LerpMetallic": {
+              "Description": "金属（Metallic）の補間PBSマテリアル。"
+            },
+            "PBS_LerpSpecular": {
+              "Description": "スペキュラー（Specular）の補間PBSマテリアル。"
+            },
+            "PBS_ColorMaskMetallic": {
+              "Description": "カラーマスク適用のMetallic PBSマテリアル。"
+            },
+            "PBS_ColorMaskSpecular": {
+              "Description": "カラーマスク適用のSpecular PBSマテリアル。"
+            },
+            "PBS_ColorSplatMetallic": {
+              "Description": "カラースプラット適用のMetallic PBSマテリアル。"
+            },
+            "PBS_ColorSplatSpecular": {
+              "Description": "カラースプラット適用のSpecular PBSマテリアル。"
+            },
+            "PBS_DisplaceMetallic": {
+              "Description": "ディスプレースメント対応のMetallic PBSマテリアル。"
+            },
+            "PBS_DisplaceSpecular": {
+              "Description": "ディスプレースメント対応のSpecular PBSマテリアル。"
+            },
+            "PBS_DistanceLerpMetallic": {
+              "Description": "距離による補間のMetallic PBSマテリアル。"
+            },
+            "PBS_DistanceLerpSpecular": {
+              "Description": "距離による補間のSpecular PBSマテリアル。"
+            },
+            "PBS_DualSidedMetallic": {
+              "Description": "両面描画のMetallic PBSマテリアル。"
+            },
+            "PBS_DualSidedSpecular": {
+              "Description": "両面描画のSpecular PBSマテリアル。"
+            },
+            "PBS_IntersectMetallic": {
+              "Description": "交差表現のMetallic PBSマテリアル。"
+            },
+            "PBS_IntersectSpecular": {
+              "Description": "交差表現のSpecular PBSマテリアル。"
+            },
+            "PBS_MultiUV_Metallic": {
+              "Description": "複数UV対応のMetallic PBSマテリアル。"
+            },
+            "PBS_MultiUV_Specular": {
+              "Description": "複数UV対応のSpecular PBSマテリアル。"
+            },
+            "PBS_RimMetallic": {
+              "Description": "リムライト付きのMetallic PBSマテリアル。"
+            },
+            "PBS_RimSpecular": {
+              "Description": "リムライト付きのSpecular PBSマテリアル。"
+            },
+            "PBS_SliceMetallic": {
+              "Description": "スライス表現のMetallic PBSマテリアル。"
+            },
+            "PBS_SliceSpecular": {
+              "Description": "スライス表現のSpecular PBSマテリアル。"
+            },
+            "PBS_StencilMaterialMetallic": {
+              "Description": "ステンシル対応のMetallic PBSマテリアル。"
+            },
+            "PBS_StencilMaterialSpecular": {
+              "Description": "ステンシル対応のSpecular PBSマテリアル。"
+            },
+            "PBS_TriplanarMetallic": {
+              "Description": "トライプラナー投影のMetallic PBSマテリアル。"
+            },
+            "PBS_TriplanarSpecular": {
+              "Description": "トライプラナー投影のSpecular PBSマテリアル。"
+            },
+            "PBS_VertexColorMetallic": {
+              "Description": "頂点カラー対応のMetallic PBSマテリアル。"
+            },
+            "PBS_VertexColorSpecular": {
+              "Description": "頂点カラー対応のSpecular PBSマテリアル。"
+            },
+            "PBS_VoronoiCrystal": {
+              "Description": "ボロノイ結晶風のPBSマテリアル。"
+            }
+          }
+        },
+        "Skybox": {
+          "Summary": "スカイボックス用のマテリアル。",
+          "Components": {
+            "GradientSkyMaterial": {
+              "Description": "グラデーションによる空のマテリアル。"
+            },
+            "ProceduralSkyMaterial": {
+              "Description": "太陽を含む空用のプロシージャルマテリアル。"
+            }
+          }
+        },
+        "Special": {
+          "Summary": "特殊用途のマテリアル。",
+          "Components": {
+            "DebugMaterial": {
+              "Description": "デバッグ用のマテリアル。"
+            },
+            "ReflectionMaterial": {
+              "Description": "反射表現を行うマテリアル。"
+            },
+            "UV RectMaterial": {
+              "Description": "UV 矩形でテクスチャ領域を指定します。"
+            },
+            "TextureDebugMaterial": {
+              "Description": "テクスチャのデバッグ可視化を行います。"
+            }
+          }
+        },
+        "Text": {
+          "Summary": "テキストオブジェクト用のマテリアル。",
+          "Components": {
+            "TextUnlitMaterial": {
+              "Description": "テキスト用のアンリットマテリアル。"
+            }
+          }
+        },
+        "UI": {
+          "Summary": "ユーザーインターフェース用のマテリアル。",
+          "Categorys": {
+            "Circle Segment": {
+              "Summary": "円弧セグメント用のUIマテリアル。",
+              "Components": {
+                "UI CircleSegment": {
+                  "Description": "UI の円弧セグメントを描画するマテリアル。"
+                }
+              }
+            },
+            "Text": {
+              "Summary": "UIのテキスト用マテリアル。",
+              "Components": {
+                "UI TextUnlitMaterial": {
+                  "Description": "UIテキスト用のアンリットマテリアル。"
+                }
+              }
+            }
+          },
+          "Components": {
+            "UI UnlitMaterial": {
+              "Description": "UI 用のアンリットマテリアル。"
+            }
+          }
+        },
+        "Unlit": {
+          "Summary": "シェーディングを行わないマテリアル。",
+          "Components": {
+            "DepthProjectionMaterial": {
+              "Description": "深度投影を行うアンリットマテリアル。"
+            },
+            "FresnelLerpMaterial": {
+              "Description": "フレネル効果による補間を行うアンリットマテリアル。"
+            },
+            "FresnelMaterial": {
+              "Description": "フレネル効果を用いたアンリットマテリアル。"
+            },
+            "MatcapMaterial": {
+              "Description": "MatCap（マテリアルキャプチャ）による簡易ライティング表現。"
+            },
+            "OverlayFresnelMaterial": {
+              "Description": "フレネル効果のオーバーレイ表現。"
+            },
+            "OverlayUnlitMaterial": {
+              "Description": "オーバーレイ用のアンリットマテリアル。"
+            },
+            "Projection360Material": {
+              "Description": "360度投影のアンリットマテリアル。"
+            },
+            "UnlitDistanceLerpMaterial": {
+              "Description": "距離による補間を行うアンリットマテリアル。"
+            },
+            "UnlitMaterial": {
+              "Description": "基本的なアンリットマテリアル。"
+            },
+            "WireframeMaterial": {
+              "Description": "ワイヤーフレーム表示のアンリットマテリアル。"
+            }
+          }
+        },
+        "Volume": {
+          "Summary": "ボリューム表現用のマテリアル。",
+          "Components": {
+            "FogBoxVolumeMaterial": {
+              "Description": "ボックス型の体積フォグ用マテリアル。"
+            },
+            "VolumeUnlitMaterial": {
+              "Description": "ボリューム用のアンリットマテリアル。"
+            }
+          }
+        }
+      },
+      "Components": {
+        "FurMaterial": {
+          "Description": "毛皮向けのマテリアル（草にもよく用いられます）。"
+        },
+        "PBS Metallic": {
+          "Description": "標準的なメタリックPBSマテリアル。"
+        },
+        "PBS Specular": {
+          "Description": "標準的なスペキュラーPBSマテリアル。"
+        },
+        "XiexeToonMaterial": {
+          "Description": "トゥーンマテリアル。"
+        }
+      }
+    },
+    "Metadata": {
+      "Summary": "アセットのメタデータ",
+      "Components": {
+        "BitmapAssetMetadata": {
+          "Description": "ビットマップアセットのメタデータを保持します。"
+        }
+      }
+    },
+    "Procedural Animations": {
+      "Summary": "プロシージャルアニメーション",
+      "Components": {
+        "DynamicSubtitleProvider": {
+          "Description": "動的な字幕を提供するコンポーネント。"
+        }
+      }
+    },
+    "Procedural Audio Clips": {
+      "Summary": "プロシージャルなオーディオクリップの生成・変更",
+      "Components": {
+        "SawtoothWaveClip": {
+          "Description": "ノコギリ波のオーディオクリップを生成します。"
+        },
+        "SimplexNoiseClip": {
+          "Description": "Simplexノイズによるオーディオクリップを生成します。"
+        },
+        "SineWaveClip": {
+          "Description": "サイン波のオーディオクリップを生成します。"
+        },
+        "SquareWaveClip": {
+          "Description": "矩形波のオーディオクリップを生成します。"
+        },
+        "TriangleWaveClip": {
+          "Description": "三角波のオーディオクリップを生成します。"
+        },
+        "ValueNoiseClip": {
+          "Description": "Valueノイズのオーディオクリップを生成します。"
+        }
+      }
+    },
+    "Procedural Cubemaps": {
+      "Summary": "プロシージャルなキューブマップ生成",
+      "Components": {
+        "CheckerboardCubemap": {
+          "Description": "チェッカーボードのキューブマップを生成します。"
+        }
+      }
+    },
+    "Procedural Fonts": {
+      "Summary": "プロシージャルな動的フォント",
+      "Components": {
+        "DynamicSpriteFont": {
+          "Description": "動的スプライトフォントを生成・提供します。"
+        }
+      }
+    },
+    "Procedural Meshes": {
+      "Summary": "プロシージャルメッシュ",
+      "Categorys": {
+        "Legacy UI": {
+          "Summary": "レガシーUI向けのメッシュ。",
+          "Components": {
+            "BevelPlaneMesh": {
+              "Description": "ベベル付きの平面メッシュを生成します。"
+            },
+            "BevelRingMesh": {
+              "Description": "ベベル付きのリング（円環）メッシュを生成します。"
+            },
+            "BevelStripeMesh": {
+              "Description": "ベベル付きのストライプメッシュを生成します。"
+            },
+            "MultiBevelStripeMesh": {
+              "Description": "複数ベベルのストライプメッシュを生成します。"
+            }
+          }
+        }
+      },
+      "Components": {
+        "ArrowMesh": {
+          "Description": "矢印形状のメッシュを生成します。"
+        },
+        "BallisticPathMesh": {
+          "Description": "弾道軌道（放物線）のパスメッシュを生成します。"
+        },
+        "BentTubeMesh": {
+          "Description": "曲がったチューブメッシュを生成します。"
+        },
+        "BevelBoxMesh": {
+          "Description": "面取り（ベベル）付きボックスメッシュを生成します。"
+        },
+        "BezierTubeMesh": {
+          "Description": "ベジエ曲線に沿ったチューブメッシュを生成します。"
+        },
+        "BoxArrayMesh": {
+          "Description": "複数ボックスの配列メッシュを生成します。"
+        },
+        "BoxMesh": {
+          "Description": "ボックス（直方体）メッシュを生成します。"
+        },
+        "CameraFrustumMesh": {
+          "Description": "カメラフラスタム形状のメッシュを生成します。"
+        },
+        "CapsuleMesh": {
+          "Description": "カプセル形状のメッシュを生成します。"
+        },
+        "CircleMesh": {
+          "Description": "円メッシュを生成します。"
+        },
+        "ConeMesh": {
+          "Description": "円錐メッシュを生成します。"
+        },
+        "CrossMesh": {
+          "Description": "十字形メッシュを生成します。"
+        },
+        "CurvedPlaneMesh": {
+          "Description": "曲面プレーンメッシュを生成します。"
+        },
+        "CylinderMesh": {
+          "Description": "円柱メッシュを生成します。"
+        },
+        "FrameMesh": {
+          "Description": "フレーム（枠）メッシュを生成します。"
+        },
+        "GridMesh": {
+          "Description": "グリッドメッシュを生成します。"
+        },
+        "HollowConeMesh": {
+          "Description": "中空の円錐メッシュを生成します。"
+        },
+        "IcoSphereMesh": {
+          "Description": "正二十面体ベースのスフィアメッシュを生成します。"
+        },
+        "ImageColorDistributionGraph": {
+          "Description": "画像の色分布グラフメッシュを生成します。"
+        },
+        "LabelPointerMesh": {
+          "Description": "ラベル用ポインタ（矢印）メッシュを生成します。"
+        },
+        "LightningMesh": {
+          "Description": "稲妻形状のメッシュを生成します。"
+        },
+        "MultiLineMesh": {
+          "Description": "複数ラインのメッシュを生成します。"
+        },
+        "MultiSegmentMesh": {
+          "Description": "複数セグメントのメッシュを生成します。"
+        },
+        "PointClusterMesh": {
+          "Description": "点群メッシュを生成します。"
+        },
+        "PointMesh": {
+          "Description": "点メッシュを生成します。"
+        },
+        "QuadArrayMesh": {
+          "Description": "四角形の配列メッシュを生成します。"
+        },
+        "QuadMesh": {
+          "Description": "四角形メッシュを生成します。"
+        },
+        "RampMesh": {
+          "Description": "ランプ（傾斜）メッシュを生成します。"
+        },
+        "RingMesh": {
+          "Description": "リング（円環）メッシュを生成します。"
+        },
+        "SegmentMesh": {
+          "Description": "セグメントメッシュを生成します。"
+        },
+        "SlotSegmentMesh": {
+          "Description": "スロットセグメントメッシュを生成します。"
+        },
+        "SphereMesh": {
+          "Description": "球メッシュを生成します。"
+        },
+        "SpiralTubeMesh": {
+          "Description": "螺旋チューブメッシュを生成します。"
+        },
+        "StandaloneRectMesh<T>": {
+          "Description": "単独の矩形メッシュを生成します。"
+        },
+        "StripeMesh": {
+          "Description": "ストライプメッシュを生成します。"
+        },
+        "StripeWireMesh": {
+          "Description": "ストライプのワイヤーメッシュを生成します。"
+        },
+        "TorusMesh": {
+          "Description": "トーラス（ドーナツ）メッシュを生成します。"
+        },
+        "TriangleMesh": {
+          "Description": "三角形メッシュを生成します。"
+        },
+        "TriangleDiagnosticMesh": {
+          "Description": "三角形の診断可視化メッシュを生成します。"
+        },
+        "TubeBoxMesh": {
+          "Description": "チューブボックスメッシュを生成します。"
+        },
+        "TubeMesh": {
+          "Description": "チューブメッシュを生成します。"
+        },
+        "TubeSpiralMesh": {
+          "Description": "螺旋チューブメッシュ（別形式）を生成します。"
+        },
+        "TubeWireMesh": {
+          "Description": "チューブのワイヤーメッシュを生成します。"
+        },
+        "WrapperMesh": {
+          "Description": "ラッパー用のメッシュ（別メッシュのラップ）を生成します。"
+        },
+        "CircleSegmentShaderMesh": {
+          "Description": "円弧セグメント用シェーダーメッシュを生成します。"
+        },
+        "ColorDepthGrid": {
+          "Description": "カラーと深度のグリッド可視化メッシュを生成します。"
+        },
+        "ColorDepthPointCloud": {
+          "Description": "カラーと深度の点群メッシュを生成します。"
+        }
+      }
+    },
+    "Procedural Textures": {
+      "Summary": "プロシージャルテクスチャ",
+      "Components": {
+        "AudioWaveformTexture": {
+          "Description": "オーディオ波形を可視化したテクスチャを生成します。"
+        },
+        "GradientStripTexture": {
+          "Description": "グラデーションストリップのテクスチャを生成します。"
+        },
+        "GridTexture": {
+          "Description": "グリッド模様のテクスチャを生成します。"
+        },
+        "NoiseTexture": {
+          "Description": "ノイズのテクスチャを生成します。"
+        },
+        "SimplexTexture": {
+          "Description": "Simplexノイズのテクスチャを生成します。"
+        },
+        "SolidColorTexture": {
+          "Description": "単色のテクスチャを生成します。"
+        },
+        "StringQRCodeTexture": {
+          "Description": "文字列からQRコードのテクスチャを生成します。"
+        },
+        "UVTexture": {
+          "Description": "UVガイド用のテクスチャを生成します。"
+        }
+      }
+    },
+    "Tagging": {
+      "Summary": "タグ付けとマテリアル適用制御",
+      "Components": {
+        "HierarchyMaterialTarget": {
+          "Description": "階層内のマテリアル適用対象（ターゲット）を指定します。"
+        },
+        "MaterialApplyPolicy": {
+          "Description": "マテリアル適用のポリシー（タグ）を定義します。"
+        },
+        "MaterialRelay": {
+          "Description": "マテリアルの中継を行い、適用先へ伝播します。"
+        },
+        "MeshRendererMaterialRelay": {
+          "Description": "MeshRenderer へのマテリアル中継を行います。"
+        }
+      }
+    },
+    "Utility": {
+      "Summary": "アセットの読み込み・多重化・各種メタデータ",
+      "Components": {
+        "AssetLoader<T>": {
+          "Description": "指定した型のアセットを読み込み、提供します。"
+        },
+        "AssetMultiplexer<T>": {
+          "Description": "複数のアセット入力から条件に応じて選択・出力します。"
+        },
+        "AudioClipAssetMetadata": {
+          "Description": "オーディオクリップのアセットメタデータ。"
+        },
+        "AudioStreamMetadata": {
+          "Description": "オーディオストリームのメタデータ。"
+        },
+        "BooleanAssetDriver": {
+          "Description": "ブール値でアセットの切り替えなどを駆動します。"
+        },
+        "ClipboardImporter": {
+          "Description": "クリップボードからアセットをインポートします。"
+        },
+        "CubemapAssetMetadata": {
+          "Description": "キューブマップのアセットメタデータ。"
+        },
+        "DocumentAssetMetadata": {
+          "Description": "ドキュメントアセットのメタデータ。"
+        },
+        "DocumentPageMetadata": {
+          "Description": "ドキュメントページのメタデータ。"
+        },
+        "GaussianSplatAssetMetadata": {
+          "Description": "ガウシアンスプラットのアセットメタデータ。"
+        },
+        "ITexture2DAssetMetadata": {
+          "Description": "ITexture2D のアセットメタデータ。"
+        },
+        "MaterialAssetMetadata": {
+          "Description": "マテリアルのアセットメタデータ。"
+        },
+        "MeshAssetMetadata": {
+          "Description": "メッシュのアセットメタデータ。"
+        },
+        "ProceduralAssetMetadata": {
+          "Description": "プロシージャルアセットのメタデータ。"
+        },
+        "Texture2DAssetMetadata": {
+          "Description": "Texture2D のアセットメタデータ。"
+        },
+        "Texture3DAssetMetadata": {
+          "Description": "Texture3D のアセットメタデータ。"
+        },
+        "VideoTextureAssetMetadata": {
+          "Description": "ビデオテクスチャのアセットメタデータ。"
         }
       }
     }
@@ -16,6 +635,51 @@
     },
     "NullTextureProvider": {
       "Description": "常に無効なテクスチャを提供するプレースホルダー。"
+    },
+    "RenderTextureProvider": {
+      "Description": "カメラのレンダー結果をテクスチャとして提供します。"
+    },
+    "SpriteProvider": {
+      "Description": "UIX 向けのスプライトテクスチャを提供します。"
+    },
+    "StaticAnimationProvider": {
+      "Description": "URL から静的アニメーションを読み込み提供します。"
+    },
+    "StaticAudioClip": {
+      "Description": "URL から静的オーディオクリップを読み込み、AudioClipPlayer 用に提供します。"
+    },
+    "StaticBinary": {
+      "Description": "URL からバイナリデータを読み込み提供します。"
+    },
+    "StaticCubemap": {
+      "Description": "URL からキューブマップを読み込み提供します。"
+    },
+    "StaticFont": {
+      "Description": "URL からフォントを読み込み提供します。"
+    },
+    "StaticGaussianSplat": {
+      "Description": "URL からガウシアンスプラットを読み込み提供します。"
+    },
+    "StaticLocaleProvider": {
+      "Description": "URL から翻訳セット（ロケール）を読み込み提供します。"
+    },
+    "StaticMesh": {
+      "Description": "URL から静的メッシュを読み込み提供します。"
+    },
+    "StaticSavedObjectProvider": {
+      "Description": "現在未使用です。"
+    },
+    "StaticShader": {
+      "Description": "URL からシェーダーを読み込み提供します。"
+    },
+    "StaticTexture2D": {
+      "Description": "URL から静的 2D テクスチャを読み込み提供します。"
+    },
+    "StaticTexture3D": {
+      "Description": "URL から静的 3D テクスチャを読み込み提供します。"
+    },
+    "VideoTextureProvider": {
+      "Description": "URL から動画と音声をテクスチャとして提供します。音声出力には AudioOutput が必要です。"
     }
   }
 }

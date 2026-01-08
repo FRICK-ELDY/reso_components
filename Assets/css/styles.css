@@ -133,6 +133,9 @@ details.category > summary {
   font-weight: 650;
   padding: 6px;
   outline: none;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
 }
 
 details.category > summary::-webkit-details-marker {
@@ -149,6 +152,20 @@ details.category > summary::before {
 
 details.category[open] > summary::before {
   content: "▾";
+}
+
+.category-title {
+  flex: 0 0 auto;
+}
+
+.inline-summary {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .category-summary {
@@ -168,15 +185,29 @@ details.category[open] > summary::before {
   margin: 0;
   padding: 8px 10px 8px 12px;
   border-bottom: 1px dashed var(--border);
+  display: flex;
+  align-items: baseline;
 }
 
 .component-name {
   font-weight: 600;
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--accent);
 }
 
 .component-desc {
   color: var(--muted);
   font-size: 13px;
+}
+
+.component-inline-desc {
+  color: var(--muted);
+  font-size: 13px;
+  margin-left: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .footer {

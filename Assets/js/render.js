@@ -16,30 +16,39 @@ export function renderTree(container, data, selectedTag) {
   }
   for (const catName of categories) {
     const catObj = data.Categorys[catName] || {};
-    fragment.appendChild(renderCategory(catName, catObj, true));
+    fragment.appendChild(renderCategory(catName, catObj, true, 0));
   }
   container.appendChild(fragment);
 }
 
-export function renderCategory(categoryName, categoryObj, openByDefault) {
+export function renderCategory(categoryName, categoryObj, openByDefault, level) {
   const details = document.createElement("details");
   details.className = "category";
   if (openByDefault) details.setAttribute("open", "");
 
   const summary = document.createElement("summary");
-  summary.textContent = categoryName;
+  const titleSpan = document.createElement("span");
+  titleSpan.className = "category-title";
+  titleSpan.textContent = categoryName;
+  summary.appendChild(titleSpan);
   details.appendChild(summary);
 
   const summaryText = (categoryObj && categoryObj.Summary) ? String(categoryObj.Summary) : "";
   if (summaryText) {
     summary.setAttribute("title", summaryText);
+    const inline = document.createElement("span");
+    inline.className = "inline-summary";
+    inline.textContent = ` — ${summaryText}`;
+    inline.setAttribute("title", summaryText);
+    summary.appendChild(inline);
   }
 
   const childCats = (categoryObj && categoryObj.Categorys) ? categoryObj.Categorys : {};
   const childCatNames = Object.keys(childCats || {}).sort((a, b) => a.localeCompare(b));
   for (const childName of childCatNames) {
     const childObj = childCats[childName] || {};
-    details.appendChild(renderCategory(childName, childObj, false));
+    const childOpen = level === 0; // ルート直下の子カテゴリはデフォルトで開く
+    details.appendChild(renderCategory(childName, childObj, childOpen, (level || 0) + 1));
   }
 
   const comps = (categoryObj && categoryObj.Components) ? categoryObj.Components : {};
@@ -67,6 +76,11 @@ export function renderComponent(componentName, componentObj) {
   if (descriptionText) {
     li.setAttribute("title", descriptionText);
     name.setAttribute("title", descriptionText);
+    const inline = document.createElement("span");
+    inline.className = "component-inline-desc";
+    inline.textContent = ` — ${descriptionText}`;
+    inline.setAttribute("title", descriptionText);
+    name.appendChild(inline);
   }
   li.appendChild(name);
   return li;
