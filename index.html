@@ -8,10 +8,19 @@
 </head>
 <body>
   <header class="header">
-    <h1>Resonite コンポーネント ビューア</h1>
-    <p class="subtitle">
-      データ元: <a href="https://wiki.resonite.com/Category:Components/ja" target="_blank" rel="noopener">Resonite Wiki - カテゴリ:コンポーネント</a>
-    </p>
+    <div class="header-left">
+      <h1>Resonite コンポーネント ビューア</h1>
+      <p class="subtitle">
+        データ元: <a href="https://wiki.resonite.com/Category:Components/ja" target="_blank" rel="noopener">Resonite Wiki - カテゴリ:コンポーネント</a>
+      </p>
+      <div class="header-controls" aria-label="開く階層コントロール">
+        <div class="depth-bar-inner">
+          <span class="depth-label" title="ツリーの自動展開レベル">開く階層</span>
+          <input id="openDepthRange" class="depth-range" type="range" min="0" max="4" step="1" value="0" aria-label="開く階層スライダー">
+          <span id="openDepthValue" class="depth-value" aria-live="polite">0</span>
+        </div>
+      </div>
+    </div>
   </header>
 
   <section class="controls">
@@ -19,6 +28,8 @@
     <input id="fileInput" type="file" accept="application/json" multiple aria-label="JSONファイルを選択（複数可）">
     <button id="clearBtn" type="button">クリア</button>
   </section>
+
+
 
   <nav id="tagBar" class="tag-bar" aria-label="カテゴリフィルタ"></nav>
 

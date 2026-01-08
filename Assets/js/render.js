@@ -1,6 +1,6 @@
 import { normalizeName } from "./utils.js";
 
-export function renderTree(container, data, selectedTag) {
+export function renderTree(container, data, selectedTag, openDepth = 1) {
   container.innerHTML = "";
   if (!data || !data.Categorys || Object.keys(data.Categorys).length === 0) {
     const empty = document.createElement("div");
@@ -16,15 +16,17 @@ export function renderTree(container, data, selectedTag) {
   }
   for (const catName of categories) {
     const catObj = data.Categorys[catName] || {};
-    fragment.appendChild(renderCategory(catName, catObj, true, 0));
+    fragment.appendChild(renderCategory(catName, catObj, 0, openDepth));
   }
   container.appendChild(fragment);
 }
 
-export function renderCategory(categoryName, categoryObj, openByDefault, level) {
+export function renderCategory(categoryName, categoryObj, level, openDepth) {
   const details = document.createElement("details");
   details.className = "category";
-  if (openByDefault) details.setAttribute("open", "");
+  if (typeof openDepth === "number" && level < openDepth) {
+    details.setAttribute("open", "");
+  }
 
   const summary = document.createElement("summary");
   const titleSpan = document.createElement("span");
@@ -47,8 +49,7 @@ export function renderCategory(categoryName, categoryObj, openByDefault, level) 
   const childCatNames = Object.keys(childCats || {}).sort((a, b) => a.localeCompare(b));
   for (const childName of childCatNames) {
     const childObj = childCats[childName] || {};
-    const childOpen = level === 0; // ルート直下の子カテゴリはデフォルトで開く
-    details.appendChild(renderCategory(childName, childObj, childOpen, (level || 0) + 1));
+    details.appendChild(renderCategory(childName, childObj, (level || 0) + 1, openDepth));
   }
 
   const comps = (categoryObj && categoryObj.Components) ? categoryObj.Components : {};

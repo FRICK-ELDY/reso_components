@@ -13,26 +13,37 @@ import { showError } from "./utils.js";
   const fileInput = document.getElementById("fileInput");
   const clearBtn = document.getElementById("clearBtn");
   const tagBar = document.getElementById("tagBar");
+  const openDepthRange = document.getElementById("openDepthRange");
+  const openDepthValue = document.getElementById("openDepthValue");
 
   let originalData = null;
   let currentViewData = null;
   let selectedTag = "all";
+  let openDepth = 2; // 0=全て閉、1=カテゴリのみ、2=カテゴリ+子
 
   init();
 
   function init() {
     wireEvents();
     setupTags();
+    // 初期表示時の開く階層を入力値から反映
+    if (openDepthRange) {
+      const val = parseInt(openDepthRange.value, 10);
+      if (!isNaN(val)) {
+        openDepth = Math.max(0, Math.min(10, val));
+        if (openDepthValue) openDepthValue.textContent = String(openDepth);
+      }
+    }
     loadInitialData().then((data) => {
       originalData = data;
       currentViewData = data;
-      renderTree(treeContainer, currentViewData, selectedTag);
+      renderTree(treeContainer, currentViewData, selectedTag, openDepth);
     }).catch((err) => {
       showError(treeContainer, "初期データの読み込みに失敗しました。空のデータで起動します。", err);
       const empty = { Categorys: {} };
       originalData = empty;
       currentViewData = empty;
-      renderTree(treeContainer, currentViewData, selectedTag);
+      renderTree(treeContainer, currentViewData, selectedTag, openDepth);
     });
   }
 
@@ -41,7 +52,7 @@ import { showError } from "./utils.js";
       if (selectedTag.toLowerCase() === String(tagName).toLowerCase()) return;
       selectedTag = tagName;
       updateTagActiveStates(tagBar, selectedTag);
-      renderTree(treeContainer, currentViewData, selectedTag);
+      renderTree(treeContainer, currentViewData, selectedTag, openDepth);
     });
   }
 
@@ -53,13 +64,13 @@ import { showError } from "./utils.js";
       } else {
         currentViewData = filterData(originalData, query);
       }
-      renderTree(treeContainer, currentViewData, selectedTag);
+      renderTree(treeContainer, currentViewData, selectedTag, openDepth);
     });
 
     clearBtn.addEventListener("click", () => {
       searchInput.value = "";
       currentViewData = originalData;
-      renderTree(treeContainer, currentViewData, selectedTag);
+      renderTree(treeContainer, currentViewData, selectedTag, openDepth);
     });
 
     fileInput.addEventListener("change", async (e) => {
@@ -70,13 +81,27 @@ import { showError } from "./utils.js";
         originalData = merged;
         currentViewData = merged;
         searchInput.value = "";
-        renderTree(treeContainer, currentViewData, selectedTag);
+        renderTree(treeContainer, currentViewData, selectedTag, openDepth);
       } catch (error) {
         showError(treeContainer, "選択したJSONの読み込み/マージに失敗しました。ファイル内容と形式をご確認ください。", error);
       } finally {
         fileInput.value = "";
       }
     });
+
+    if (openDepthRange) {
+      const updateDepth = () => {
+        const val = parseInt(openDepthRange.value, 10);
+        if (!isNaN(val)) {
+          const clamped = Math.max(0, Math.min(10, val));
+          openDepth = clamped;
+          if (openDepthValue) openDepthValue.textContent = String(clamped);
+          renderTree(treeContainer, currentViewData, selectedTag, openDepth);
+        }
+      };
+      openDepthRange.addEventListener("change", updateDepth);
+      openDepthRange.addEventListener("input", updateDepth);
+    }
   }
 })();
 
