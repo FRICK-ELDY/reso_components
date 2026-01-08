@@ -1,0 +1,62 @@
+{
+  "Categorys": {
+    "Assets": {
+      "Summary": "マテリアル、プロシージャルコンポーネント、メッシュ",
+      "Categorys": {
+        "Export": {
+          "Summary": "エクスポート可能なアセット。",
+          "Components": {
+            "AudioExportable": {
+              "Description": "オーディオデータを外部形式としてエクスポート可能にするコンポーネント。"
+            }
+          }
+        }
+      },
+      "Components": {
+        "DesktopTextureProvider": {
+          "Description": "デスクトップの画面をテクスチャとして提供します。"
+        },
+        "NullTextureProvider": {
+          "Description": "常に無効なテクスチャを提供するプレースホルダー。"
+        }
+      }
+    },
+    "Audio": {
+      "Summary": "オーディオ出力、リバーブゾーン",
+      "Components": {}
+    },
+    "Cloud": {
+      "Summary": "クラウドユーザー情報、サーバーステータス",
+      "Components": {}
+    },
+    "UIX": {
+      "Summary": "ResoniteのUIシステムであるUIX用のコンポーネントです。",
+      "Components": {}
+    },
+    "Rendering": {
+      "Summary": "レンダリングに関するコンポーネント。",
+      "Components": {}
+    },
+    "Transform": {
+      "Summary": "トランスフォーム（位置・回転・スケール）関連。",
+      "Components": {}
+    },
+    "Physics": {
+      "Summary": "物理演算に関連するコンポーネント。",
+      "Components": {}
+    },
+    "Userspace": {
+      "Summary": "ユーザースペース関連。",
+      "Components": {}
+    },
+    "World": {
+      "Summary": "ワールド関連。",
+      "Components": {}
+    }
+  },
+  "_meta": {
+    "source": "https://wiki.resonite.com/Category:Components/ja",
+    "note": "このファイルは手動でメンテナンスできます。キー名は\"Categorys\"/\"Components\"に合わせています。"
+  }
+}
+
