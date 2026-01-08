@@ -1,5 +1,37 @@
 {
-  "Summary": "オーディオ出力、リバーブゾーン",
-  "Components": {}
+  "Summary": "オーディオ再生・出力・リスナー・リバーブなどの音響コンポーネント。",
+  "Categorys": {
+    "Utility": {
+      "Summary": "オーディオデバイス情報・選択に関するユーティリティ。",
+      "Components": {
+        "AudioDeviceIndexFinder": {
+          "Description": "利用可能なオーディオデバイスのインデックスを検索・取得します。"
+        },
+        "AudioInputDeviceInfo": {
+          "Description": "入力（マイク）デバイスの情報を取得します。"
+        },
+        "AudioOutputDeviceInfo": {
+          "Description": "出力（再生）デバイスの情報を取得します。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "AudioClipPlayer": {
+      "Description": "オーディオクリップを再生するプレーヤー。音量・ピッチ・ループを制御します。"
+    },
+    "AudioOutput": {
+      "Description": "スロットの音声を出力します。デバイスへの出力や音量などを制御します。"
+    },
+    "AudioReverbZone": {
+      "Description": "指定領域内の音に残響（リバーブ）効果を与えます。"
+    },
+    "LerpingMultiClipPlayer": {
+      "Description": "複数クリップ間を補間（クロスフェード）しながら再生します。"
+    },
+    "MultiAudioClipPlayer": {
+      "Description": "複数のオーディオクリップを切り替え/同時再生・ミックスします。"
+    }
+  }
 }
 
