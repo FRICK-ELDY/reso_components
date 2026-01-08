@@ -1,5 +1,5 @@
 import { CATEGORY_TAGS } from "./constants.js";
-import { loadInitialData, mergeLocalJsonFiles } from "./loader.js";
+import { loadInitialData } from "./loader.js";
 import { renderTree } from "./render.js";
 import { filterData } from "./filter.js";
 import { setupTagBar, updateTagActiveStates } from "./tags.js";
@@ -10,7 +10,6 @@ import { showError } from "./utils.js";
 
   const treeContainer = document.getElementById("treeContainer");
   const searchInput = document.getElementById("searchInput");
-  const fileInput = document.getElementById("fileInput");
   const clearBtn = document.getElementById("clearBtn");
   const tagBar = document.getElementById("tagBar");
   const openDepthRange = document.getElementById("openDepthRange");
@@ -71,22 +70,6 @@ import { showError } from "./utils.js";
       searchInput.value = "";
       currentViewData = originalData;
       renderTree(treeContainer, currentViewData, selectedTag, openDepth);
-    });
-
-    fileInput.addEventListener("change", async (e) => {
-      const files = (e.target && e.target.files) ? Array.from(e.target.files) : [];
-      if (!files.length) return;
-      try {
-        const merged = await mergeLocalJsonFiles(files);
-        originalData = merged;
-        currentViewData = merged;
-        searchInput.value = "";
-        renderTree(treeContainer, currentViewData, selectedTag, openDepth);
-      } catch (error) {
-        showError(treeContainer, "選択したJSONの読み込み/マージに失敗しました。ファイル内容と形式をご確認ください。", error);
-      } finally {
-        fileInput.value = "";
-      }
     });
 
     if (openDepthRange) {
