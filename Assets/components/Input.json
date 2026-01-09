@@ -1,0 +1,139 @@
+{
+  "Summary": "ユーザー入力関連。",
+  "Categorys": {
+    "Controls": {
+      "Summary": "コントロール関連のコンポーネント。",
+      "Components": {
+        "TrackedHand": {
+          "Description": "トラッキングされた手の入力を処理し、仮想環境内での手の動きを再現します。"
+        }
+      }
+    },
+    "Desktop": {
+      "Summary": "デスクトップ入力関連のコンポーネント。",
+      "Components": {
+        "DesktopControlDialog": {
+          "Description": "デスクトップモードでのコントロールダイアログを管理します。"
+        },
+        "DesktopController": {
+          "Description": "デスクトップモードでのコントローラー入力を処理します。"
+        },
+        "DesktopDisplayLayout": {
+          "Description": "ユーザーのモニター設定に基づいてディスプレイ選択ボタンを表示します。"
+        },
+        "DesktopInteractionRelay": {
+          "Description": "デスクトップモードでのインタラクションを中継します。"
+        },
+        "DisplayIndex": {
+          "Description": "特定のディスプレイのインデックスを管理します。"
+        },
+        "DisplayInfo": {
+          "Description": "ディスプレイに関する情報を提供します。"
+        }
+      }
+    },
+    "Haptics": {
+      "Summary": "触覚フィードバック関連のコンポーネント。",
+      "Categorys": {
+        "Filters": {
+          "Summary": "触覚フィードバックのフィルター。",
+          "Components": {
+            "AxisDistanceHapticFilter": {
+              "Description": "特定の軸に沿った距離に基づいてハプティクスの強度を調整するフィルター。"
+            },
+            "CylindricalDistanceHapticFilter": {
+              "Description": "円筒形の範囲内での距離に基づいてハプティクスの強度を調整するフィルター。"
+            },
+            "ImpactTimeHapticFilter": {
+              "Description": "ユーザーの手が影響エリア内にいる時間に基づいてハプティクスの強度を調整するフィルター。"
+            },
+            "RadialDistanceHapticFilter": {
+              "Description": "中心点からの距離に基づいてハプティクスの強度を調整するフィルター。"
+            },
+            "SimplexNoiseHapticFilter": {
+              "Description": "Simplexノイズを使用してハプティクスの強度を変化させるフィルター。"
+            },
+            "SineHapticFilter": {
+              "Description": "時間経過に伴いハプティクスの強度を正弦波のように変化させるフィルター。"
+            },
+            "ValueNoiseHapticFilter": {
+              "Description": "値ノイズを使用してハプティクスの強度を変化させるフィルター。"
+            },
+            "VelocityHapticFilter": {
+              "Description": "ハプティクスデバイスがHapticVolumeを通過する速度に基づいてハプティクスの強度を調整するフィルター。"
+            }
+          }
+        }
+      },
+      "Components": {
+        "ArmHapticPointMapper": {
+          "Description": "実世界の腕のハプティックポイントをゲーム内の腕にマッピングします。"
+        },
+        "AvatarHapticSourceManager": {
+          "Description": "フルボディアバターの自動生成されたハプティックポイントを上書きし、カスタムのハプティックボリュームを指定できます。"
+        },
+        "ControllerHapticPointMapper": {
+          "Description": "コントローラーのハプティックポイントをマッピングします。"
+        },
+        "DirectTagHapticSource": {
+          "Description": "特定のタグに直接関連付けられたハプティックソースを提供します。"
+        },
+        "HapticPointData": {
+          "Description": "特定のユーザーのハプティックデバイスに関するデータを取得します。"
+        },
+        "HapticPointSampler": {
+          "Description": "ハプティックポイントのサンプリングを行います。"
+        },
+        "HapticVolume": {
+          "Description": "コライダーと組み合わせて、ユーザーが特定のエリアでハプティックフィードバックを感じることができます。"
+        },
+        "HeadHapticPointMapper": {
+          "Description": "実世界の頭部のハプティックポイントをゲーム内の頭部にマッピングします。"
+        },
+        "HierarchyHapticsSource": {
+          "Description": "階層内のハプティックソースを管理します。"
+        },
+        "LegHapticPointMapper": {
+          "Description": "実世界の脚のハプティックポイントをゲーム内の脚にマッピングします。"
+        },
+        "TagHapticPointMapper": {
+          "Description": "タグに基づいてハプティックポイントをマッピングします。"
+        },
+        "TorsoHapticPointMapper": {
+          "Description": "実世界の胴体のハプティックポイントをゲーム内の胴体にマッピングします。"
+        },
+        "VirtualHapticPointSampler": {
+          "Description": "仮想環境内でハプティック感覚を取得するためのコンポーネントです。"
+        }
+      }
+    },
+    "Interaction": {
+      "Summary": "インタラクション関連のコンポーネント。",
+      "Components": {
+        "PointTouchSource": {
+          "Description": "ポイントベースのタッチ入力を処理するコンポーネント。"
+        },
+        "TipTouchSource": {
+          "Description": "ツールの先端からのタッチ入力を処理するコンポーネント。"
+        }
+      }
+    },
+    "Mockup Devices": {
+      "Summary": "モックアップデバイス関連のコンポーネント。",
+      "Components": {
+        "MockupMouthTrackingSource": {
+          "Description": "口のトラッキングのモックアップソースを提供するコンポーネント。"
+        }
+      }
+    },
+    "Utility": {
+      "Summary": "入力関連のユーティリティコンポーネント。",
+      "Components": {
+        "StaticCameraDevice": {
+          "Description": "静的なカメラデバイスを提供するコンポーネント。"
+        }
+      }
+    }
+  }
+}
+
