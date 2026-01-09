@@ -13,13 +13,6 @@
       <p class="subtitle">
         データ元: <a href="https://wiki.resonite.com/Category:Components/ja" target="_blank" rel="noopener">Resonite Wiki - カテゴリ:コンポーネント</a>
       </p>
-      <div class="header-controls" aria-label="開く階層コントロール">
-        <div class="depth-bar-inner">
-          <span class="depth-label" title="ツリーの自動展開レベル">開く階層</span>
-          <input id="openDepthRange" class="depth-range" type="range" min="0" max="4" step="1" value="0" aria-label="開く階層スライダー">
-          <span id="openDepthValue" class="depth-value" aria-live="polite">0</span>
-        </div>
-      </div>
     </div>
   </header>
 
@@ -29,7 +22,16 @@
   </section>
 
   <section class="content" role="region" aria-label="内容">
-    <nav id="tagBar" class="tag-bar" aria-label="カテゴリフィルタ"></nav>
+    <aside class="sidebar" aria-label="サイドバー">
+      <div class="tag-controls" aria-label="開く階層コントロール">
+        <div class="depth-bar-inner">
+          <span class="depth-label" title="ツリーの自動展開レベル">階層表示</span>
+          <input id="openDepthRange" class="depth-range" type="range" min="0" max="4" step="1" value="1" aria-label="開く階層スライダー">
+          <span id="openDepthValue" class="depth-value" aria-live="polite">1</span>
+        </div>
+      </div>
+      <nav id="tagBar" class="tag-bar" aria-label="カテゴリフィルタ"></nav>
+    </aside>
     <main id="treeContainer" class="tree-container" aria-live="polite"></main>
   </section>
 
