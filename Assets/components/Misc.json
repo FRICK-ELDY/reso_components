@@ -1,5 +1,8 @@
 {
   "Summary": "その他。",
-  "Components": {}
+  "Components": {
+    "OBSSettings": {
+      "Description": "OBS（Open Broadcaster Software）の設定を管理するコンポーネント。"
+    }
+  }
 }
-
