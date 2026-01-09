@@ -26,7 +26,7 @@
       "Description": "適用された役割によって、どのアクションを使用できるかを設定します。"
     },
     "VoicePermission": {
-      "Description": "どのボイスモードを使用できるかを設定します。「Shout」が設定されている場合、ユーザーは左4つのボイスモード（Mute < Whisper < Normal < Shout）を使用できます。Broadcastは使用できません。"
+      "Description": "どのボイスモードを使用できるかを設定します。「Shout」が設定されている場合、ユーザーは左4つのボイスモード（Mute < Whisper < Normal < Shout）を使用できます。"
     },
     "WorldPermissions": {
       "Description": "ワールドの一般的な権限（スポーン、保存、アイテムの持ち出し、アバターの装備、ワールドの保存など）を設定します。"

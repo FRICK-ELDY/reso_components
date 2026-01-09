@@ -21,6 +21,12 @@ html, body {
   line-height: 1.6;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   padding: 20px;
   border-bottom: 1px solid var(--border);
@@ -69,6 +75,12 @@ html, body {
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+.content {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .controls input[type="search"] {
@@ -141,11 +153,14 @@ html, body {
 
 .tag-bar {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 8px;
-  padding: 10px 20px;
-  border-bottom: 1px solid var(--border);
+  padding: 12px;
+  flex: 0 0 260px;
+  width: 260px;
+  border-right: 1px solid var(--border);
   background: #0f1320;
+  overflow: auto;
 }
 
 .tag-bar .tag {
@@ -157,6 +172,8 @@ html, body {
   cursor: pointer;
   font-size: 12px;
   user-select: none;
+  width: 100%;
+  text-align: left;
 }
 
 .tag-bar .tag:hover {
@@ -170,6 +187,9 @@ html, body {
 }
 
 .tree-container {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: auto;
   padding: 18px 20px 60px;
 }
 
