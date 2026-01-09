@@ -1,5 +1,9 @@
 {
   "Summary": "インタラクション関連。",
-  "Components": {}
+  "Components": {
+    "GripPoseReference": {
+      "Description": "グリップ（把持）ポーズの参照を提供します。"
+    }
+  }
 }
 
