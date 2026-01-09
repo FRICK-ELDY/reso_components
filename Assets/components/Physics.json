@@ -1,5 +1,76 @@
 {
   "Summary": "物理演算に関連するコンポーネント。",
-  "Components": {}
+  "Categorys": {
+    "Colliders": {
+      "Summary": "物理的な衝突判定を行うためのコンポーネント。",
+      "Components": {
+        "BoxCollider": {
+          "Description": "X、Y、Zのサイズを持つボックス型のコライダー。"
+        },
+        "CapsuleCollider": {
+          "Description": "高さと半球状の端部の半径を持つカプセル型のコライダー。"
+        },
+        "ConeCollider": {
+          "Description": "高さと円形の端部の半径を持つ円錐型のコライダー。"
+        },
+        "ConvexHullCollider": {
+          "Description": "オブジェクトのメッシュに対して凸包（凹みのない形状）を作成するコライダー。"
+        },
+        "CylinderCollider": {
+          "Description": "高さと円形の端部の半径を持つ円柱型のコライダー。"
+        },
+        "MeshCollider": {
+          "Description": "オブジェクトのメッシュの外形に基づくコライダー。"
+        },
+        "SphereCollider": {
+          "Description": "半径を持つ球形のコライダー。"
+        },
+        "TriangleCollider": {
+          "Description": "三角形ポリゴンの物理的な表現を行うコライダー。"
+        }
+      }
+    },
+    "Dynamic Bones": {
+      "Summary": "キャラクターやオブジェクトの揺れ物表現を実現するためのコンポーネント。",
+      "Components": {
+        "DynamicBoneChain": {
+          "Description": "ダイナミックボーンのチェーンを作成・管理するコンポーネント。"
+        },
+        "DynamicBonePlayerColliders": {
+          "Description": "プレイヤーのコライダーとダイナミックボーンの相互作用を管理するコンポーネント。"
+        },
+        "DynamicBoneSphereCollider": {
+          "Description": "ダイナミックボーンの球形コライダーを設定するコンポーネント。"
+        }
+      }
+    },
+    "Extensions": {
+      "Summary": "物理挙動を拡張するための追加コンポーネント。",
+      "Components": {
+        "MeshUVRaycastPortal": {
+          "Description": "メッシュのUV座標を使用したレイキャストポータルコンポーネント。"
+        },
+        "SlotRaycastTransferPortal": {
+          "Description": "スロット間でレイキャストを転送するポータルコンポーネント。"
+        }
+      }
+    },
+    "Utility": {
+      "Summary": "物理関連の補助的な機能を提供するコンポーネント。",
+      "Components": {
+        "ColliderUserTracker": {
+          "Description": "コライダー内のユーザーを追跡するコンポーネント。"
+        },
+        "SingleShapeCharacterControllerManager": {
+          "Description": "ユーザーの立位や現在の高さに基づいてカプセルコライダーの形状を変更するコンポーネント。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "CharacterController": {
+      "Description": "キャラクターの移動や衝突判定を管理するコンポーネント。"
+    }
+  }
 }
 
