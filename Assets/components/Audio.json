@@ -20,11 +20,17 @@
     "AudioClipPlayer": {
       "Description": "オーディオクリップを再生するプレーヤー。音量・ピッチ・ループを制御します。"
     },
+    "AudioFilterBlendWrapper": {
+      "Description": "複数のオーディオフィルタ効果を補間・ブレンドするラッパー。"
+    },
+    "AudioListener": {
+      "Description": "3Dオーディオの聴取点（リスナー）を定義し、定位や距離減衰の基準になります。"
+    },
     "AudioOutput": {
       "Description": "スロットの音声を出力します。デバイスへの出力や音量などを制御します。"
     },
-    "AudioReverbZone": {
-      "Description": "指定領域内の音に残響（リバーブ）効果を与えます。"
+    "AudioZitaReverb": {
+      "Description": "ZitaReverb アルゴリズムによる残響（ホール/ルーム系）を適用します。"
     },
     "LerpingMultiClipPlayer": {
       "Description": "複数クリップ間を補間（クロスフェード）しながら再生します。"
