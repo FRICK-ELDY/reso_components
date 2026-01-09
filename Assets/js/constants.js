@@ -30,6 +30,7 @@ export const CATEGORY_TAGS = [
   "Uncategorized",
   "Users",
   "Userspace",
+  "Utility",
   "Wizards"
 ];
 

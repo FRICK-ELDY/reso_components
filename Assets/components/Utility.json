@@ -1,0 +1,165 @@
+{
+  "Summary": "ユーティリティ（リンク、保存、同期、表示、フォーマット等）。",
+  "Categorys": {
+    "Entity Interfaces": {
+      "Summary": "エンティティインターフェース関連のユーティリティ。",
+      "Components": {
+        "AudioPlayerInterface": {
+          "Description": "オーディオプレーヤーインターフェースを提供します。"
+        },
+        "AudioStreamInterface": {
+          "Description": "オーディオストリームインターフェースを提供します。"
+        },
+        "ColorDialogInterface": {
+          "Description": "カラーダイアログインターフェースを提供します。"
+        },
+        "DocumentInterface": {
+          "Description": "ドキュメントインターフェースを提供します。"
+        },
+        "HyperLinkDisplayInterface": {
+          "Description": "ハイパーリンク表示インターフェースを提供します。"
+        },
+        "NamePlateInterface": {
+          "Description": "ネームプレートインターフェースを提供します。"
+        },
+        "NoticeDisplayInterface": {
+          "Description": "通知表示インターフェースを提供します。"
+        },
+        "ProgressBarInterface": {
+          "Description": "進捗バーインターフェースを提供します。"
+        },
+        "TextDisplayInterface": {
+          "Description": "テキスト表示インターフェースを提供します。"
+        },
+        "VideoPlayerInterface": {
+          "Description": "ビデオプレーヤーインターフェースを提供します。"
+        },
+        "WorldLockingInterface": {
+          "Description": "ワールドロックインターフェースを提供します。"
+        }
+      }
+    },
+    "Tools": {
+      "Summary": "ユーティリティ系ツール群。",
+      "Components": {
+        "AudioStreamSpawner": {
+          "Description": "オーディオストリームをスポーンします。"
+        },
+        "AvatarCreatorSpawner": {
+          "Description": "AvatarCreator をスポーンします。"
+        },
+        "FullBodyCalibratorSpawner": {
+          "Description": "フルボディキャリブレーターをスポーンします。"
+        },
+        "InteractiveCameraSpawner": {
+          "Description": "インタラクティブカメラをスポーンします。"
+        },
+        "GenericUserspaceDialogSpawner": {
+          "Description": "Userspace の汎用ダイアログをスポーンします。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "AppVersion": {
+      "Description": "アプリケーションのバージョン情報を提供します。"
+    },
+    "AudioSettingSync": {
+      "Description": "オーディオ設定を同期します。"
+    },
+    "AuthorityTimeBase": {
+      "Description": "権限側の時間基準を提供します。"
+    },
+    "ChildrenSaveBlocker": {
+      "Description": "子スロットの保存をブロックします。"
+    },
+    "CurrentDateTimeTextDriver": {
+      "Description": "現在日時を文字列フィールドに表示します。"
+    },
+    "DroneCamera": {
+      "Description": "ドローンカメラ挙動を提供します。"
+    },
+    "ExternalSlotDuplicator": {
+      "Description": "階層外のスロットを複製します。"
+    },
+    "ExternalSlotSaver": {
+      "Description": "階層外のスロットをアイテムと共に保存します。"
+    },
+    "FileVisual": {
+      "Description": "ファイルの視覚表現を表示します。"
+    },
+    "Hyperlink": {
+      "Description": "ブラウザでリンクを開きます。"
+    },
+    "Laser": {
+      "Description": "レーザーを提供します。"
+    },
+    "LocalUserLiveStatus": {
+      "Description": "ローカルユーザーのライブ状態を扱います。"
+    },
+    "MultiTextureFader<A>": {
+      "Description": "複数テクスチャ間のフェードを行います。"
+    },
+    "MultiValueTextFormatDriver": {
+      "Description": "複数の値から整形テキストを生成し文字列フィールドを駆動します。"
+    },
+    "PerformanceMetrics": {
+      "Description": "パフォーマンス指標を表示/収集します。"
+    },
+    "PlatformColorPalette": {
+      "Description": "プラットフォーム固有のカラーパレットを提供します。"
+    },
+    "PlatformInfo": {
+      "Description": "プラットフォーム情報を提供します。"
+    },
+    "QuantityTextFormatDriver<U>": {
+      "Description": "数量（単位付き）を整形して文字列フィールドを駆動します。"
+    },
+    "RandomEventGenerator": {
+      "Description": "ランダムにイベントを発火します。"
+    },
+    "ReferenceMultiplexer<T>": {
+      "Description": "複数参照の中から条件に応じて出力を切り替えます。"
+    },
+    "SettingsDataFeed": {
+      "Description": "設定項目のデータフィードを提供します。"
+    },
+    "SettingValueSync<T>": {
+      "Description": "設定値の同期を行います。"
+    },
+    "StoppedPlayableCleaner": {
+      "Description": "停止した IPlayable をクリーンアップします。"
+    },
+    "TextCountdownClock": {
+      "Description": "カウントダウンをテキストで表示します。"
+    },
+    "ToolSimulator": {
+      "Description": "ユーザーが保持/操作したかのようにツールをシミュレートします。"
+    },
+    "UserInterfaceEditModeSync": {
+      "Description": "UI 編集モードを同期します。"
+    },
+    "UserTrackingSpaceSync": {
+      "Description": "ユーザーのトラッキング空間を同期します。"
+    },
+    "ValueGraphRecorder": {
+      "Description": "値の変化をグラフとして記録します。"
+    },
+    "ValueMultiplexer": {
+      "Description": "複数の値入力から出力を選択します。"
+    },
+    "ValueTextFormatDriver<T>": {
+      "Description": "単一の値を整形して文字列フィールドを駆動します。"
+    },
+    "ViolentAprilFoolsExplosion": {
+      "Description": "エイプリルフール用のジョーク。削除時に子を爆散させます。"
+    },
+    "VoiceModeSync": {
+      "Description": "音声モードを同期します。"
+    },
+    "Workspace": {
+      "Description": "ワークスペース機能を提供します。"
+    }
+  }
+}
+
