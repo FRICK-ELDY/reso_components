@@ -1,0 +1,81 @@
+{
+  "Summary": "ProtoFlux関連。",
+  "Categorys": {
+    "Debug": {
+      "Summary": "ProtoFluxノードのデバッグに使用するコンポーネント。",
+      "Components": {
+        "ProtoFluxNodeDebugInfo": {
+          "Description": "ProtoFluxノードのデバッグ情報を表示するコンポーネント。"
+        }
+      }
+    },
+    "FrooxEngine": {
+      "Summary": "FrooxEngineのコアノード。",
+      "Categorys": {
+        "ProtoFlux": {
+          "Summary": "ProtoFlux関連のコンポーネント。",
+          "Categorys": {
+            "CoreNodes": {
+              "Summary": "ProtoFluxのコアノード。",
+              "Components": {
+                "AsyncMethodProxy": {
+                  "Description": "非同期メソッドを呼び出すためのプロキシコンポーネント。"
+                },
+                "AsyncMethodProxy_0000<T0,T1,T2,T3,T4,T5,T6,T7>": {
+                  "Description": ""
+                },
+                "AsyncMethodProxy_0000<T0,T1,T2,T3,T4,T5,T6>": {
+                  "Description": ""
+                },
+                "AsyncMethodProxy_0000<T0,T1,T2,T3,T4,T5>": {
+                  "Description": ""
+                }, 
+                "AsyncMethodProxy_0000<T0,T1,T2,T3,T4>": {
+                  "Description": ""
+                },
+                "AsyncMethodProxy_0000<T0,T1,T2,T3>": {
+                  "Description": ""
+                },
+                "AsyncMethodProxy_0000<T0,T1,T2>": {
+                  "Description": ""
+                },
+                "AsyncMethodProxy_0000<T0,T1>": {
+                  "Description": ""
+                },
+                "AsyncMethodProxy_0000<T0>": {
+                  "Description": ""
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Runtimes": {
+      "Summary": "ProtoFluxのランタイムコンポーネント。",
+      "Categorys": {
+        "Execution ": {
+          "Summary": "実行に関するランタイムコンポーネント。",
+          "Categorys": {
+            "Nodes": {
+              "Summary": "ProtoFluxのノード。",
+              "Components": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "Components": {
+    "GlobalDelegate<T>": {
+      "Description": "グローバルなデリゲートを定義・管理するコンポーネント。"
+    },
+    "GlobalReference<T>": {
+      "Description": "グローバルな参照を定義・管理するコンポーネント。"
+    },
+    "GlobalValue<T>": {
+      "Description": "グローバルな値を定義・管理するコンポーネント。"
+    }
+  }
+}
+

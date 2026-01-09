@@ -19,6 +19,7 @@ export const CATEGORY_TAGS = [
   "Network",
   "Permissions",
   "Physics",
+  "ProtoFlux",
   "Radiant UI",
   "Rendering",
   "Transform",
