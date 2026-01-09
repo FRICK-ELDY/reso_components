@@ -17,6 +17,7 @@ export const CATEGORY_TAGS = [
   "Metadata",
   "Misc",
   "Network",
+  "Permissions",
   "Physics",
   "Radiant UI",
   "Rendering",

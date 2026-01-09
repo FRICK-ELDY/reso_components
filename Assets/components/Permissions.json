@@ -1,0 +1,36 @@
+{
+  "Summary": "権限（パーミッション）関連。",
+  "Components": {
+    "AvatarObjectPermissions": {
+      "Description": "適切にタグ付けされた場合、ユーザーが装備できるアバターを決定します。"
+    },
+    "CameraPermissions": {
+      "Description": "誰がどのカメラモードを使用できるかを設定します。"
+    },
+    "GrabbablePermissions": {
+      "Description": "タグやインストールされたコンポーネントタイプによって、どのオブジェクトがつかみ可能かを設定します。"
+    },
+    "InteractionHandlerPermissions": {
+      "Description": "ツールタイプによって、どのツールが装備可能かを設定します。"
+    },
+    "LocomotionPermissions": {
+      "Description": "コンポーネントタイプによって、どのロコモーションを使用できるかを設定します。"
+    },
+    "ScreenViewPermissions": {
+      "Description": "スクリーンビュータイプ名によって、どのスクリーンビューを使用できるかを設定します。"
+    },
+    "TouchablePermissions": {
+      "Description": "タグやインストールされたコンポーネントタイプによって、どのオブジェクトがタッチ可能かを設定します。"
+    },
+    "UserPermissions": {
+      "Description": "適用された役割によって、どのアクションを使用できるかを設定します。"
+    },
+    "VoicePermission": {
+      "Description": "どのボイスモードを使用できるかを設定します。「Shout」が設定されている場合、ユーザーは左4つのボイスモード（Mute < Whisper < Normal < Shout）を使用できます。Broadcastは使用できません。"
+    },
+    "WorldPermissions": {
+      "Description": "ワールドの一般的な権限（スポーン、保存、アイテムの持ち出し、アバターの装備、ワールドの保存など）を設定します。"
+    }
+  }
+}
+
