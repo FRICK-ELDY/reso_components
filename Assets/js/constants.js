@@ -25,6 +25,7 @@ export const CATEGORY_TAGS = [
   "Rendering",
   "Tools",
   "Transform",
+  "UI",
   "UIX",
   "Uncategorized",
   "Userspace",

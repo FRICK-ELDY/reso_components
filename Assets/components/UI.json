@@ -1,0 +1,49 @@
+{
+  "Summary": "ユーザーインターフェース（UI）コンポーネント。",
+  "Categorys": {
+    "Dialogs": {
+      "Summary": "ダイアログUI。",
+      "Components": {
+        "LegacyColorDialog": {
+          "Description": "レガシーのカラーダイアログを提供します。"
+        }
+      }
+    },
+    "Physical": {
+      "Summary": "物理的インタラクションUI。",
+      "Components": {
+        "LegacyButton": {
+          "Description": "レガシーのボタンUIコンポーネント。"
+        },
+        "LegacyCheckbox": {
+          "Description": "レガシーのチェックボックスUIコンポーネント。"
+        },
+        "LegacyEnumEditor": {
+          "Description": "レガシーの列挙値編集UIコンポーネント。"
+        },
+        "LegacyHorizontalChoiceBar": {
+          "Description": "レガシーの水平選択バーUIコンポーネント。"
+        },
+        "LegacyNumericUpDown": {
+          "Description": "レガシーの数値アップダウンUIコンポーネント。"
+        },
+        "LegacyProgressBar": {
+          "Description": "レガシーの進捗バーUIコンポーネント。"
+        },
+        "LegacyRadio": {
+          "Description": "レガシーのラジオボタンUIコンポーネント。"
+        },
+        "LegacyRadioGroup": {
+          "Description": "レガシーのラジオグループUIコンポーネント。"
+        },
+        "LegacySlider": {
+          "Description": "レガシーのスライダーUIコンポーネント。"
+        },
+        "LegacyTextField": {
+          "Description": "レガシーのテキストフィールドUIコンポーネント。"
+        }
+      }
+    }
+  }
+}
+
