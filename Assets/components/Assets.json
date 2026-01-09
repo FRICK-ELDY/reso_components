@@ -10,6 +10,9 @@
         "BinaryExportable": {
           "Description": "スロットをバイナリ（Binary）ファイルとしてエクスポート可能にします。"
         },
+        "GaussianSplatExportable": {
+          "Description": "スロットをガウシアンスプラット（Gaussian Splat）ファイルとしてエクスポート可能にします。"
+        },
         "PackageExportable": {
           "Description": "スロットをResonite Packageファイルとしてエクスポート可能にします。"
         },
@@ -24,9 +27,6 @@
         },
         "VolumeExportable": {
           "Description": "スロットを3D画像（Texture3D）ファイルとしてエクスポート可能にします。"
-        },
-        "GaussianSplatExportable": {
-          "Description": "スロットをガウシアンスプラット（Gaussian Splat）ファイルとしてエクスポート可能にします。"
         }
       }
     },
@@ -99,12 +99,6 @@
         "PBS": {
           "Summary": "PBS（物理ベースシェーディング）関連のマテリアル。",
           "Components": {
-            "PBS_LerpMetallic": {
-              "Description": "金属（Metallic）の補間PBSマテリアル。"
-            },
-            "PBS_LerpSpecular": {
-              "Description": "スペキュラー（Specular）の補間PBSマテリアル。"
-            },
             "PBS_ColorMaskMetallic": {
               "Description": "カラーマスク適用のMetallic PBSマテリアル。"
             },
@@ -116,7 +110,7 @@
             },
             "PBS_ColorSplatSpecular": {
               "Description": "カラースプラット適用のSpecular PBSマテリアル。"
-            },
+            },            
             "PBS_DisplaceMetallic": {
               "Description": "ディスプレースメント対応のMetallic PBSマテリアル。"
             },
@@ -179,6 +173,12 @@
             },
             "PBS_VoronoiCrystal": {
               "Description": "ボロノイ結晶風のPBSマテリアル。"
+            },
+            "PBSLerpMetallic": {
+              "Description": "金属（Metallic）の補間PBSマテリアル。"
+            },
+            "PBSLerpSpecular": {
+              "Description": "スペキュラー（Specular）の補間PBSマテリアル。"
             }
           }
         },
@@ -350,6 +350,12 @@
       "Components": {
         "CheckerboardCubemap": {
           "Description": "チェッカーボードのキューブマップを生成します。"
+        },
+        "DebugDirectionCubemap": {
+          "Description": "(no doc)方向のキューブマップを生成します。"
+        },
+        "SimplexCubemap": {
+          "Description": "(no doc)Simplexノイズのキューブマップを生成します。"
         }
       }
     },
@@ -358,6 +364,14 @@
       "Components": {
         "DynamicSpriteFont": {
           "Description": "動的スプライトフォントを生成・提供します。"
+        }
+      }
+    },
+    "Procedural Gaussian Splat": {
+      "Summary": "(no doc)プロシージャルなガウシアンスプラット",
+      "Components": {
+        "DiagnosticGaussianSplat": {
+          "Description": "(no doc) 診断用のガウシアンスプラットを生成します。"
         }
       }
     },
@@ -413,8 +427,20 @@
         "CircleMesh": {
           "Description": "円メッシュを生成します。"
         },
+        "CircleSegmentShaderMesh": {
+          "Description": "円弧セグメント用シェーダーメッシュを生成します。"
+        },
+        "ColorDepthGrid": {
+          "Description": "カラーと深度のグリッド可視化メッシュを生成します。"
+        },
+        "ColorDepthPointCloud": {
+          "Description": "カラーと深度の点群メッシュを生成します。"
+        },
         "ConeMesh": {
           "Description": "円錐メッシュを生成します。"
+        },
+        "ConstrainedDelaunayMesh": {
+          "Description": "(no doc)制約付きデラニューメッシュを生成します。"
         },
         "CrossMesh": {
           "Description": "十字形メッシュを生成します。"
@@ -435,7 +461,19 @@
           "Description": "中空の円錐メッシュを生成します。"
         },
         "IcoSphereMesh": {
-          "Description": "正二十面体ベースのスフィアメッシュを生成します。"
+          "Description": "正二十面体ベースのスフィアメッシュを生成します（SH変調なし）。"
+        },
+        "IcoSphereMeshSH1": {
+          "Description": "球面調和（SH1/L1）で色や半径を変調できる IcoSphere メッシュを生成します。"
+        },
+        "IcoSphereMeshSH2": {
+          "Description": "球面調和（SH2/L2）で色や半径を変調できる IcoSphere メッシュを生成します。"
+        },
+        "IcoSphereMeshSH3": {
+          "Description": "球面調和（SH3/L3）で色や半径を変調できる IcoSphere メッシュを生成します。"
+        },
+        "IcoSphereMeshSH4": {
+          "Description": "球面調和（SH4/L4）で色や半径を変調できる IcoSphere メッシュを生成します。"
         },
         "ImageColorDistributionGraph": {
           "Description": "画像の色分布グラフメッシュを生成します。"
@@ -479,9 +517,6 @@
         "SphereMesh": {
           "Description": "球メッシュを生成します。"
         },
-        "SpiralTubeMesh": {
-          "Description": "螺旋チューブメッシュを生成します。"
-        },
         "StandaloneRectMesh<T>": {
           "Description": "単独の矩形メッシュを生成します。"
         },
@@ -514,15 +549,20 @@
         },
         "WrapperMesh": {
           "Description": "ラッパー用のメッシュ（別メッシュのラップ）を生成します。"
+        }
+      }
+    },
+    "Procedural Texture3Ds": {
+      "Summary": "(no doc)プロシージャルな3Dテクスチャ",
+      "Components": {
+        "MultiChannelSimplexTexture3D": {
+          "Description": "マルチチャンネルSimplexノイズの3Dテクスチャを生成します。"
         },
-        "CircleSegmentShaderMesh": {
-          "Description": "円弧セグメント用シェーダーメッシュを生成します。"
+        "SimplexTexture3D": {
+          "Description": "Simplexノイズの3Dテクスチャを生成します。"
         },
-        "ColorDepthGrid": {
-          "Description": "カラーと深度のグリッド可視化メッシュを生成します。"
-        },
-        "ColorDepthPointCloud": {
-          "Description": "カラーと深度の点群メッシュを生成します。"
+        "UVW_ProceduralTexture3D": {
+          "Description": "UVWプロシージャルテクスチャの3Dテクスチャを生成します。"
         }
       }
     },
@@ -531,6 +571,9 @@
       "Components": {
         "AudioWaveformTexture": {
           "Description": "オーディオ波形を可視化したテクスチャを生成します。"
+        },
+        "DocumentPageTexture": {
+          "Description": "ドキュメントページのテクスチャを生成します。"
         },
         "GradientStripTexture": {
           "Description": "グラデーションストリップのテクスチャを生成します。"
@@ -584,10 +627,10 @@
         "AudioClipAssetMetadata": {
           "Description": "オーディオクリップのアセットメタデータ。"
         },
-        "AudioStreamMetadata": {
+        "AudioStreamMetadata<S>": {
           "Description": "オーディオストリームのメタデータ。"
         },
-        "BooleanAssetDriver": {
+        "BooleanAssetDriver<A>": {
           "Description": "ブール値でアセットの切り替えなどを駆動します。"
         },
         "ClipboardImporter": {
@@ -614,7 +657,7 @@
         "MeshAssetMetadata": {
           "Description": "メッシュのアセットメタデータ。"
         },
-        "ProceduralAssetMetadata": {
+        "ProceduralAssetMetadata<A>": {
           "Description": "プロシージャルアセットのメタデータ。"
         },
         "Texture2DAssetMetadata": {
@@ -653,6 +696,9 @@
     },
     "StaticCubemap": {
       "Description": "URL からキューブマップを読み込み提供します。"
+    },
+    "StaticDocument": {
+      "Description": "URL からドキュメントを読み込み提供します。"
     },
     "StaticFont": {
       "Description": "URL からフォントを読み込み提供します。"
