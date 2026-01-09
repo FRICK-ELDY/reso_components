@@ -1,5 +1,9 @@
 {
-  "Summary": "ジェネレータ/入力関連。",
-  "Components": {}
+  "Summary": "ジェネレータ（迷路生成など）。",
+  "Components": {
+    "MazeGenerator": {
+      "Description": "指定したパラメータで迷路を生成します。"
+    }
+  }
 }
 
