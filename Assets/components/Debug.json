@@ -1,0 +1,78 @@
+{
+  "Summary": "デバッグ表示、可視化、入力/設定監視、テスト動作用のコンポーネント。",
+  "Components": {
+    "DebugBoxDistance": {
+      "Description": "ボックスとの距離を可視化/デバッグします。"
+    },
+    "DebugConeDistance": {
+      "Description": "コーンとの距離を可視化/デバッグします。"
+    },
+    "DebugFeed": {
+      "Description": "デバッグ情報のフィードを表示します。"
+    },
+    "DebugFieldAdapter": {
+      "Description": "フィールド値を監視/出力するデバッグ用アダプターです。"
+    },
+    "DebugFieldAdapterTest": {
+      "Description": "DebugFieldAdapter のテスト用コンポーネントです。"
+    },
+    "DebugHandOffsetCompensation": {
+      "Description": "手のオフセット補正をデバッグ/調整します。"
+    },
+    "DebugHands": {
+      "Description": "手の可視化/デバッグ表示を行います。"
+    },
+    "DebugHapticPoint": {
+      "Description": "ハプティック（触覚）ポイントを可視化/デバッグします。"
+    },
+    "DebugLinePoint": {
+      "Description": "ライン/ポイントの可視化デバッグを行います。"
+    },
+    "DebugLocomotionSimulator": {
+      "Description": "移動（ロコモーション）をシミュレートしデバッグします。"
+    },
+    "DebugSceneHierarchyFeed": {
+      "Description": "シーン階層のデバッグフィードを表示します。"
+    },
+    "DebugSettingListener": {
+      "Description": "設定値の変更をリッスンしデバッグ出力します。"
+    },
+    "DebugSettingSwitchSource": {
+      "Description": "設定スイッチのソースをデバッグ/切り替えします。"
+    },
+    "DebugSphereRaycast": {
+      "Description": "球レイキャストの可視化/デバッグを行います。"
+    },
+    "DebugSphereSectorDistance": {
+      "Description": "球セクターとの距離を可視化/デバッグします。"
+    },
+    "DebugTangentSpace": {
+      "Description": "タンジェント空間の可視化/デバッグを行います。"
+    },
+    "DebugTestMeshThroughput": {
+      "Description": "メッシュ処理スループットのテスト/ベンチマークを行います。"
+    },
+    "DebugTransform": {
+      "Description": "トランスフォームの値を可視化/デバッグします。"
+    },
+    "DebugUsers": {
+      "Description": "ユーザー情報/位置のデバッグ可視化を行います。"
+    },
+    "DebugVector": {
+      "Description": "ベクター（方向/大きさ）を可視化/デバッグします。"
+    },
+    "FootstepEventDebugVisualizer": {
+      "Description": "足音イベントのデバッグ可視化を行います。"
+    },
+    "RectTransformComputedProperties": {
+      "Description": "RectTransform の計算済みプロパティを表示します。"
+    },
+    "TestFakeViveTracker": {
+      "Description": "Vive トラッカーを模擬するテスト用コンポーネントです。"
+    },
+    "TestSineWaveSource": {
+      "Description": "サイン波を生成するテスト用ソースです。"
+    }
+  }
+}
+

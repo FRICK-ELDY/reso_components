@@ -7,6 +7,7 @@ export const CATEGORY_TAGS = [
   "Cloud",
   "Common UI",
   "Data",
+  "Debug",
   "Generators",
   "Interaction",
   "Locomotion",
