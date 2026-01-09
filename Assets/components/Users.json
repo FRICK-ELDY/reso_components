@@ -1,0 +1,144 @@
+{
+  "Summary": "ユーザー関連（スポーン、トラッキング、ストリーム、情報など）。",
+  "Categorys": {
+    "Common Avatar System": {
+      "Summary": "アバターのプロパティを制御します。",
+      "Categorys": {
+        "Anchors": { "Summary": "アバターのアンカー/リリース。", "Components": {
+          "AvatarAnchor": { "Description": "アバターをアンカー固定します。" },
+          "AvatarAnchorDestroyOnRelease": { "Description": "リリース時にアンカーを破棄します。" },
+          "AvatarAnchorLocomotionRelease": { "Description": "ロコモーションによりアンカーからリリースします。" },
+          "AvatarAnchorTouchTrigger": { "Description": "タッチ入力でアンカー/リリースをトリガーします。" },
+          "MultiUserAvatarAnchor": { "Description": "複数ユーザーのアバターをアンカー可能にします。" }
+        } },
+        "Animation": { "Summary": "プロシージャルロコモーション関連。", "Components": {
+          "LocomotionAnimationBodyCollider": { "Description": "ボディ用のロコモーションアニメーション用コライダー設定を行います。" },
+          "LocomotionAnimationColliderBlock": { "Description": "ロコモーションアニメーションのコライダー挙動をブロック/制御します。" },
+          "LocomotionAnimationConfiguration": { "Description": "プロシージャルロコモーションの各種設定を行います。" },
+          "LocomotionAnimationFeetMetrics": { "Description": "足のメトリクス（長さ/幅/接地など）を定義します。" },
+          "LocomotionAnimationHandMetrics": { "Description": "手のメトリクス（長さ/幅/可動域など）を定義します。" },
+          "LocomotionAnimationSuppressor": { "Description": "ロコモーションアニメーションの抑制/無効化を行います。" }
+        } },
+        "Audio": { "Summary": "アバターのオーディオ関連。", "Components": {
+          "AvatarAudioConfiguration": { "Description": "アバターの音声設定（入力/出力/処理）を構成します。" },
+          "AvatarAudioOutputManager": { "Description": "アバターの音声出力先や出力動作を管理します。" },
+          "AvatarVoiceInfo": { "Description": "アバターのボイス情報（状態/設定）を提供します。" },
+          "AvatarVoiceRangeVisualizer": { "Description": "アバターの声の到達範囲を可視化します。" },
+          "AvatarVoiceSourceAssigner": { "Description": "アバターの音声ソースを割り当てます。" }
+        } },
+        "Face": { "Summary": "表情・顔の制御。", "Components": {
+          "AvatarExpressionDriver": { "Description": "アバターの表情を駆動します。" },
+          "AvatarEyeDataSourceAssigner": { "Description": "目のデータソースを割り当てます。" },
+          "AvatarEyeTrackingInfo": { "Description": "アバターの視線トラッキング情報を提供します。" },
+          "AvatarMouthDataSourceAssigner": { "Description": "口のデータソースを割り当てます。" },
+          "AvatarMouthTrackingInfo": { "Description": "アバターの口のトラッキング情報を提供します。" },
+          "AvatarRawEyeData": { "Description": "生の目のトラッキングデータを提供します。" },
+          "AvatarRawMouthData": { "Description": "生の口のトラッキングデータを提供します。" },
+          "EyeLinearDriver": { "Description": "視線を線形に駆動します。" },
+          "EyeManager": { "Description": "目/視線関連の管理を行います。" },
+          "EyeRotationDriver": { "Description": "視線の回転を駆動します。" }
+        } },
+        "Fingers": { "Summary": "指の制御。", "Components": {
+          "AvatarFingerPoseInfo": { "Description": "アバターの指ポーズ情報を提供します。" },
+          "AvatarHandDataAssigner": { "Description": "手のデータソースを割り当てます。" },
+          "FingerPoseLerp": { "Description": "指ポーズを補間（Lerp）します。" },
+          "FingerPoseModifier": { "Description": "指ポーズを修正・調整します。" },
+          "FingerPoseMultiplexer": { "Description": "複数の指ポーズ入力を多重化します。" },
+          "FingerPosePreset": { "Description": "指ポーズのプリセットを適用します。" },
+          "FingerReferencePoseSource": { "Description": "参照用の指ポーズを提供します。" },
+          "FingerSplayModifier": { "Description": "指の開き（スプレイ）を調整します。" },
+          "HandPoser": { "Description": "手全体のポーズを作成・適用します。" }
+        } },
+        "Nameplate": { "Summary": "ネームプレート関連。", "Components": {
+          "AvatarBadgeManager": { "Description": "アバターのバッジ表示/管理を行います。" },
+          "AvatarLiveIndicator": { "Description": "ライブ状態を示すインジケーターを表示します。" },
+          "AvatarNameTagAssigner": { "Description": "ネームタグ（名前表示）の割り当てを行います。" },
+          "AvatarNameplateVisibilityDriver": { "Description": "ネームプレートの表示/非表示を駆動します。" }
+        } },
+        "Pose Filters": { "Summary": "ポーズフィルタ。", "Components": {
+          "AvatarPoseBoxConstraint": { "Description": "アバターポーズにボックス拘束を適用します。" },
+          "AvatarPoseOffset": { "Description": "アバターポーズに位置・回転などのオフセットを適用します。" },
+          "AvatarPoseRotationConstraint": { "Description": "アバターポーズに回転拘束を適用します。" },
+          "AvatarPoseSmoothLerp": { "Description": "アバターポーズをスムーズに補間（Lerp）します。" }
+        } }
+      },
+      "Components": {
+        "AvatarControllerInfo": { "Description": "アバターコントローラの情報を提供します。" },
+        "AvatarControllerSpawner": { "Description": "アバターコントローラを生成します。" },
+        "AvatarDebugHand": { "Description": "デバッグ用の手の表示/制御を行います。" },
+        "AvatarDestroyOnDequip": { "Description": "装備解除時にアバターを破棄します。" },
+        "AvatarFacetAnchor": { "Description": "アバターファセット用のアンカーを提供します。" },
+        "AvatarGroup": { "Description": "アバターのグループ管理を行います。" },
+        "AvatarManager": { "Description": "アバターの全体管理を行います。" },
+        "AvatarNeckOffset": { "Description": "首位置のオフセットを調整します。" },
+        "AvatarNodeAssigner": { "Description": "アバターのノード割り当てを行います。" },
+        "AvatarObjectComponentProxy": { "Description": "アバターオブジェクトのコンポーネントをプロキシします。" },
+        "AvatarObjectScale": { "Description": "アバターオブジェクトのスケールを制御します。" },
+        "AvatarObjectSlot": { "Description": "アバター用のオブジェクトスロットを提供します。" },
+        "AvatarPoseFilterInstaller": { "Description": "ポーズフィルターをアバターにインストールします。" },
+        "AvatarPoseNode": { "Description": "アバターポーズ用のノードを提供します。" },
+        "AvatarRawToolData": { "Description": "ツール用のRawデータを提供します。" },
+        "AvatarRenderSettings": { "Description": "アバターのレンダリング設定を行います。" },
+        "AvatarRoot": { "Description": "アバターのルートを示します。" },
+        "AvatarSlotEquippedToggle": { "Description": "スロット装備状態をトグル制御します。" },
+        "AvatarToolAnchor": { "Description": "アバターツールのアンカーを提供します。" },
+        "AvatarTrackingOffset": { "Description": "アバターのトラッキングオフセットを設定します。" },
+        "AvatarUserMeshHider": { "Description": "ユーザーのメッシュを非表示にします。" },
+        "AvatarUserReferenceAssigner": { "Description": "ユーザー参照の割り当てを行います。" },
+        "AvatarUserRootOverrideAssigner": { "Description": "ユーザーのルート参照を上書き割り当てします。" },
+        "AvatarUserViewHeadOverride": { "Description": "ユーザーのビュー/頭部参照を上書きします。" },
+        "CommonAvatarBuilder": { "Description": "共通アバターのビルド/セットアップを行います。" },
+        "DefaultUserScale": { "Description": "ユーザーの既定スケールを設定します。" },
+        "SimpleAvatarProtection": { "Description": "シンプルなアバタープロテクションを提供します。" }
+      }
+    }
+  },
+  "Components": {
+    "CommonSpawnArea": {
+      "Description": "ユーザーがスポーンする領域を定義します。任意で PointGenerator を利用できます。"
+    },
+    "EyeTrackingStreamManager": {
+      "Description": "眼球データのストリーム入力を扱うコンポーネント。"
+    },
+    "FingerPoseStreamManager": {
+      "Description": "指の姿勢データのストリーム入力を扱うコンポーネント。"
+    },
+    "InteractionHandlerStreamDriver": {
+      "Description": "レーザーインタラクションのストリーム入力を扱うコンポーネント。"
+    },
+    "MouthTrackingStreamManager": {
+      "Description": "口のトラッキングデータのストリーム入力を扱うコンポーネント。"
+    },
+    "SimpleAwayIndicator": {
+      "Description": "ユーザーが別のワールドにフォーカス中であることを示すマテリアルをアバターに付与します。"
+    },
+    "SimpleUserSpawn": {
+      "Description": "オプションなしでユーザーをスポーンします（CommonSpawnArea の簡易版）。"
+    },
+    "SpawnArc": {
+      "Description": "円弧の縁に沿ってユーザーをスポーンできるようにします。"
+    },
+    "TrackedDevicePositioner": {
+      "Description": "(no docs) トラッキングデバイスの位置決めを行います。"
+    },
+    "TrackerController": {
+      "Description": "(no docs) トラッカーコントローラを制御します。"
+    },
+    "TransformStreamDriver": {
+      "Description": "(no docs) トランスフォームのストリームを駆動します。"
+    },
+    "UserAudioStream": {
+      "Description": "ユーザーの音声ストリームを扱います。"
+    },
+    "UserInfo": {
+      "Description": "(no docs) ユーザー情報を提供します。"
+    },
+    "UserJoinAudioIndicator": {
+      "Description": "(no docs) ユーザー参加時のオーディオインジケーターを表示/再生します。"
+    },
+    "UserRoot": {
+      "Description": "(no docs) ユーザーのルートスロットを示します。"
+    }
+  }
+}
+

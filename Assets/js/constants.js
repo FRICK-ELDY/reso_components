@@ -28,6 +28,7 @@ export const CATEGORY_TAGS = [
   "UI",
   "UIX",
   "Uncategorized",
+  "Users",
   "Userspace",
   "Wizards"
 ];
