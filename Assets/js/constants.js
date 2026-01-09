@@ -31,7 +31,8 @@ export const CATEGORY_TAGS = [
   "Users",
   "Userspace",
   "Utility",
-  "Wizards"
+  "Wizards",
+  "World"
 ];
 
 

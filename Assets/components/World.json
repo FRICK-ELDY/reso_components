@@ -1,0 +1,49 @@
+{
+  "Summary": "ワールド関連（リンク、ステータス、サムネイル、セッション情報など）。",
+  "Categorys": {
+    "Loading": {
+      "Summary": "ワールドの読み込みに関するコンポーネント。",
+      "Components": {
+        "AssetLoadStatus": {
+          "Description": "アセットの読み込み状態を表示/提供します。"
+        },
+        "MeshRendererLoadStatus": {
+          "Description": "MeshRenderer の読み込み状態を表示/提供します。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "CharacterColliderWorldLink": {
+      "Description": "キャラクター用コライダーとワールドリンクの連携を行います。"
+    },
+    "FocusedWorldStatus": {
+      "Description": "フォーカス中のワールド状態を提供/表示します。"
+    },
+    "SessionInfoSource": {
+      "Description": "セッションの情報ソースを提供します。"
+    },
+    "SessionCaptureThumbnailSource": {
+      "Description": "セッションキャプチャのサムネイルを提供します。"
+    },
+    "TouchWorldLink": {
+      "Description": "タッチ入力でワールドリンクを実行します。"
+    },
+    "WorldCaptureThumbnailSource": {
+      "Description": "ワールドキャプチャのサムネイルを提供します。"
+    },
+    "WorldCloseAction": {
+      "Description": "ワールドを閉じるアクションを実行します。"
+    },
+    "WorldLink": {
+      "Description": "ワールドへのリンクを提供します。"
+    },
+    "WorldOrb": {
+      "Description": "ワールドオーブ（ワールドへの入口）の表示/操作を行います。"
+    },
+    "WorldTextureThumbnailSource": {
+      "Description": "ワールドのテクスチャサムネイルを提供します。"
+    }
+  }
+}
+
