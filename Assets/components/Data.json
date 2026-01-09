@@ -1,5 +1,189 @@
 {
-  "Summary": "データ/デバッグ関連。",
-  "Components": {}
+  "Summary": "データ値・メタデータ・変数（動的/親/空間）、プリセット、変換。",
+  "Categorys": {
+    "Conversions": {
+      "Summary": "DateTime をローカルタイムゾーンへ変換するコンポーネント。",
+      "Components": {
+        "LocalDateTimeConvertor": {
+          "Description": "指定の DateTime をローカルユーザーのローカルタイムゾーンへ変換します。"
+        },
+        "LocalNullableDateTimeConvertor": {
+          "Description": "Nullable<DateTime> をローカルユーザーのローカルタイムゾーンへ変換します。"
+        }
+      }
+    },
+    "Dynamic": {
+      "Summary": "動的変数（Dynamic variables）と相互作用するコンポーネント。",
+      "Components": {
+        "DynamicField<T>": {
+          "Description": "動的変数の値を参照・編集するフィールドです。"
+        },
+        "DynamicReference<T>": {
+          "Description": "動的参照を提供します。"
+        },
+        "DynamicReferenceVariable<T>": {
+          "Description": "動的参照変数を保持します。"
+        },
+        "DynamicReferenceVariableDriver<T>": {
+          "Description": "動的参照変数と参照フィールドを同期します。"
+        },
+        "DynamicReferenceVariableReset<T>": {
+          "Description": "動的参照変数を既定値にリセットします。"
+        },
+        "DynamicTypeField": {
+          "Description": "動的型のフィールドを提供します。"
+        },
+        "DynamicTypeVariable": {
+          "Description": "動的型の変数を保持します。"
+        },
+        "DynamicValueVariable<T>": {
+          "Description": "動的値変数を保持します。"
+        },
+        "DynamicValueVariableDriver<T>": {
+          "Description": "動的値変数と値フィールドを同期します。"
+        },
+        "DynamicValueVariableReset<T>": {
+          "Description": "動的値変数を既定値にリセットします。"
+        },
+        "DynamicVariableSpace": {
+          "Description": "動的変数のスコープ（名前空間）を提供します。"
+        },
+        "DynamicVariableStatus<T>": {
+          "Description": "動的変数の状態を表示・監視します。"
+        }
+      }
+    },
+    "Parent": {
+      "Summary": "親値（Parent values）と相互作用する、より軽量な仕組み。",
+      "Components": {
+        "ParentReference<T>": {
+          "Description": "直近の子がリンクできる参照型を提供します。"
+        },
+        "ParentReferenceLink<T>": {
+          "Description": "スロットの親にある ParentReference にリンクします。"
+        },
+        "ParentValue<T>": {
+          "Description": "直近の子がリンクできる値型を提供します。"
+        },
+        "ParentValueLink<T>": {
+          "Description": "スロットの親にある ParentValue にリンクします。"
+        }
+      }
+    },
+    "Presets": {
+      "Summary": "トリガー時に値/参照フィールドへデータプリセットを適用します。",
+      "Components": {
+        "DataPreset": {
+          "Description": "トリガー時に適用する DataPresetValue と DataPresetReference の集合です。"
+        },
+        "DataPresetReference<T>": {
+          "Description": "参照型のデータプリセット。"
+        },
+        "DataPresetValue<T>": {
+          "Description": "値型のデータプリセット。"
+        }
+      }
+    },
+    "Spatial": {
+      "Summary": "空間変数（Spatial variables）と相互作用するコンポーネント。",
+      "Categorys": {
+        "Box Variables": {
+          "Summary": "箱形領域の空間変数。",
+          "Components": {
+            "BoxConstantReferenceSpatialVariable<T>": {
+              "Description": "ボックス領域で一定の参照値を提供する空間変数です。"
+            },
+            "BoxConstantValueSpatialVariable<T>": {
+              "Description": "ボックス領域で一定の値を提供する空間変数です。"
+            },
+            "BoxGradientValueSpatialVariable<T>": {
+              "Description": "ボックス領域で位置に応じたグラデーション値を提供する空間変数です。"
+            },
+            "BoxTexture3D SpatialVariable": {
+              "Description": "ボックス領域で 3D テクスチャに基づく値を提供する空間変数です。"
+            },
+            "BoxVertexValueSpatialVariable<T>": {
+              "Description": "ボックス領域で頂点値に基づく値を提供する空間変数です。"
+            }
+          }
+        },
+        "Samplers": {
+          "Summary": "空間データのサンプリングを行うコンポーネント。",
+          "Components": {
+            "BooleanSpatialVariableDriver": {
+              "Description": "空間変数を用いてブール値を駆動します。"
+            },
+            "CloningReferenceSpatialVariableCollector<T>": {
+              "Description": "空間上の参照値を収集し、必要に応じてクローンを生成します。"
+            },
+            "MinMaxValueSpatialVariableDriver<T>": {
+              "Description": "空間変数から最小/最大値をサンプリングして駆動します。"
+            },
+            "NumericValueSpatialVariableDriver<T>": {
+              "Description": "空間変数から数値をサンプリングして駆動します。"
+            },
+            "ReferenceSpatialVariableCollector<T>": {
+              "Description": "空間上の参照値を収集します。"
+            },
+            "ReferenceSpatialVariableDriver<T>": {
+              "Description": "空間変数の参照値をサンプリングして駆動します。"
+            },
+            "SpatialVariableBlendDriver": {
+              "Description": "複数の空間変数をブレンドして出力します。"
+            },
+            "TypeSpatialVariableDriver": {
+              "Description": "空間変数から型情報をサンプリングして駆動します。"
+            },
+            "ValueSpatialVariableDriver<T>": {
+              "Description": "空間変数から値をサンプリングして駆動します。"
+            },
+            "ValueSpatialVariablePartialDerivativeDriver<T>": {
+              "Description": "空間変数の値の偏微分をサンプリングして駆動します。"
+            }
+          }
+        },
+        "Sphere Variables": {
+          "Summary": "球形領域の空間変数。",
+          "Components": {
+            "SphereConstantReferenceSpatialVariable<T>": {
+              "Description": "球領域で一定の参照値を提供する空間変数です。"
+            },
+            "SphereConstantValueSpatialVariable<T>": {
+              "Description": "球領域で一定の値を提供する空間変数です。"
+            },
+            "SphereGradientVertorVariable":{ 
+              "Description": "球領域で位置に応じたベクトル値を提供する空間変数です。" 
+            },
+            "SphereStartEndValueSpatialVariable<T>": {
+              "Description": "球領域で開始値/終了値に基づく値を提供する空間変数です。"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Components": {
+    "AudioMetadata": {
+      "Description": "オーディオのメタデータを保持します。"
+    },
+    "FileMetadata": {
+      "Description": "ファイルのメタデータを保持します。"
+    },
+    "PhotoMetadata": {
+      "Description": "写真のメタデータを保持します。"
+    },
+    "ReferenceField<T>": {
+      "Description": "参照（Reference）フィールドを提供します。"
+    },
+    "ReferenceList": {
+      "Description": "参照のリストを保持・操作します。"
+    },
+    "TypeField": {
+      "Description": "型（Type）フィールドを提供します。"
+    },
+    "ValueField<T>": {
+      "Description": "値（Value）フィールドを提供します。"
+    }
+  }
 }
 
