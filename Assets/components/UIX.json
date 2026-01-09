@@ -1,5 +1,190 @@
 {
   "Summary": "ResoniteのUIシステムであるUIX用のコンポーネントです。",
-  "Components": {}
+  "Categorys": {
+    "Graphics": {
+      "Summary": "UIX の見た目（レンダリング）を構成するコンポーネント。",
+      "Components": {
+        "DualColorImage": {
+          "Description": "2色のティントを持つ画像を生成します。"
+        },
+        "GradientImage": {
+          "Description": "各コーナーにカスタムグラデーション色を持つ画像を作成します。"
+        },
+        "Image": {
+          "Description": "画像を作成します。"
+        },
+        "Mask": {
+          "Description": "画像のマスクを作成します。"
+        },
+        "OutlinedArc": {
+          "Description": "中心点の周囲にアウトラインの弧を描画します。"
+        },
+        "RawGraphic": {
+          "Description": "生のグラフィック（Raw Graphic）を作成します。"
+        },
+        "RawImage": {
+          "Description": "Raw 画像を作成します。"
+        },
+        "RectMesh": {
+          "Description": "矩形メッシュを作成します。"
+        },
+        "Text": {
+          "Description": "UIX 要素用のテキストを作成します。"
+        },
+        "TiledRawImage": {
+          "Description": "タイル状の Raw 画像を作成します。"
+        }
+      }
+    },
+    "Interaction": {
+      "Summary": "UIX へのユーザー入力・操作を扱うコンポーネント。",
+      "Components": {
+        "AssetReceiver<A>": {
+          "Description": "UIX 要素にアセット（A）をドロップして受け取ります。"
+        },
+        "Button": {
+          "Description": "押下可能な UIX ボタン。"
+        },
+        "Checkbox": {
+          "Description": "オン/オフを切り替える UIX チェックボックス。"
+        },
+        "Expander": {
+          "Description": "スロットのセクションを展開/有効化します。"
+        },
+        "HoverArea": {
+          "Description": "ユーザーのホバー入力に反応します。"
+        },
+        "HoverDynamicValueSet<T>": {
+          "Description": "ホバー入力に応じて値を動的に設定します。"
+        },
+        "InteractionBlock": {
+          "Description": "UIX のインタラクションイベントをブロックします。"
+        },
+        "ModalOverlay": {
+          "Description": "ユーザーが操作するモーダルオーバーレイ。"
+        },
+        "ModalOverlayManager": {
+          "Description": "モーダルオーバーレイの管理を行います。"
+        },
+        "ProgressBar": {
+          "Description": "進捗率を視覚的に示すインジケーター。"
+        },
+        "RadiantModalOverlay": {
+          "Description": "放射状のモーダルオーバーレイ。"
+        },
+        "ReferenceProxySource": {
+          "Description": "UIX 要素から参照を取り出せるようにします。"
+        },
+        "ReferenceRadio<T>": {
+          "Description": "参照型に基づくラジオオプション。"
+        },
+        "ReferenceReceiver": {
+          "Description": "UIX 要素に参照をドロップして設定できるようにします。"
+        },
+        "ReferenceReceiver<T>": {
+          "Description": "特定型の参照を UIX 要素にドロップして設定できるようにします。"
+        },        
+        "ScrollRect": {
+          "Description": "内容をスクロール可能にする矩形領域。"
+        },
+        "Slider<T>": {
+          "Description": "ハンドルをスライドして位置に対応する値を返す UIX スライダー。"
+        },
+        "TextField": {
+          "Description": "ユーザーが文字入力できるテキストフィールド。"
+        },
+        "UIGrabInstancer": {
+          "Description": "UIX 要素からスロットのインスタンスを掴めるようにします。"
+        },
+        "ValueFieldProxySource": {
+          "Description": "UIX 要素からフィールド参照を取得できるようにします。"
+        },
+        "ValueProxySource": {
+          "Description": "UIX 要素から値を取得できるようにします。"
+        },
+        "ValueRadio<T>": {
+          "Description": "値型に基づくラジオオプション。"
+        },
+        "ValueReceiver<T>": {
+          "Description": "UIX 要素に値をドロップして受け取ります。"
+        }
+      }
+    },
+    "Layout": {
+      "Summary": "UIX 要素のレイアウト（配置）を制御するコンポーネント。",
+      "Components": {
+        "ArcLayout": {
+          "Description": "中心点の周囲に沿って要素をカーブ配置するレイアウト（コンテキストメニューで使用）。"
+        },
+        "ArcSegmentLayout": {
+          "Description": "カーブレイアウトの区間を分割するレイアウトセグメント（コンテキストメニューで使用）。"
+        },
+        "AspectRatioFitter": {
+          "Description": "内容物を指定のアスペクト比に合わせるレイアウトフィッター。"
+        },
+        "ContentSizeFitter": {
+          "Description": "RectTransform 内に収まるよう内容サイズを動的に調整します。"
+        },
+        "FixedRectFitterLayout": {
+          "Description": "RectTransform 内に収まるよう内容サイズを静的に合わせます。"
+        },
+        "GraphicChunkRoot": {
+          "Description": "グラフィカルチャンクのルートを表します。"
+        },
+        "GridLayout": {
+          "Description": "左から右、上から下のグリッドで内容を整列するレイアウト。"
+        },
+        "HorizontalLayout": {
+          "Description": "内容を水平方向（左から右）に整列するレイアウト。"
+        },
+        "IgnoreLayout": {
+          "Description": "親レイアウトに対し、この要素をレイアウト対象外にします。"
+        },
+        "LayoutElement": {
+          "Description": "親レイアウトでの扱い（最小/優先サイズ等）を指定する記述子。"
+        },
+        "OverlappingLayout": {
+          "Description": "要素を重ねて配置するレイアウト。"
+        },
+        "VerticalLayout": {
+          "Description": "内容を垂直方向（上から下）に整列するレイアウト。"
+        }
+      }
+    },
+    "Utility": {
+      "Summary": "UIX システムの各種ユーティリティ。",
+      "Components": {
+        "AxisMultiViewportPanner": {
+          "Description": "UIX にページ切替（複数ビューポート）機能を提供します。"
+        },
+        "ProjectedRectSlotDriver": {
+          "Description": "スロットを指定の UIX 変換（位置/回転/スケール）に追従させます。"
+        },
+        "RectSizeDriver": {
+          "Description": "RectTransform の内容サイズを制御します。"
+        },
+        "RectSlotDriver": {
+          "Description": "スロットの位置値を駆動し、参照をフィールドとして提供します。"
+        },
+        "RectTransformLerp": {
+          "Description": "RectTransform の位置を補間（Lerp）します。"
+        },
+        "SlideSwapRegion": {
+          "Description": "RectTransform 内の領域をスライドで入れ替えます。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "Canvas": {
+      "Description": "UIX のキャンバス。"
+    },
+    "NestedCanvas": {
+      "Description": "メインの Canvas から入れ子のキャンバスを構成します。"
+    },
+    "RectTransform": {
+      "Description": "UIX 要素のサイズとアンカーを定義します。"
+    }
+  }
 }
 
