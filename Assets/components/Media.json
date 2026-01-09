@@ -1,0 +1,57 @@
+{
+  "Summary": "メディア関連。",
+  "Categorys": {
+    "Capture": {
+      "Summary": "キャプチャ関連のコンポーネント。",
+      "Components": {
+        "InteractiveCamera": {
+          "Description": "インタラクティブなカメラコンポーネント。"
+        },
+        "InteractiveCameraAnchor": {
+          "Description": "インタラクティブなカメラのアンカーポイントを設定するコンポーネント。"
+        }
+      }
+    },
+    "Utility": {
+      "Summary": "メディア関連のユーティリティコンポーネント。",
+      "Components": {
+        "ChannelVolumeMeter": {
+          "Description": "チャンネルごとの音量を測定するコンポーネント。"
+        },
+        "HoverPlayback": {
+          "Description": "ホバー時にメディアの再生を制御するコンポーネント。"
+        },
+        "IsPlayingDriver": {
+          "Description": "再生状態を駆動するコンポーネント。"
+        },
+        "PlaybackPositionDriver": {
+          "Description": "再生位置を駆動するコンポーネント。"
+        },
+        "PlaybackStateDriver": {
+          "Description": "再生状態を駆動するコンポーネント。"
+        },
+        "PlaybackSynchronizer": {
+          "Description": "複数のメディアプレイヤーの再生を同期するコンポーネント。"
+        },
+        "VisemeAnalyzer": {
+          "Description": "ビジーム（口の形状）を分析するコンポーネント。"
+        },
+        "VolumeMeter": {
+          "Description": "音量を測定するコンポーネント。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "ChildParentAudioClipPlayer": {
+      "Description": "親子関係でオーディオクリップを再生するコンポーネント。"
+    },
+    "GrabbableUserVoiceModifier": {
+      "Description": "つかみ可能なユーザーボイスモディファイアー。"
+    },
+    "RandomAudioClipPlayer": {
+      "Description": "ランダムにオーディオクリップを再生するコンポーネント。"
+    }
+  }
+}
+

@@ -13,6 +13,7 @@ export const CATEGORY_TAGS = [
   "Interaction",
   "Localization",
   "Locomotion",
+  "Media",
   "Metadata",
   "Misc",
   "Physics",
