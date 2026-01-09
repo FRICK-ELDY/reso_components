@@ -1,0 +1,31 @@
+{
+  "Summary": "ネットワーク関連。",
+  "Categorys": {
+    "OSC": {
+      "Summary": "Open Sound Control（OSC）でResoniteにデータを送受信します。",
+      "Components": {
+        "OSC Field<T>": {
+          "Description": "OSCの値を他のコンポーネントの値フィールドに格納するコンポーネント。"
+        },
+        "OSC Receiver": {
+          "Description": "Resonite内でOSCメッセージを受信するコンポーネント。"
+        },
+        "OSC Sender": {
+          "Description": "ResoniteからOSCメッセージを送信するコンポーネント。"
+        },
+        "OSC Value<T>": {
+          "Description": "OSCの値を通常のコンポーネントフィールドとして公開するコンポーネント。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "TwitchInterface": {
+      "Description": "TwitchのAPIイベントと通信するインターフェースコンポーネント。"
+    },
+    "WebsocketClient": {
+      "Description": "WebSocketクライアントとして機能するコンポーネント。"
+    }
+  }
+}
+
