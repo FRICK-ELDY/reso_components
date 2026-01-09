@@ -1,5 +1,288 @@
 {
   "Summary": "トランスフォーム（位置・回転・スケール）関連。",
-  "Components": {}
+  "Categorys": {
+    "Drivers": {
+      "Summary": "フィールドを駆動するコンポーネント。",
+      "Components": {
+        "AutoLookAtUser": { "Description": "最も近いユーザーを見るようにスロットを向けます。" },
+        "AxisAligner": { "Description": "子スロットをX/Y/Zいずれかの軸方向に等間隔で整列します。" },
+        "AxisPanner": { "Description": "指定軸に沿って一定速度・距離で移動します（折り返しやスケール変更も可能）。" },
+        "AxisRotationAligner": { "Description": "軸回転に合わせて子スロットを整列します。" },
+        "BooleanReferenceDriver<T>": { "Description": "ブール値に応じて参照ターゲットを二択で駆動します。" },
+        "BooleanSwitcher": { "Description": "整数値に基づいて複数オブジェクトのうち1つだけを有効化します。" },
+        "BooleanUserOverrideGather": { "Description": "ブールのユーザー上書き値を集約します。" },
+        "BooleanValueDriver<T>": { "Description": "ブール値に応じて値ターゲットを二択で駆動します。" },
+        "BoundingBoxDriver": { "Description": "バウンディングボックスを駆動/取得します。" },
+        "CircleAligner": { "Description": "子スロットを指定半径・軸の円周上に均等配置します。" },
+        "ColorToColorX": { "Description": "Color を ColorX に写像します。" },
+        "ConstantLerpValue<T>": { "Description": "一定レートで値を補間して駆動します。" },
+        "CopyGlobalScale": { "Description": "別スロットのグローバルスケールをコピーします。" },
+        "CopyGlobalTransform": { "Description": "別スロットの位置・回転（グローバル）をコピーします。" },
+        "DoubleToFloatCopy": { "Description": "(no docs)DoubleをFloatへコピーします。" },
+        "DynamicBlendShapeDriver": { "Description": "ブレンドシェイプを動的に駆動します。" },
+        "FlipAtUser": { "Description": "ユーザー方向へパネル等が反転するように向けます。" },
+        "Float2Driver": { "Description": "2つのFloatからFloat2を駆動します。" },
+        "Float3Driver": { "Description": "3つのFloatからFloat3を駆動します。" },
+        "Float4Driver": { "Description": "4つのFloatからFloat4を駆動します。" },
+        "LinearAngleMapper": { "Description": "Floatをオイラー角でFloatQへ線形写像します。" },
+        "LinearColorMapper": { "Description": "FloatをColorへ線形写像します。" },
+        "LinearMapper1D": { "Description": "FloatをFloatへ線形写像します。" },
+        "LinearMapper2D": { "Description": "FloatをFloat2へ線形写像します。" },
+        "LinearMapper3D": { "Description": "FloatをFloat3へ線形写像します。" },
+        "LinearMapper4D": { "Description": "FloatをFloat4へ線形写像します。" },
+        "LinearRotationMapper": { "Description": "Floatを四元数（FloatQ）へ線形写像します。" },
+        "LineTransform": { "Description": "線に沿った配置/変換を行います。" },
+        "LookAt": { "Description": "指定スロットの方向を常に向くようにします。" },
+        "LookAtUser": { "Description": "指定のユーザーの方向を常に向くようにします。" },
+        "MirrorTransform": { "Description": "ミラー変換を適用します。" },
+        "MultiBoolConditionDriver": { "Description": "複数条件の比較結果でブールを駆動します。" },
+        "NullableSourceDriver<T>": { "Description": "Nullable ソース値からターゲットを駆動します。" },
+        "NumericUserOverrideGather<T>": { "Description": "数値のユーザー上書き値を集約します。" },
+        "ObjectGridAligner": { "Description": "子スロットを行・列のグリッドで整列します（セルサイズ/補間あり）。" },
+        "ObjectScroller": { "Description": "オブジェクトの連続スクロール表示を行います。" },
+        "Panner1D": { "Description": "0から指定量までを一定速度で往復/循環させるFloat駆動。" },
+        "Panner2D": { "Description": "0から指定量までを一定速度で往復/循環させるFloat2駆動。" },
+        "Panner3D": { "Description": "0から指定量までを一定速度で往復/循環させるFloat3駆動。" },
+        "Panner4D": { "Description": "0から指定量までを一定速度で往復/循環させるFloat4駆動。" },
+        "PositionAtUser": { "Description": "指定ユーザーの位置へ配置/追従します。" },
+        "PositionDeltaDriver": { "Description": "位置の差分でターゲットを駆動します。" },
+        "RaycastDriver": { "Description": "レイキャスト結果を用いて値/トランスフォームを駆動します。" },
+        "RayDriver": { "Description": "始点・軸・距離からレイ上の2点（Float3）を駆動します。" },
+        "ReferenceCast<S,T>": { "Description": "参照型をキャストしてターゲットに適用します。" },
+        "ReferenceCopy<T>": { "Description": "ソース参照をターゲット参照へコピーします。" },
+        "ReferenceEqualityDriver<T>": { "Description": "参照が指定参照と等しいかでブールを駆動します。" },
+        "ReferenceUserOverride<T>": { "Description": "参照をユーザーごとに上書き駆動します。" },
+        "RelativePositioner": { "Description": "相対的な位置決めを行います。" },
+        "RemoteConnectionPointDriver": { "Description": "別スロットから位置/ベクトル/向き/サイズをリモート駆動します。" },
+        "ScaleAligner": { "Description": "子スロットのスケールを整列/調整します。" },
+        "Scaler": { "Description": "スケール値を駆動します。" },
+        "ScaleTransition": { "Description": "スケールを時間で補間遷移させます。" },
+        "SmoothTransform": { "Description": "位置・回転・スケールをスムーズに補間して目標へ追従させます。" },
+        "SmoothValue<T>": { "Description": "任意の値をスムーズに補間して目標へ近づけます。" },
+        "SphereAligner": { "Description": "子スロットを球面上に均等配置し、外向き整列も可能です。" },
+        "Spinner": { "Description": "指定軸回りに一定速度で回転させます。" },
+        "StringConcatenationDriver": { "Description": "文字列の連結結果でフィールドを駆動します。" },
+        "TextureSizeDriver": { "Description": "テクスチャのサイズ情報をフィールドへ反映します。" },
+        "TimeIntDriver": { "Description": "0..Nを指定速度で増減/反転して繰り返す整数を駆動します。" },
+        "UnwrappableBoxDriver": { "Description": "6つの面を回転させ展開可能な立方体を形成します。" },
+        "UserDistanceValueDriver<T>": { "Description": "ユーザー距離に応じて値を駆動します。" },
+        "UserInterfacePositioner": { "Description": "UI の位置決め/整列を行います。" },
+        "UserRefToSyncRefAdapter": { "Description": "UserRef を SyncRef に変換するアダプタです。" },
+        "UVAtlasAnimator": { "Description": "UV アトラスをアニメーションさせます。" },
+        "ValueCopy<T>": { "Description": "値をそのままコピーしてターゲットへ駆動します。" },
+        "ValueEqualityDriver<T>": { "Description": "値が指定値と等しいかでブールを駆動します。" },
+        "ValueUserOverride<T>": { "Description": "ユーザーごとに異なる値でターゲットを駆動します。" },
+        "ValueGradientDriver<T>": { "Description": "グラデーションと位置に基づきターゲット値を駆動します。" },
+        "VirtualParent": { "Description": "実階層を変えずに仮想的な親子付けを行います。" },
+        "Wiggler": { "Description": "ウィグル（揺れ）アニメーションを適用します。" },
+        "Wobbler1D": { "Description": "1次元の揺れを適用します。" },
+        "Wobbler2D": { "Description": "2次元の揺れを適用します。" },
+        "Wobbler3D": { "Description": "3次元の揺れを適用します。" },
+        "Wobbler4D": { "Description": "4次元の揺れを適用します。" }
+      }
+    },
+    "Function Drivers": {
+      "Summary": "グラフ関数で時間変化するドライバー。",
+      "Components": {
+        "TimeSineDriver": {
+          "Description": "時間に基づく正弦波で値を駆動します。"
+        }
+      }
+    },
+    "Interaction": {
+      "Summary": "インタラクションを制御するコンポーネント。",
+      "Components": {
+        "AssetFrameSlot<A>": {
+          "Description": "アセットフレームスロットを提供します。"
+        },
+        "Grabbable": {
+          "Description": "コライダーがある場合の掴み設定を制御します。"
+        },
+        "GrabbableAvatarPoseFilter": {
+          "Description": "掴まれている間のアバター手の位置/動きを制限します。"
+        },
+        "GrabbableParenter": {
+          "Description": "接触時に対象をこのスロットにペアレントします。"
+        },
+        "GrabbableReceiverSurface": {
+          "Description": "近づいたオブジェクトをスロット表面へ吸着させます。"
+        },
+        "GrabInstancer": {
+          "Description": "掴まれた際、テンプレートから複製を生成し、それを掴ませます。"
+        },
+        "GrabToolSnapper": {
+          "Description": "ツールのグラブ時にスナップ動作を行います。"
+        },
+        "GrabReferenceSet": {
+          "Description": "グラブ時に参照フィールドを設定します。"
+        },
+        "GrabTransformReset": {
+          "Description": "グラブ関連のトランスフォームをリセットします。"
+        },
+        "GrabValueSet": {
+          "Description": "グラブ時に値フィールドを設定します。"
+        },
+        "Joint": {
+          "Description": "掴んで回した際の回転挙動を制御します。"
+        },
+        "KnobControl": {
+          "Description": "ノブ（つまみ）操作の挙動を制御します。"
+        },
+        "PhysicalButton": {
+          "Description": "物理ボタンの押下挙動を制御します。"
+        },
+        "ScaleElement": {
+          "Description": "単一要素のスケール操作を制御します。"
+        },
+        "ScaleGroup": {
+          "Description": "グループ全体のスケール操作を制御します。"
+        },
+        "Slider": {
+          "Description": "掴んで移動することでスロット位置を制御します。"
+        },
+        "Snapper": {
+          "Description": "SnapTarget へ近づいた時に相対位置へスナップさせます。"
+        },
+        "SnapTarget": {
+          "Description": "Snapper を所定の相対位置へスナップさせます。"
+        },
+        "ToolAvatarPoseFilter": {
+          "Description": "ツール使用時のアバターポーズを制限します。"
+        },
+        "TouchableData": {
+          "Description": "タッチのホバー/タッチ状態や振動を制御します。"
+        },
+        "TouchButton": {
+          "Description": "タッチでボタン挙動を行います。"
+        },
+        "TouchEventRelay": {
+          "Description": "タッチイベントを ProtoFlux の Touchable Events ノードへ送出します。"
+        },
+        "TouchToggle": {
+          "Description": "タッチでトグル状態を切り替えます。"
+        },
+        "TouchValueOption<T>": {
+          "Description": "タッチによる値オプションの選択を行います。"
+        }
+      }
+    },
+    "Point Generators": {
+      "Summary": "点を生成するコンポーネント。",
+      "Components": {
+        "BoxPointGenerator": {
+          "Description": "長さ・幅・高さを指定したボックス内に点を配置して生成します。"
+        },
+        "CirclePointGenerator": {
+          "Description": "半径を指定した円周上に点を生成します。"
+        },
+        "PointGenerator": {
+          "Description": "単一点を生成します。"
+        },
+        "SpherePointGenerator": {
+          "Description": "半径を指定した球内/球面上に点を生成します。"
+        },
+        "SquarePointGenerator": {
+          "Description": "長さと幅を指定した矩形上に点を生成します。"
+        }
+      }
+    },
+    "Scaling": {
+      "Summary": "スケーリングに関するコンポーネント。",
+      "Components": {
+        "ScaleObject": {
+          "Description": "オブジェクトのスケール操作を制御します。"
+        },
+        "ScaleObjectCreator": {
+          "Description": "スケール用のオブジェクトを生成します。"
+        },
+        "ScaleObjectManager": {
+          "Description": "スケール対象のオブジェクト群を管理します。"
+        }
+      }
+    },
+    "Snapping": {
+      "Summary": "スナッピングに関するコンポーネント。",
+      "Components": {
+        "SnapCircle": {
+          "Description": "円形のスナップ基準にスロットをスナップさせます。"
+        },
+        "SnapGrid": {
+          "Description": "グリッド（格子）にスロットをスナップさせます。"
+        },
+        "SnapLine": {
+          "Description": "直線上にスロットをスナップさせます。"
+        },
+        "SnapPlane": {
+          "Description": "平面上にスロットをスナップさせます。"
+        },
+        "SnapPoint": {
+          "Description": "単一点にスロットをスナップさせます。"
+        },
+        "SnapSphere": {
+          "Description": "球面/球状のスナップ基準にスロットをスナップさせます。"
+        }
+      }
+    },
+    "Tagging": {
+      "Summary": "タグ付けに関するコンポーネント。",
+      "Components": {
+        "AssetOptimizationBlock": {
+          "Description": "アセット最適化に関するタグを付与します。"
+        },
+        "DestroyBlock": {
+          "Description": "スロットの破壊を禁止します。"
+        },
+        "DestroyRoot": {
+          "Description": "スロットを破壊ルートとしてマークします。"
+        },
+        "DuplicateBlock": {
+          "Description": "スロットの複製を禁止します。"
+        },
+        "GrabbableReparentBlock": {
+          "Description": "掴まれた際の再ペアレントを禁止します。"
+        },
+        "GrabBlock": {
+          "Description": "スロットが掴まれるのを禁止します。"
+        },
+        "NoDestroyUndo": {
+          "Description": "破壊操作のアンドゥを禁止します。"
+        },
+        "SearchBlock": {
+          "Description": "検索対象から除外します。"
+        },
+        "TeleportBlock": {
+          "Description": "テレポートロコモーションのレイキャストをブロックします。"
+        },
+        "TeleportPassthrough": {
+          "Description": "テレポートロコモーションがこのコライダーへレイキャストしないようにします。"
+        },
+        "TeleportSurface": {
+          "Description": "テレポートロコモーションでレイキャストを許可する表面として登録します。"
+        }
+      }
+    },
+    "Utility": {
+      "Summary": "各種トランスフォームユーティリティ。",
+      "Components": {
+        "DestroyProxy": {
+          "Description": "対象スロットの破壊を別スロットから代理実行できるようにします。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "DestroyOnUserLeave": {
+      "Description": "指定ユーザーがワールドを離れたとき、このコンポーネントのスロットを削除します。"
+    },
+    "DestroyWithoutChildren": {
+      "Description": "子スロットを残したまま、このコンポーネントのスロットを削除します。"
+    },
+    "ObjectRoot": {
+      "Description": "このコンポーネントのスロットをオブジェクトのルートとしてマークします。"
+    },
+    "RandomObjectSpawner": {
+      "Description": "テンプレートのリストからランダムなオブジェクトを親または指定地点にスポーンします。"
+    }
+  }
 }
 
