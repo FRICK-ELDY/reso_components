@@ -1,5 +1,43 @@
 {
   "Summary": "ユーザースペース関連。",
-  "Components": {}
+  "Categorys": {
+    "Virtual Keyboard": {
+      "Summary": "仮想キーボード。",
+      "Components": {
+        "SimpleVirtualKeyboard": {
+          "Description": "シンプルな仮想キーボードを提供します。"
+        },
+        "VirtualCloseKey": {
+          "Description": "仮想キーボードを閉じるキー。"
+        },
+        "VirtualKey": {
+          "Description": "単一キーの仮想キー。"
+        },
+        "VirtualKeyTextDrive": {
+          "Description": "キー入力でテキストを駆動します。"
+        },
+        "VirtualKeyboard": {
+          "Description": "仮想キーボード本体。"
+        },
+        "VirtualModifierKey": {
+          "Description": "Shift/Ctrl などの修飾キーを表す仮想キー。"
+        },
+        "VirtualMultiKey": {
+          "Description": "複数文字/機能を持つ仮想キー。"
+        },
+        "VirtualShift": {
+          "Description": "シフト状態を切り替える仮想キー。"
+        },
+        "VirtualShiftColorDriver": {
+          "Description": "シフト状態に応じてカラーを駆動します。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "AudioDeviceVolume": {
+      "Description": "オーディオデバイスの音量を制御します。"
+    }
+  }
 }
 
