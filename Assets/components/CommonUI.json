@@ -1,5 +1,198 @@
 {
   "Summary": "UIX/タッチ可能なボタンイベント、UIドライバー",
-  "Components": {}
+  "Categorys": {
+    "Button Interactions": {
+      "Summary": "一般的なボタン操作用のコンポーネント。",
+      "Categorys": {
+        "Media": {
+          "Summary": "Button Events に応じて音声を再生したり、IPlayable のループ/再生/停止/シークを制御します。",
+          "Components": {
+            "ButtonAudioClipPlayer": {
+              "Description": "特定の Button Events に応じてオーディオクリップを再生します。"
+            },
+            "ButtonLoopSet": {
+              "Description": "IPlayable の Loop プロパティを変更します。"
+            },
+            "ButtonPlaybackAction": {
+              "Description": "IPlayable の再生状態を変更し、再生/一時停止/停止を行います。"
+            },
+            "ButtonPlaybackSeeker": {
+              "Description": "ボタンが押された位置に基づいて IPlayable の再生位置を変更します。"
+            }
+          }
+        },
+        "Specialized": {
+          "Summary": "Resonite の基本機能を実装する特化コンポーネント。",
+          "Components": {
+            "ButtonAudioDeviceSet": {
+              "Description": "Userspace のみ: ローカルユーザーのオーディオデバイスを変更します。"
+            },
+            "ButtonClipboardCopyText": {
+              "Description": "フィールドのテキストをクリップボードにコピーします。"
+            },
+            "ButtonEquipFavoritAvatar": {
+              "Description": "Userspace のみ: ローカルユーザーのお気に入りアバターを変更します。"
+            },
+            "ButtonOpenHome": {
+              "Description": "ローカルユーザーまたはグループのホームワールドを開く/フォーカスします。"
+            },
+            "ButtonUserProfileIconSet": {
+              "Description": "Userspace のみ: ローカルユーザーのプロフィールアイコンを変更します。"
+            }
+          }
+        }
+      },
+      "Components": {
+        "ButtonActionTrigger": {
+          "Description": "IButton のインタラクションからアクション（C# メソッドなど）をトリガーします。"
+        },
+        "ButtonDestroy": {
+          "Description": "IDestroyable を破棄します。"
+        },
+        "ButtonDynamicImpulseTrigger": {
+          "Description": "同じタグを監視するフラックスノード受信側へダイナミックインパルスを送信します。"
+        },
+        "ButtonDynamicImpulseTriggerWithReference<T>": {
+          "Description": "参照型（Reference Types）向けに、同じタグを監視する受信側へダイナミックインパルスを送信します。"
+        },
+        "ButtonDynamicImpulseTriggerWithValue<T>": {
+          "Description": "値型（Value Types）向けに、同じタグを監視する受信側へダイナミックインパルスを送信します。"
+        },
+        "ButtonEditColorX": {
+          "Description": "指定フィールドの編集用にカラー入力を開きます。"
+        },
+        "ButtonEnumShift<T>": {
+          "Description": "ボタン押下で列挙値を指定量だけシフトします。"
+        },
+        "ButtonHoverEventRelay": {
+          "Description": "ホバーイベントを別のスロットへ転送します。"
+        },
+        "ButtonParentUnderUser": {
+          "Description": "押下したユーザーの下にスロットをペアレントします。"
+        },
+        "ButtonPressEventRelay": {
+          "Description": "プレスイベントを別のスロットへ転送します。"
+        },
+        "ButtonReferenceCycle<T>": {
+          "Description": "参照のリストで次の参照に切り替えます。"
+        },
+        "ButtonReferenceSet<T>": {
+          "Description": "フィールドへ参照を書き込みます。"
+        },
+        "ButtonStringAppend": {
+          "Description": "文字列の末尾に指定文字列を追加します。"
+        },
+        "ButtonStringErase": {
+          "Description": "文字列の先頭または末尾から文字を削除します。"
+        },
+        "ButtonToggle": {
+          "Description": "ブール値をオン/オフで切り替えます。"
+        },
+        "ButtonValueActionTrigger<T>": {
+          "Description": "ボタン操作で値を伴うアクションをトリガーします。"
+        },
+        "ButtonValueCycle<T>": {
+          "Description": "値のリストで次の値に切り替えます。"
+        },
+        "ButtonValueSet<T>": {
+          "Description": "フィールドへ値を書き込みます。"
+        },
+        "ButtonValueShift<T>": {
+          "Description": "押下のたびに値へ指定量を加算します。"
+        },
+        "ButtonWorldLink": {
+          "Description": "押下したユーザー向けに WorldLink を用いてワールド読み込みを試みます。"
+        }
+      }
+    },
+    "Drivers": {
+      "Summary": "アクションを駆動するためのコンポーネント。",
+      "Components": {
+        "Perspective360Panner": {
+          "Description": "360度ビューをパンします。"
+        },
+        "ReferenceOptionDescriptionDriver<T>": {
+          "Description": "参照ターゲットを用いて選択肢リストを生成します（主にコンテキストメニュー向け）。"
+        },
+        "ValueOptionDescriptionDriver<T>": {
+          "Description": "値ターゲットを用いて選択肢リストを生成します（主にコンテキストメニュー向け）。"
+        }
+      }
+    },
+    "Editors": {
+      "Summary": "テキストフィールドから値を解析するコンポーネント。",
+      "Categorys": {
+        "Utility": {
+          "Summary": "単位変換。",
+          "Components": {
+            "UnitSystemSwitcher": {
+              "Description": "単位系を切り替えます。"
+            }
+          }
+        }
+      },
+      "Components": {
+        "FloatTextEditorParser": {
+          "Description": "TextEditor を浮動小数点（Float）入力フィールドにします。"
+        },
+        "IntTextEditorParser": {
+          "Description": "TextEditor を整数（Int）入力フィールドにします。"
+        },
+        "QuantityTextEditorParser<U,T>": {
+          "Description": "TextEditor を数量（Quantity Types）入力フィールドにします。"
+        },
+        "QuantityTextEditorParser<U>": {
+          "Description": "TextEditor を数量（Quantity Types）入力フィールドにします。"
+        },
+        "TextEditor": {
+          "Description": "文字列（String）を用いてテキストフィールドを編集できます。"
+        },
+        "TouchableTextField": {
+          "Description": "タッチインタラクション（TouchEventRelay）対応の TextEditor 相当のテキストフィールドです。"
+        }
+      }
+    },
+    "Events": {
+      "Summary": "イベントを発火するコンポーネント。",
+      "Components": {
+        "ButtonDelegateRelay<T>": {
+          "Description": "アクション/メソッドのシグナルを送信します。"
+        },
+        "ButtonHoverRelay": {
+          "Description": "ホバーイベントのシグナルを送信します。"
+        },
+        "ButtonRefRelay<T>": {
+          "Description": "参照シグナルを送信します。"
+        },
+        "ButtonRelay": {
+          "Description": "シグナルを送信します。"
+        },
+        "ButtonRelay<T>": {
+          "Description": "値付きのシグナルを送信します。"
+        }
+      }
+    },
+    "General": {
+      "Summary": "Common UI の汎用コンポーネント。",
+      "Components": {
+        "PagingControl": {
+          "Description": "一定数のページにおける項目数をカウントするために使用します。"
+        }
+      }
+    },
+    "Utility": {
+      "Summary": "Common UI のユーティリティコンポーネント。",
+      "Components": {
+        "ConfirmationHandler": {
+          "Description": "確認処理（確認ダイアログ/承認フロー）を取り扱います。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "GenericUIContainer": {
+      "Description": "コンテナのクローズ時にタイトルとフラグを設定し、指定したスロットを破棄します。"
+    }
+  }
 }
 
