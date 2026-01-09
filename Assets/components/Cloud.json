@@ -4,20 +4,38 @@
     "Indicators": {
       "Summary": "クラウドの容量や状態などを表示する指標コンポーネント。",
       "Components": {
+        "AccountMigrationsList" : {
+          "Description": "アカウント移行リンクを提供します。"
+        },
+        "AccountMigrationStatus": {
+          "Description": "アカウント移行状態を表示します。"
+        },
         "CloudServerStatus": {
           "Description": "クラウドサーバーの稼働状況を表示します。"
         },
         "CloudUserInfo": {
           "Description": "現在のクラウドユーザー情報を表示します。"
         },
-        "OnlineUsersCount": {
-          "Description": "オンラインユーザー数を表示します。"
+        "FundingStatistics": {
+          "Description": "資金調達統計情報を表示します。"
+        },
+        "OnlineStatistic": {
+          "Description": "オンライン統計情報を表示します。"
         },
         "RecordSyncStatus": {
           "Description": "レコード同期の状態を表示します。"
         },
         "StorageUsageStatus": {
           "Description": "ストレージの使用状況を表示します。"
+        },
+        "SupporterCreditList": {
+          "Description": "サポータークレジットリストを表示します。"
+        },
+        "UniverseStatus": {
+          "Description": "ユニバースの状態を表示します。"
+        },
+        "UserLoginStatus": {
+          "Description": "ユーザーのログイン状態を表示します。"
         },
         "UserOnlineStatusSync": {
           "Description": "ユーザーのオンライン状態を同期・表示します。"
@@ -46,23 +64,14 @@
     }
   },
   "Components": {
-    "CloudStorageSpaceIndicator": {
-      "Description": "クラウドストレージの使用量/空き容量を表示します。"
-    },
-    "FriendLink": {
-      "Description": "フレンドのプロフィールや関連リソースへのリンクを提供します。"
-    },
-    "HomeGroupOrbManager": {
-      "Description": "ホーム/グループのオーブ（ポータル）を管理します。"
+    "ContactLink": {
+      "Description": "連絡先へのリンクを提供します。"
     },
     "InventoryLink": {
       "Description": "インベントリ（クラウドアイテム）へのリンクを提供します。"
     },
-    "OneTimeVideoPlayerTrigger": {
-      "Description": "一度だけ再生される動画プレイヤーをトリガーします。"
-    },
-    "PatreonSkyController": {
-      "Description": "Patreon 連携に基づく空（スカイ）演出を制御します。"
+    "LegacyCloudStorageSpaceIndicator": {
+      "Description": "レガシークラウドストレージの使用量/空き容量を表示します。"
     },
     "SessionOrbsController": {
       "Description": "セッションオーブの表示や挙動を制御します。"
