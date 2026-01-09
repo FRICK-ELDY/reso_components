@@ -1,5 +1,18 @@
 {
   "Summary": "ウィザード（作成補助）関連。",
-  "Components": {}
+  "Components": {
+    "AssetOptimizationWizard": {
+      "Description": "アセット最適化を支援するウィザード。"
+    },
+    "CubemapCreator": {
+      "Description": "キューブマップの作成を支援するウィザード。"
+    },
+    "WorldLightSourcesWizard": {
+      "Description": "ワールド内の光源設定を支援するウィザード。"
+    },
+    "WorldTextRendererWizard": {
+      "Description": "ワールド内のテキストレンダラー設定を支援するウィザード。"
+    }
+  }
 }
 
