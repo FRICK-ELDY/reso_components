@@ -1,5 +1,123 @@
 {
-  "Summary": "未分類。",
-  "Components": {}
+  "Summary": "未分類（内部/汎用向け）。有用・文書化済みのものを抜粋。",
+  "Components": {
+    "AssetMetadata": {
+      "Description": "アセットのメタデータを保持します。"
+    },
+    "AssetProxy": {
+      "Description": "アセット参照のプロキシとして機能します。"
+    },
+    "AudioInputDeviceSelection": {
+      "Description": "オーディオ入力（マイク）デバイスを選択します。"
+    },
+    "AudioOutputDeviceSelection": {
+      "Description": "オーディオ出力（再生）デバイスを選択します。"
+    },
+    "AudioStreamController": {
+      "Description": "オーディオストリームの再生・停止などを制御します。"
+    },
+    "AudioTypeGroupVolumeSlider": {
+      "Description": "オーディオタイプグループの音量をスライダーで調整します。"
+    },
+    "AvatarCreator": {
+      "Description": "アバター作成・セットアップを支援します。"
+    },
+    "AvatarEquipBlock": {
+      "Description": "誰からもそのアバターを装備できないようにブロックします。"
+    },
+    "AvatarParentNode": {
+      "Description": "アバター階層の親ノードとして機能します。"
+    },
+    "AvatarUserPositioner": {
+      "Description": "ユーザーの位置合わせ/配置を行います。"
+    },
+    "AxisRotationGizmo": {
+      "Description": "ギズモで使用される回転操作用コンポーネント。"
+    },
+    "AxisTranslationGizmo": {
+      "Description": "ギズモで使用される平行移動操作用コンポーネント。"
+    },
+    "BagEditor": {
+      "Description": "バッジの内容を編集するツール。"
+    },
+    "BagEditorItem": {
+      "Description": "バッジエディタ内の個別アイテム要素。"
+    },
+    "BatchAction": {
+      "Description": "複数の操作を一括実行します。"
+    },
+    "BezierCurve": {
+      "Description": "ベジエ曲線データを保持・編集します。"
+    },
+    "BlendshapeWeightListEditor": {
+      "Description": "ブレンドシェイプのウェイト一覧を編集します。"
+    },
+    "BooleanMemberEditor": {
+      "Description": "ブール型メンバー値を編集します。"
+    },
+    "Bounds": {
+      "Description": "ギズモで使用される境界ボリュームのコンポーネント。"
+    },
+    "BoxColliderGizmo": {
+      "Description": "ギズモで使用されるボックスコライダー可視化/操作。"
+    },
+    "BoxGizmo": {
+      "Description": "ギズモで使用されるボックス形状の可視化/操作。"
+    },
+    "BoxMeshGizmo": {
+      "Description": "ギズモで使用されるボックスメッシュの可視化/操作。"
+    },
+    "CircleSegmentShaderMesh": {
+      "Description": "円弧セグメント用のシェーダーメッシュを提供します。"
+    },
+    "ColliderEventRelay": {
+      "Description": "コライダーのイベントを他へ中継します。"
+    },
+    "ConvexHullMesh": {
+      "Description": "凸包メッシュを生成・表示します。"
+    },
+    "CopyTransformFromWorld": {
+      "Description": "ワールドからトランスフォームをコピーして適用します。"
+    },
+    "CurvePoint": {
+      "Description": "カーブ上の制御点データを保持します。"
+    },
+    "InspectorPanel": {
+      "Description": "既定のインスペクター。オブジェクトのプロパティ編集UI。"
+    },
+    "InteractionHandler": {
+      "Description": "インタラクション入力イベントを受け取り処理します。"
+    },
+    "InteractionLaser": {
+      "Description": "レーザー型インタラクション入力を提供します。"
+    },
+    "InventoryBrowser": {
+      "Description": "インベントリの閲覧・操作UIを提供します。"
+    },
+    "InventoryItem": {
+      "Description": "インベントリ内アイテムの表現/管理を行います。"
+    },
+    "InventoryItemUI": {
+      "Description": "インベントリアイテム用のUI表示コンポーネント。"
+    },
+    "ItemShelf": {
+      "Description": "アイテムを陳列・配置するための棚UI/ロジック。"
+    },
+    "ItemTextureThumbnailSource": {
+      "Description": "自動生成の代わりに特定のサムネイル画像を指定します。"
+    },
+    "ListEditor": {
+      "Description": "リストに要素を追加・削除するインスペクター用エディタ。"
+    },
+    "TextureRefEditor": {
+      "Description": "画像/テクスチャ参照を設定するためのエディタ。"
+    },
+    "VRIK": {
+      "Description": "VR機器に基づくアバターのインバースキネマティクスを提供します。"
+    },
+    "WorldDetail": {
+      "Description": "クリック時にワールドの詳細情報をコンパクトに表示します。"
+    }
+  }
 }
 
