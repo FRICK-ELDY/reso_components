@@ -1,0 +1,118 @@
+{
+  "Summary": "ツール（カメラ操作、複製、編集、計測、照明、音声、データ、ProtoFlux など）。",
+  "Categorys": {
+    "Brushes": {
+      "Summary": "ブラシ系ツール。",
+      "Components": {
+        "BillboardBrushTool": {
+          "Description": "ビルボード（板ポリ）を描くブラシツール。"
+        },
+        "BoxBrushTool": {
+          "Description": "直方体（ボックス）を描くブラシツール。"
+        },
+        "ConvexHullBrushTool": {
+          "Description": "点から凸包形状を描くブラシツール。"
+        },
+        "GeometryLineBrushTool": {
+          "Description": "線分/ラインのジオメトリを描くブラシツール。"
+        },
+        "MeshPlaneBrushTool": {
+          "Description": "(no docs)メッシュ平面を描くブラシツール。"
+        },
+        "QuadBrushTool": {
+          "Description": "クアッド（四角形）を描くブラシツール。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "CameraControlTool": {
+      "Description": "カメラの移動・回転・ズームなどを操作するツール。"
+    },
+    "CharacterColliderSetterTool": {
+      "Description": "キャラクター用コライダーの設定を行うツール。"
+    },
+    "ColorTool": {
+      "Description": "色の取得・適用・調整を行うツール。"
+    },
+    "ComponentCloneTool": {
+      "Description": "コンポーネントの複製を行うツール。"
+    },
+    "ControllerDiagnosticTool": {
+      "Description": "コントローラの入力や状態を診断・可視化するツール。"
+    },
+    "DevTool": {
+      "Description": "開発・検証向けのユーティリティツール。"
+    },
+    "DuplicatorTool": {
+      "Description": "オブジェクトやスロットの複製を行うツール。"
+    },
+    "GaussianSplatTool": {
+      "Description": "ガウシアンスプラットの作成・編集を行うツール。"
+    },
+    "GlueTool": {
+      "Description": "オブジェクト同士を固定・接着するツール。"
+    },
+    "GrabbableSetterTool": {
+      "Description": "Grabbable の有効化・設定を切り替えるツール。"
+    },
+    "InspectorTool": {
+      "Description": "オブジェクトのプロパティを検査・編集するインスペクタ。"
+    },
+    "InteractiveCameraObjectExcludeTool": {
+      "Description": "インタラクティブカメラから除外するオブジェクトを指定するツール。"
+    },
+    "LabelerTool": {
+      "Description": "ラベル付けや注釈の追加を行うツール。"
+    },
+    "LightTool": {
+      "Description": "ライト（点・スポット等）の配置と設定を行うツール。"
+    },
+    "MaterialTool": {
+      "Description": "マテリアルの適用・置換・編集を行うツール。"
+    },
+    "MeshTool": {
+      "Description": "メッシュの編集・変形・操作を行うツール。"
+    },
+    "MeshVisibilityToggleTool": {
+      "Description": "メッシュの表示／非表示を切り替えるツール。"
+    },
+    "MeterTool": {
+      "Description": "距離やサイズなどの計測を行うツール。"
+    },
+    "MicrophoneTool": {
+      "Description": "マイク入力の取得・設定を行うツール。"
+    },
+    "ObjectSlicerTool": {
+      "Description": "オブジェクトのスライス（切断）を行うツール。"
+    },
+    "ParticleSpray": {
+      "Description": "パーティクルを噴射して描画するツール。"
+    },
+    "ProtoFluxTool": {
+      "Description": "ProtoFlux の編集・操作を行うツール。"
+    },
+    "RawDataTool": {
+      "Description": "生データの確認・操作を行うツール。"
+    },
+    "RigMeshTransferTool": {
+      "Description": "リグとメッシュの対応付けや転送を行うツール。"
+    },
+    "ShapeTool": {
+      "Description": "基本図形の作成・編集を行うツール。"
+    },
+    "SpotLightTool": {
+      "Description": "スポットライトの配置と設定を行うツール。"
+    },
+    "SunMover": {
+      "Description": "太陽光源（Sun）の位置と方向を操作するツール。"
+    },
+    "ToolMultiplexer": {
+      "Description": "複数ツールの切り替え・統合を行うツール。"
+    },
+    "WigglerApplier": {
+      "Description": "オブジェクトに揺れ（Wiggle）効果を適用するツール。"
+    }
+  }
+}
+
