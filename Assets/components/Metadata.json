@@ -1,5 +1,9 @@
 {
   "Summary": "メタデータ関連。",
-  "Components": {}
+  "Components": {
+    "License": {
+      "Description": "オブジェクトの使用またはエクスポート条件を指定します。"
+    }
+  }
 }
 
