@@ -22,6 +22,7 @@ export const CATEGORY_TAGS = [
   "ProtoFlux",
   "Radiant UI",
   "Rendering",
+  "Relations",
   "Transform",
   "UIX",
   "Uncategorized",

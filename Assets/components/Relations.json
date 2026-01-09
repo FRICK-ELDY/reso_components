@@ -1,0 +1,97 @@
+{
+  "Summary": "値/参照のドライバーおよびスウィズル関連コンポーネント。",
+  "Categorys": {
+    "Swizzle Drivers": {
+      "Summary": "パック値の要素を入替・抽出・再配置するドライバー群。",
+      "Components": {
+        "Bool2ToBool2SwizzleDriver": { "Description": "Bool2 から Bool2 へのスウィズルを行います。" },
+        "Bool2ToBool3SwizzleDriver": { "Description": "Bool2 から Bool3 へのスウィズルを行います。" },
+        "Bool2ToBool4SwizzleDriver": { "Description": "Bool2 から Bool4 へのスウィズルを行います。" },
+        "Bool3ToBool2SwizzleDriver": { "Description": "Bool3 から Bool2 へのスウィズルを行います。" },
+        "Bool3ToBool3SwizzleDriver": { "Description": "Bool3 から Bool3 へのスウィズルを行います。" },
+        "Bool3ToBool4SwizzleDriver": { "Description": "Bool3 から Bool4 へのスウィズルを行います。" },
+        "Bool4ToBool2SwizzleDriver": { "Description": "Bool4 から Bool2 へのスウィズルを行います。" },
+        "Bool4ToBool3SwizzleDriver": { "Description": "Bool4 から Bool3 へのスウィズルを行います。" },
+        "Bool4ToBool4SwizzleDriver": { "Description": "Bool4 から Bool4 へのスウィズルを行います。" },
+        "Double2ToDouble2SwizzleDriver": { "Description": "Double2 から Double2 へのスウィズルを行います。" },
+        "Double2ToDouble3SwizzleDriver": { "Description": "Double2 から Double3 へのスウィズルを行います。" },
+        "Double2ToDouble4SwizzleDriver": { "Description": "Double2 から Double4 へのスウィズルを行います。" },
+        "Double2ToDoubleQSwizzleDriver": { "Description": "Double2 から DoubleQ へのスウィズルを行います。" },
+        "Double3ToDouble2SwizzleDriver": { "Description": "Double3 から Double2 へのスウィズルを行います。" },
+        "Double3ToDouble3SwizzleDriver": { "Description": "Double3 から Double3 へのスウィズルを行います。" },
+        "Double3ToDouble4SwizzleDriver": { "Description": "Double3 から Double4 へのスウィズルを行います。" },
+        "Double3ToDoubleQSwizzleDriver": { "Description": "Double3 から DoubleQ へのスウィズルを行います。" },
+        "Double4ToDouble2SwizzleDriver": { "Description": "Double4 から Double2 へのスウィズルを行います。" },
+        "Double4ToDouble3SwizzleDriver": { "Description": "Double4 から Double3 へのスウィズルを行います。" },
+        "Double4ToDouble4SwizzleDriver": { "Description": "Double4 から Double4 へのスウィズルを行います。" },
+        "Double4ToDoubleQSwizzleDriver": { "Description": "Double4 から DoubleQ へのスウィズルを行います。" },
+        "Float2ToColorSwizzleDriver": { "Description": "Float2 から Color へのスウィズルを行います。" },
+        "Float2ToColorXSwizzleDriver": { "Description": "Float2 から ColorX へのスウィズルを行います。" },
+        "Float2ToFloat2SwizzleDriver": { "Description": "Float2 から Float2 へのスウィズルを行います。" },
+        "Float2ToFloat3SwizzleDriver": { "Description": "Float2 から Float3 へのスウィズルを行います。" },
+        "Float2ToFloat4SwizzleDriver": { "Description": "Float2 から Float4 へのスウィズルを行います。" },
+        "Float2ToFloatQSwizzleDriver": { "Description": "Float2 から FloatQ へのスウィズルを行います。" },
+        "Float3ToColorSwizzleDriver": { "Description": "Float3 から Color へのスウィズルを行います。" },
+        "Float3ToColorXSwizzleDriver": { "Description": "Float3 から ColorX へのスウィズルを行います。" },
+        "Float3ToFloat2SwizzleDriver": { "Description": "Float3 から Float2 へのスウィズルを行います。" },
+        "Float3ToFloat3SwizzleDriver": { "Description": "Float3 から Float3 へのスウィズルを行います。" },
+        "Float3ToFloat4SwizzleDriver": { "Description": "Float3 から Float4 へのスウィズルを行います。" },
+        "Float3ToFloatQSwizzleDriver": { "Description": "Float3 から FloatQ へのスウィズルを行います。" },
+        "Float4ToColorSwizzleDriver": { "Description": "Float4 から Color へのスウィズルを行います。" },
+        "Float4ToColorXSwizzleDriver": { "Description": "Float4 から ColorX へのスウィズルを行います。" },
+        "Float4ToFloat2SwizzleDriver": { "Description": "Float4 から Float2 へのスウィズルを行います。" },
+        "Float4ToFloat3SwizzleDriver": { "Description": "Float4 から Float3 へのスウィズルを行います。" },
+        "Float4ToFloat4SwizzleDriver": { "Description": "Float4 から Float4 へのスウィズルを行います。" },
+        "Float4ToFloatQSwizzleDriver": { "Description": "Float4 から FloatQ へのスウィズルを行います。" },
+        "Int2ToInt2SwizzleDriver": { "Description": "Int2 から Int2 へのスウィズルを行います。" },
+        "Int2ToInt3SwizzleDriver": { "Description": "Int2 から Int3 へのスウィズルを行います。" },
+        "Int2ToInt4SwizzleDriver": { "Description": "Int2 から Int4 へのスウィズルを行います。" },
+        "Int3ToInt2SwizzleDriver": { "Description": "Int3 から Int2 へのスウィズルを行います。" },
+        "Int3ToInt3SwizzleDriver": { "Description": "Int3 から Int3 へのスウィズルを行います。" },
+        "Int3ToInt4SwizzleDriver": { "Description": "Int3 から Int4 へのスウィズルを行います。" },
+        "Int4ToInt2SwizzleDriver": { "Description": "Int4 から Int2 へのスウィズルを行います。" },
+        "Int4ToInt3SwizzleDriver": { "Description": "Int4 から Int3 へのスウィズルを行います。" },
+        "Int4ToInt4SwizzleDriver": { "Description": "Int4 から Int4 へのスウィズルを行います。" },
+        "Long2ToLong2SwizzleDriver": { "Description": "Long2 から Long2 へのスウィズルを行います。" },
+        "Long2ToLong3SwizzleDriver": { "Description": "Long2 から Long3 へのスウィズルを行います。" },
+        "Long2ToLong4SwizzleDriver": { "Description": "Long2 から Long4 へのスウィズルを行います。" },
+        "Long3ToLong2SwizzleDriver": { "Description": "Long3 から Long2 へのスウィズルを行います。" },
+        "Long3ToLong3SwizzleDriver": { "Description": "Long3 から Long3 へのスウィズルを行います。" },
+        "Long3ToLong4SwizzleDriver": { "Description": "Long3 から Long4 へのスウィズルを行います。" },
+        "Long4ToLong2SwizzleDriver": { "Description": "Long4 から Long2 へのスウィズルを行います。" },
+        "Long4ToLong3SwizzleDriver": { "Description": "Long4 から Long3 へのスウィズルを行います。" },
+        "Long4ToLong4SwizzleDriver": { "Description": "Long4 から Long4 へのスウィズルを行います。" },
+        "Uint2ToUint2SwizzleDriver": { "Description": "Uint2 から Uint2 へのスウィズルを行います。" },
+        "Uint2ToUint3SwizzleDriver": { "Description": "Uint2 から Uint3 へのスウィズルを行います。" },
+        "Uint2ToUint4SwizzleDriver": { "Description": "Uint2 から Uint4 へのスウィズルを行います。" },
+        "Uint3ToUint2SwizzleDriver": { "Description": "Uint3 から Uint2 へのスウィズルを行います。" },
+        "Uint3ToUint3SwizzleDriver": { "Description": "Uint3 から Uint3 へのスウィズルを行います。" },
+        "Uint3ToUint4SwizzleDriver": { "Description": "Uint3 から Uint4 へのスウィズルを行います。" },
+        "Uint4ToUint2SwizzleDriver": { "Description": "Uint4 から Uint2 へのスウィズルを行います。" },
+        "Uint4ToUint3SwizzleDriver": { "Description": "Uint4 から Uint3 へのスウィズルを行います。" },
+        "Uint4ToUint4SwizzleDriver": { "Description": "Uint4 から Uint4 へのスウィズルを行います。" },
+        "Ulong2ToUlong2SwizzleDriver": { "Description": "Ulong2 から Ulong2 へのスウィズルを行います。" },
+        "Ulong2ToUlong3SwizzleDriver": { "Description": "Ulong2 から Ulong3 へのスウィズルを行います。" },
+        "Ulong2ToUlong4SwizzleDriver": { "Description": "Ulong2 から Ulong4 へのスウィズルを行います。" },
+        "Ulong3ToUlong2SwizzleDriver": { "Description": "Ulong3 から Ulong2 へのスウィズルを行います。" },
+        "Ulong3ToUlong3SwizzleDriver": { "Description": "Ulong3 から Ulong3 へのスウィズルを行います。" },
+        "Ulong3ToUlong4SwizzleDriver": { "Description": "Ulong3 から Ulong4 へのスウィズルを行います。" },
+        "Ulong4ToUlong2SwizzleDriver": { "Description": "Ulong4 から Ulong2 へのスウィズルを行います。" },
+        "Ulong4ToUlong3SwizzleDriver": { "Description": "Ulong4 から Ulong3 へのスウィズルを行います。" },
+        "Ulong4ToUlong4SwizzleDriver": { "Description": "Ulong4 から Ulong4 へのスウィズルを行います。" }
+      }
+    }
+  },
+  "Components": {
+    "ReferenceMultiDriver<T>": {
+      "Description": "複数の参照フィールドを一括で駆動します。"
+    },
+    "ValueDriver<T>": {
+      "Description": "単一の値フィールドを駆動します。"
+    },
+    "ValueMultiDriver<T>": {
+      "Description": "複数の値フィールドを一括で駆動します。"
+    }
+  }
+}
+
