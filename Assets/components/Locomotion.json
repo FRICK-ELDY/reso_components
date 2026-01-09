@@ -1,5 +1,70 @@
 {
   "Summary": "移動（ロコモーション）関連。",
-  "Components": {}
+  "Categorys": {
+    "Footsteps": {
+      "Summary": "ユーザーの足音イベントを検出し、それに応じてアクションを実行する方法。",
+      "Components": {
+        "FootstepEventRelay": {
+          "Description": "ユーザーの足に配置し、足音イベントを受信して他のスロットに送信します。"
+        },
+        "FootstepSoundDefinition": {
+          "Description": "足音の音声定義を提供します。"
+        },
+        "FootstepSoundPlayer": {
+          "Description": "プレイヤーが同じスロット上のコライダー上を歩くときに、IFootstepSoundMaterialsのリストをトリガーします。"
+        },
+        "FootstepSoundSplatmapSplitter": {
+          "Description": "足音の音声をスプラットマップに基づいて分割します。"
+        },
+        "SelfFootstepEventRelay": {
+          "Description": "自身の足音イベントをリレーします。"
+        }
+      }
+    },
+    "Interaction": {
+      "Summary": "インタラクション関連のロコモーション。",
+      "Components": {
+        "CharacterEventTrigger": {
+          "Description": "キャラクターのイベントをトリガーします。"
+        },
+        "CharacterForceField": {
+          "Description": "キャラクターに対して重力を変化させる場所を生成します。"
+        },
+        "CharacterParenter": {
+          "Description": "キャラクターの親子関係を管理します。"
+        },
+        "CharacterTeleporter": {
+          "Description": "トリガーに入ったプレイヤーをテレポートします。"
+        },
+        "LocomotionGrip": {
+          "Description": "ユーザーがコライダーの階層を登ることができるかどうかを制御します。"
+        }
+      }
+    },
+    "Modifiers": {
+      "Summary": "接触しているものや場所に応じてキャラクターコントローラーを変更する方法。",
+      "Components": {
+      }
+    },
+    "Modules": {
+      "Summary": "ロコモーションモジュール。",
+      "Components": {
+        "GrabWorldLocomotion": {
+          "Description": "ワールドやアバター、ツールチップからユーザーにロコモーションを提供します。"
+        },
+        "NoclipLocomotion": {
+          "Description": "物理的な制約を無視して自由に移動できるロコモーションモジュールです。"
+        },
+        "PhysicalLocomotion": {
+          "Description": "歩行、登攀、飛行、ゼロGなど、多様な移動モードを提供するロコモーションモジュール。"
+        },
+        "SlideLocomotion": {
+          "Description": "ユーザーが滑るように移動できるロコモーションモジュールです。"
+        },
+        "TeleportLocomotion": {
+          "Description": "ユーザーがアークパスを使用して目的地を選択し、テレポートできるようにします。"
+        }
+      }
+    }
+  }
 }
-
