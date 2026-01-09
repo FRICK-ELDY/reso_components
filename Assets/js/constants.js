@@ -10,6 +10,7 @@ export const CATEGORY_TAGS = [
   "Debug",
   "Generators",
   "Interaction",
+  "Localization",
   "Locomotion",
   "Metadata",
   "Misc",

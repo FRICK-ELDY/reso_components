@@ -1,0 +1,18 @@
+{
+  "Summary": "翻訳関連。",
+  "Components": {
+    "CurrentLocaleInfo": {
+      "Description": "現在のロケール情報を提供します。"
+    },
+    "LocaleActiveDriver": {
+      "Description": "ロケールのアクティブドライバーを提供します。"
+    },
+    "LocaleAuthorsInfo": {
+      "Description": "ロケールの作者情報を提供します。"
+    },
+    "LocaleStringDriver": {
+      "Description": "ロケール文字列のドライバーを提供します。"
+    }
+  }
+}
+
