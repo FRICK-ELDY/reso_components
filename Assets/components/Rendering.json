@@ -1,5 +1,281 @@
 {
-  "Summary": "レンダリングに関するコンポーネント。",
-  "Components": {}
+  "Summary": "レンダリング（カメラ/ライト/メッシュ/テキスト/可視化/リグ/反射 など）。",
+  "Categorys": {
+    "Drivers": {
+      "Summary": "レンダリング用のドライバー。",
+      "Components": {
+        "MaterialSet": {
+          "Description": "マテリアルのセットを定義し、レンダリングに適用します。"
+        }
+      }
+    },
+    "Metadata": {
+      "Summary": "レンダリング用のメタデータ。",
+      "Components": {
+        "ReflectionProbeMetadata": {
+          "Description": "反射プローブのメタデータを保持します。"
+        }
+      }
+    },
+    "Particle System": {
+      "Summary": "パーティクルシステム関連コンポーネント。",
+      "Categorys": {
+        "Emitters": {
+          "Summary": "パーティクルを放出するエミッタ。",
+          "Components": {
+            "BoxEmitter": {
+              "Description": "ボックス形状の体積からパーティクルを放出します。"
+            },
+            "CircleEmitter": {
+              "Description": "円形領域からパーティクルを放出します。"
+            },
+            "ConeEmitter": {
+              "Description": "円錐（コーン）形状からパーティクルを放出します。"
+            },
+            "CylinderEmitter": {
+              "Description": "円柱形状からパーティクルを放出します。"
+            },
+            "LineEmitter": {
+              "Description": "直線上からパーティクルを放出します。"
+            },
+            "MeshEmitter": {
+              "Description": "メッシュ表面からパーティクルを放出します。"
+            },
+            "PointEmitter": {
+              "Description": "一点（ポイント）からパーティクルを放出します。"
+            },
+            "SkinnedMeshEmitter": {
+              "Description": "スキンメッシュの表面からパーティクルを放出します。"
+            },
+            "SphereEmitter": {
+              "Description": "球形領域からパーティクルを放出します。"
+            }
+          }
+        },
+        "Modules": {
+          "Summary": "パーティクルシステムの挙動を定義するモジュール。",
+          "Components": {
+            "AlphaOverLifetimeLinearGradient": { "Description": "寿命に応じてアルファを線形グラデーションで変化させます。" },
+            "AngularVelocity3DConstantInitializer": { "Description": "初期角速度（3D）を一定値で設定します。" },
+            "AngularVelocity3DRangeInitializer": { "Description": "初期角速度（3D）を範囲からランダムに設定します。" },
+            "AngularVelocityConstantInitializer": { "Description": "初期角速度を一定値で設定します。" },
+            "AngularVelocityDrag": { "Description": "角速度にドラッグ（減衰）を与えます。" },
+            "AngularVelocityRangeInitializer": { "Description": "初期角速度を範囲からランダムに設定します。" },
+            "ColorByOrientationDirection": { "Description": "向きの方向に基づいて色を適用します。" },
+            "ColorByOrientationDirectionSH1": { "Description": "向きの方向（SH1）に基づいて色を適用します。" },
+            "ColorByOrientationDirectionSH2": { "Description": "向きの方向（SH2）に基づいて色を適用します。" },
+            "ColorByOrientationDirectionSH3": { "Description": "向きの方向（SH3）に基づいて色を適用します。" },
+            "ColorByOrientationDirectionSH4": { "Description": "向きの方向（SH4）に基づいて色を適用します。" },
+            "ColorBySpeedMinMax": { "Description": "速度の最小/最大に基づいて色を適用します。" },
+            "ColorBySpeedMinMaxHSV": { "Description": "速度の最小/最大に基づき HSV で色を適用します。" },
+            "ColorBySpeedTexture": { "Description": "速度に基づきテクスチャから色をサンプルします。" },
+            "ColorByThreadDiagnosticModule": { "Description": "スレッド診断用に色分けします。" },
+            "ColorByVelocityDirection": { "Description": "速度方向に基づいて色を適用します。" },
+            "ColorByVelocityDirectionSH1": { "Description": "速度方向（SH1）に基づいて色を適用します。" },
+            "ColorByVelocityDirectionSH2": { "Description": "速度方向（SH2）に基づいて色を適用します。" },
+            "ColorByVelocityDirectionSH3": { "Description": "速度方向（SH3）に基づいて色を適用します。" },
+            "ColorByVelocityDirectionSH4": { "Description": "速度方向（SH4）に基づいて色を適用します。" },
+            "ColorConstantInitializer": { "Description": "初期色を一定値で設定します。" },
+            "ColorFromTexture3D": { "Description": "3Dテクスチャから色を取得します。" },
+            "ColorHSV OverLifetimeStartEnd": { "Description": "寿命に応じて HSV の開始/終了で色を補間します。" },
+            "ColorHSV RangeInitializer": { "Description": "初期 HSV 色を範囲から設定します。" },
+            "ColorListInitializer": { "Description": "(no docs)色リストを初期化します。" },
+            "ColorOverLifetimeLinearGradient": { "Description": "寿命に応じて色を線形グラデーションで変化させます。" },
+            "ColorOverLifetimeStartEnd": { "Description": "寿命に応じて開始色から終了色へ変化させます。" },
+            "ColorOverLifetimeTexture": { "Description": "寿命に応じてテクスチャから色を取得します。" },
+            "ColorRangeInitializer": { "Description": "初期色を範囲からランダムに設定します。" },
+            "ConstantAngularVelocityForce": { "Description": "一定の角速度を与える力を適用します。" },
+            "GravityForce": { "Description": "重力の力を適用します。" },
+            "LifetimeConstantInitializer": { "Description": "寿命を一定値で設定します。" },
+            "LifetimeRangeInitializer": { "Description": "寿命を範囲からランダムに設定します。" },
+            "LinearForce": { "Description": "一定方向の線形力を適用します。" },
+            "OrientAtPoint": { "Description": "特定の点に向くように向きを調整します。" },
+            "OrientByVelocity": { "Description": "速度方向に基づいて向きを調整します。" },
+            "OriginRadialForce": { "Description": "原点からの放射状の力を適用します。" },
+            "ParticleBirthSubEmitter": { "Description": "(no docs)パーティクルの誕生時にサブエミッタを発火します。" },
+            "ParticleDeathSubEmitter": { "Description": "(no docs)パーティクルの死亡時にサブエミッタを発火します。" },
+            "ParticleLifetimeSubEmitter": { "Description": "(no docs)パーティクルの寿命時にサブエミッタを発火します。" },
+            "ParticleLightsModule": { "Description": "パーティクルがライトを発するようにします。" },
+            "ParticleRibbonsModule": { "Description": "リボン（帯）状のパーティクルを生成します。" },
+            "ParticleTrailsModule": { "Description": "パーティクルの軌跡（トレイル）を生成します。" },
+            "PivotFromVelocityMagnitude": { "Description": "速度の大きさからピボットを決定します。" },
+            "PivotModule": { "Description": "ピボット位置を制御します。" },
+            "PositionSimulatorModule": { "Description": "位置のシミュレーションを行います。" },
+            "RadialForce": { "Description": "中心からの放射状の力を適用します。" },
+            "RibbonColorConstantInitializer": { "Description": "リボンの色を一定値で初期化します。" },
+            "RibbonColorRangeInitializer": { "Description": "リボンの色を範囲から初期化します。" },
+            "RibbonFollowerColorConstantInitializer": { "Description": "リボンフォロワーの色を一定値で初期化します。" },
+            "RibbonFollowerColorRangeInitializer": { "Description": "リボンフォロワーの色を範囲から初期化します。" },
+            "RibbonFollowerWidthConstantInitializer": { "Description": "リボンフォロワーの幅を一定値で初期化します。" },
+            "RibbonFollowerWidthRangeInitializer": { "Description": "リボンフォロワーの幅を範囲から初期化します。" },
+            "RibbonWidthConstantInitializer": { "Description": "リボンの幅を一定値で初期化します。" },
+            "RibbonWidthRangeInitializer": { "Description": "リボンの幅を範囲から初期化します。" },
+            "Rotation3DConstantInitializer": { "Description": "初期回転（3D）を一定値で設定します。" },
+            "Rotation3DEulerRangeInitializer": { "Description": "初期回転（オイラー角）を範囲から設定します。" },
+            "RotationConstantInitializer": { "Description": "初期回転を一定値で設定します。" },
+            "RotationRangeInitializer": { "Description": "初期回転を範囲から設定します。" },
+            "RotationSimulatorModule": { "Description": "回転のシミュレーションを行います。" },
+            "SequenceRibbonSplitter": { "Description": "シーケンスに基づきリボンを分割します。" },
+            "SimplexTurbulentForce": { "Description": "Simplex ノイズに基づく乱流の力を適用します。" },
+            "SizeConstantInitializer": { "Description": "初期サイズを一定値で設定します。" },
+            "SizeModifier": { "Description": "サイズを変化させる修飾を適用します。" },
+            "SizeMultiplierByVelocity": { "Description": "速度に応じてサイズ倍率を適用します。" },
+            "SizeOffsetByVelocity": { "Description": "速度に応じてサイズオフセットを適用します。" },
+            "SizeOverLifetimeStartEnd": { "Description": "寿命に応じてサイズを開始/終了間で変化させます。" },
+            "SizeOverLifetimeTexture": { "Description": "(no docs)寿命に応じてテクスチャからサイズを取得します。" },
+            "SizeRangeInitializer": { "Description": "初期サイズを範囲からランダムに設定します。" },
+            "SizeSineMultiplier": { "Description": "サイン波に基づいてサイズを変調します。" },
+            "SpeedConstantInitializer": { "Description": "初期速度を一定値で設定します。" },
+            "SpeedRangeInitializer": { "Description": "初期速度を範囲からランダムに設定します。" },
+            "Texture3D Force": { "Description": "3Dテクスチャに基づく力を適用します。" },
+            "TextureSheetAnimator": { "Description": "テクスチャシートを用いてアニメーションします。" },
+            "TimeProximityRibbonSplitter": { "Description": "時間的近接に基づいてリボンを分割します。" },
+            "TrailColorConstantInitializer": { "Description": "トレイルの色を一定値で初期化します。" },
+            "TrailColorRangeInitializer": { "Description": "トレイルの色を範囲から初期化します。" },
+            "TrailLifetimeConstantInitializer": { "Description": "トレイルの寿命を一定値で初期化します。" },
+            "TrailLifetimeFromSizeInitializer": { "Description": "サイズからトレイルの寿命を導出して初期化します。" },
+            "TrailLifetimeRangeInitializer": { "Description": "トレイルの寿命を範囲から初期化します。" },
+            "TrailWidthConstantInitializer": { "Description": "トレイルの幅を一定値で初期化します。" },
+            "TrailWidthRangeInitializer": { "Description": "トレイルの幅を範囲から初期化します。" },
+            "UniformSizeConstantInitializer": { "Description": "一様サイズを一定値で初期化します。" },
+            "UniformSizeOverLifetimeStartEnd": { "Description": "寿命に応じて一様サイズを開始/終了間で変化させます。" },
+            "UniformSizeRangeInitializer": { "Description": "一様サイズを範囲から初期化します。" },
+            "UniformSizeSineMultiplier": { "Description": "サイン波に基づいて一様サイズを変調します。" },
+            "VelocityDrag": { "Description": "速度にドラッグ（減衰）を与えます。" }
+          }
+        },
+        "Renderers": {
+          "Summary": "パーティクルの描画方法を定義するレンダラー。",
+          "Components": {
+            "BillboardParticleRenderer": {
+              "Description": "ビルボードとしてパーティクルを描画します。"
+            },
+            "DebugQuadMeshRenderer": {
+              "Description": "デバッグ用のクアッドメッシュでパーティクルを描画します。"
+            },
+            "MeshParticleRenderer": {
+              "Description": "メッシュを用いてパーティクルを描画します。"
+            },
+            "NullParticleRenderer": {
+              "Description": "パーティクルを描画しません（無効化用）。"
+            },
+            "PointCloudParticleRenderer": {
+              "Description": "点群としてパーティクルを描画します。"
+            }
+          }
+        }
+      },
+      "Components": {
+        "ParticleStyle": {
+          "Description": "パーティクルの見た目スタイルを定義します。"
+        },
+        "ParticleSystem": {
+          "Description": "パーティクルシミュレーションを行うシステム本体。"
+        }
+      }
+    },
+    "Text": {
+      "Summary": "テキストレンダリング関連コンポーネント。",
+      "Components": {
+        "FontChain": {
+          "Description": "フォントチェーン（フォールバック連鎖）を定義します。"
+        },
+        "FontCollection": {
+          "Description": "フォントのコレクションを管理します。"
+        }
+      }
+    },
+    "Visuals": {
+      "Summary": "ビジュアル（可視化）関連コンポーネント。",
+      "Components": {
+        "LegacyGlowCircle": {
+          "Description": "レガシー 発光する円のビジュアルを描画します。"
+        },
+        "LegacyUIStyle": {
+          "Description": "レガシー UI のスタイルを適用します。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "AmbientLightSH2": {
+      "Description": "SH2 による環境光情報を提供・適用します。"
+    },
+    "AnimationTrack<T>": {
+      "Description": "アニメーショントラックを定義・再生します。"
+    },
+    "Animator": {
+      "Description": "アニメーションの再生・遷移を制御します。"
+    },
+    "AtlasInfo": {
+      "Description": "テクスチャアトラスの情報を保持します。"
+    },
+    "BillboardRenderBufferRenderer": {
+      "Description": "レンダーバッファをビルボードとして描画します。"
+    },
+    "BipedRig": {
+      "Description": "二足リグを構成・制御します。"
+    },
+    "BlitToDisplay": {
+      "Description": "レンダー結果をディスプレイへブリット出力します。"
+    },
+    "Camera": {
+      "Description": "シーンを撮影するカメラです。"
+    },
+    "CameraPortal": {
+      "Description": "ポータル視点でのカメラ描画を行います。"
+    },
+    "DirectVisemeDriver": {
+      "Description": "ビセーム（口形）を直接駆動します。"
+    },
+    "DynamicVisemeDriver": {
+      "Description": "入力に基づきビセームを動的に駆動します。"
+    },
+    "GaussianSplatRenderer": {
+      "Description": "ガウシアンスプラットを描画します。"
+    },
+    "HiddenLayer": {
+      "Description": "非表示レイヤーを制御します。"
+    },
+    "Light": {
+      "Description": "ライト（点光源/指向性など）を提供します。"
+    },
+    "LODGroup": {
+      "Description": "LOD（詳細度）を距離等に応じて切り替えます。"
+    },
+    "MeshRenderer": {
+      "Description": "メッシュを描画します。"
+    },
+    "OverlayLayer": {
+      "Description": "オーバーレイレイヤーとして描画します。"
+    },
+    "ReflectionProbe": {
+      "Description": "反射キューブマップを生成・提供します。"
+    },
+    "ReflectionProbeSH2": {
+      "Description": "SH2 ベースの反射プローブを提供します。"
+    },
+    "RenderMaterialOverride": {
+      "Description": "描画時のマテリアルを一時的に上書きします。"
+    },
+    "RenderTransformOverride": {
+      "Description": "描画時のトランスフォームを一時的に上書きします。"
+    },
+    "Rig": {
+      "Description": "装着/骨格リグの描画・制御を行います。"
+    },
+    "SkinnedMeshRenderer": {
+      "Description": "スキニングされたメッシュを描画します。"
+    },
+    "Skybox": {
+      "Description": "スカイボックスを描画します。"
+    },
+    "TextRenderer": {
+      "Description": "テキストを描画します。"
+    },
+    "TrailsRenderBufferRenderer": {
+      "Description": "レンダーバッファのトレイルを描画します。"
+    }
+  }
 }
 
