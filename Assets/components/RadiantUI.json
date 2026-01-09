@@ -1,5 +1,303 @@
 {
-  "Summary": "Radiant UI 関連。",
-  "Components": {}
+  "Summary": "Radiant UI のコンテナ、コンテキストメニュー、データフィード、ファセット、ナビゲーション、ユーティリティなど。",
+  "Categorys": {
+    "Containers": {
+      "Summary": "Radiant UI のコンテナ。",
+      "Components": {
+        "GridContainer": {
+          "Description": "要素をグリッド状に配置するためのコンテナです。"
+        }
+      }
+    },
+    "Context Menu": {
+      "Summary": "Radiant UI のコンテキストメニュー。",
+      "Components": {
+        "ContextMenu": {
+          "Description": "使用しないでください: ネイティブのコンテキストメニュー用です。"
+        },
+        "ContextMenuItem": {
+          "Description": "使用しないでください: ネイティブのコンテキストメニュー用です。"
+        },
+        "ContextMenuItemSource": {
+          "Description": "メニュー項目のソース（供給元）です。"
+        },
+        "ContextMenuSubmenu": {
+          "Description": "サブメニューを表す項目です。"
+        },
+        "RootContextMenuItem": {
+          "Description": "コンテキストメニューのルート用メニュー項目です。"
+        }
+      }
+    },
+    "Data Feeds": {
+      "Summary": "Data Feeds の UI 構築に関するセット（詳細は Data Feeds を参照）。",
+      "Categorys": {
+        "Feeds": {
+          "Summary": "フィードデータのソースとなるフィードの一覧。",
+          "Components": {
+            "EnumFeed<E>": {
+              "Description": "列挙型（Enum）の値をフィードとして提供します。"
+            },
+            "WorldUsersFeed": {
+              "Description": "現在のワールド内のユーザー一覧をフィードとして提供します。"
+            },
+            "WorldsDataFeed": {
+              "Description": "ワールドのデータをフィードとして提供します。"
+            }
+          }
+        },
+        "Interactions": {
+          "Summary": "データフィード内のカテゴリの上下移動などのインタラクション。",
+          "Components": {
+            "MoveUpDataFeedCategory": {
+              "Description": "データフィード内でカテゴリ階層を1つ上に移動します。"
+            },
+            "OpenDataFeedCategory": {
+              "Description": "データフィードで指定したカテゴリを開きます。"
+            },
+            "SetDataFeedCategory": {
+              "Description": "データフィードの現在のカテゴリを設定します。"
+            }
+          }
+        },
+        "Interfaces": {
+          "Summary": "数値・ラベル・カテゴリ等のインターフェース用テンプレート。",
+          "Components": {
+            "FeedActionInterface": {
+              "Description": "データフィードのアクション用インターフェース。"
+            },
+            "FeedCategoryInterface": {
+              "Description": "カテゴリのインターフェース。"
+            },
+            "FeedClampedValueFieldInterface<T>": {
+              "Description": "範囲制限付き数値フィールドのインターフェース。"
+            },
+            "FeedEntityInterface<T>": {
+              "Description": "エンティティのインターフェース。"
+            },
+            "FeedGridInterface": {
+              "Description": "グリッド表示のインターフェース。"
+            },
+            "FeedGroupInterface": {
+              "Description": "グループのインターフェース。"
+            },
+            "FeedIndicatorInterface<T>": {
+              "Description": "インジケーターのインターフェース。"
+            },
+            "FeedItemInterface": {
+              "Description": "一般的なアイテムのインターフェース。"
+            },
+            "FeedOrderedItemInterface<T>": {
+              "Description": "順序付きアイテムのインターフェース。"
+            },
+            "FeedQuantityFieldInterface<U,T>": {
+              "Description": "数量（単位付き）フィールドのインターフェース。"
+            },
+            "FeedResettableGroupInterface": {
+              "Description": "リセット可能なグループのインターフェース。"
+            },
+            "FeedSliderInterface<T>": {
+              "Description": "スライダー UI のインターフェース。"
+            },
+            "FeedToggleInterface": {
+              "Description": "トグル UI のインターフェース。"
+            },
+            "FeedValueActionInterface<T>": {
+              "Description": "値を伴うアクションのインターフェース。"
+            },
+            "FeedValueFieldInterface<T>": {
+              "Description": "値フィールドのインターフェース。"
+            },
+            "MergedWorldDataItemInterface": {
+              "Description": "マージされたワールドデータ項目のインターフェース。"
+            },
+            "SessionInfoItemInterface": {
+              "Description": "セッション情報項目のインターフェース。"
+            },
+            "WorldItemInterface": {
+              "Description": "ワールド項目のインターフェース。"
+            }
+          }
+        },
+        "Views": {
+          "Summary": "マッパーでテンプレートを複製しビューを構築する各種ビューア。",
+          "Components": {
+            "DebugDataFeedView": {
+              "Description": "データフィードの内容をデバッグ表示するビューです。"
+            },
+            "RootCategoryView": {
+              "Description": "データフィードのルートカテゴリを表示するビューです。"
+            },
+            "SingleFeedView": {
+              "Description": "単一のデータフィードを受け取り、テンプレートを複製して表示するビューです。"
+            }
+          }
+        }
+      },
+      "Components": {
+        "DataFeedItemMapper": {
+          "Description": "データフィードのアイテムをテンプレートへマッピングします。"
+        }
+      }
+    },
+    "Facets": {
+      "Summary": "Radiant UI のファセット。",
+      "Components": {
+        "AvatarCreatorFacetPreset": {
+          "Description": "アバター作成用のファセットプリセット。"
+        },
+        "ClipboardPasteFacetPreset": {
+          "Description": "クリップボード貼り付けのファセットプリセット。"
+        },
+        "ControllerDiagramFacetPreset": {
+          "Description": "コントローラのダイアグラム表示用ファセットプリセット。"
+        },
+        "FPS FacetPreset": {
+          "Description": "FPS 表示用のファセットプリセット。"
+        },
+        "FreeformDashFacetPreset": {
+          "Description": "フリーフォームダッシュ用のファセットプリセット。"
+        },
+        "FullBodyCalibratorFacetPreset": {
+          "Description": "フルボディ校正用のファセットプリセット。"
+        },
+        "HelpFacetPreset": {
+          "Description": "(no docs)ヘルプ用のファセットプリセット。"
+        },
+        "MigrationDetailFacetPreset": {
+          "Description": "移行の詳細表示用ファセットプリセット。"
+        },
+        "MigrationListFacetPreset": {
+          "Description": "移行の一覧表示用ファセットプリセット。"
+        },
+        "NameplateStyleFacetPreset": {
+          "Description": "ネームプレートのスタイル設定ファセットプリセット。"
+        },
+        "NameplateVisibilityFacetPreset": {
+          "Description": "ネームプレートの表示切替ファセットプリセット。"
+        },
+        "NewWorldFacetPreset": {
+          "Description": "新規ワールドの作成/遷移用ファセットプリセット。"
+        },
+        "OnlineStatusFacetPreset": {
+          "Description": "オンラインステータス表示のファセットプリセット。"
+        },
+        "OnlineUserCountFacetPreset": {
+          "Description": "オンラインユーザー数表示のファセットプリセット。"
+        },
+        "OpenDebugFacetPreset": {
+          "Description": "デバッグパネルを開くファセットプリセット。"
+        },
+        "OpenHomeFacetPreset": {
+          "Description": "ホームを開くファセットプリセット。"
+        },
+        "PagingControlFacetPreset": {
+          "Description": "ページングコントロール用のファセットプリセット。"
+        },
+        "SearchBarFacetPreset": {
+          "Description": "検索バー用のファセットプリセット。"
+        },
+        "SeatedModeFacetPreset": {
+          "Description": "着席モード切替のファセットプリセット。"
+        },
+        "ServerStatusFacetPreset": {
+          "Description": "サーバーステータス表示のファセットプリセット。"
+        },
+        "SettingsFacetPreset": {
+          "Description": "設定 UI のファセットプリセット。"
+        },
+        "Setup2FAFacetPreset": {
+          "Description": "二要素認証のセットアップ用ファセットプリセット。"
+        },
+        "SimpleProfileFacetPreset": {
+          "Description": "シンプルプロフィール表示のファセットプリセット。"
+        },
+        "StorageIndicatorFacetPreset": {
+          "Description": "ストレージ使用量表示のファセットプリセット。"
+        },
+        "StreamAudioFacetPreset": {
+          "Description": "オーディオ配信/ストリーミング用のファセットプリセット。"
+        },
+        "StreamingCameraFacetPreset": {
+          "Description": "ストリーミングカメラ用のファセットプリセット。"
+        },
+        "SyncStatusFacetPreset": {
+          "Description": "同期状態表示のファセットプリセット。"
+        },
+        "TimeFacetPreset": {
+          "Description": "時刻/時間表示のファセットプリセット。"
+        },
+        "VersionNumberFacetPreset": {
+          "Description": "バージョン番号表示のファセットプリセット。"
+        },
+        "VoiceFacetPreset": {
+          "Description": "ボイスの状態/設定用ファセットプリセット。"
+        },
+        "WorldCloseFacetPreset": {
+          "Description": "ワールドを閉じる操作のファセットプリセット。"
+        },
+        "WorldFilterFacetPreset": {
+          "Description": "ワールドのフィルター UI 用ファセットプリセット。"
+        },
+        "WorldListFacetPreset": {
+          "Description": "ワールド一覧表示のファセットプリセット。"
+        }
+      }
+    },
+    "General": {
+      "Summary": "Radiant UI の一般コンポーネント。",
+      "Components": {
+        "RadiantSearchBar": {
+          "Description": "Radiant UI の検索バーコンポーネント。"
+        }
+      }
+    },
+    "Navigation": {
+      "Summary": "データフィードで遷移したパスのパスセグメントUIを作成します。",
+      "Components": {
+        "BreadcrumbInterface": {
+          "Description": "データフィードのパスセグメントをテンプレートとして表現します。"
+        },
+        "BreadcrumbManager": {
+          "Description": "データフィードのパスセグメントを生成し、配置します。"
+        }
+      }
+    },
+    "Utility": {
+      "Summary": "Radiant UI のユーティリティ。",
+      "Components": {
+        "AlwaysOnFacetModule": {
+          "Description": "ファセットを常時オンにするモジュール。"
+        }
+      }
+    },
+    "World Browsing": {
+      "Summary": "Radiant UI のワールドブラウジング関連。",
+      "Categorys": {
+        "Legacy": {
+          "Summary": "レガシーのワールドブラウジング関連。",
+          "Components": {
+            "LegacyWorldDetail": {
+              "Description": "レガシーのワールド詳細を表示します。"
+            },
+            "LegacyWorldListManager": {
+              "Description": "レガシーのワールド一覧を管理します。"
+            },
+            "LegacyWorldThumbnailItem": {
+              "Description": "レガシーのワールドサムネイル項目を表示します。"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Components": {
+    "Facet": {
+      "Description": "Radiant UI のファセットを提供します。"
+    },
+    "RadiantDashStateSync": {
+      "Description": "Radiant ダッシュボードの状態を同期します。"
+    }
+  }
 }
 
