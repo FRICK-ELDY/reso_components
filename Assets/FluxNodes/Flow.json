@@ -1,6 +1,177 @@
 {
   "Summary": "非同期、イベント、トリガー、制御フロー。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Async": {
+      "Summary": "フロー処理をバックグラウンドスレッドで実行。",
+      "Components": {
+        "AsyncDynamicImpulseReceiver": {
+          "Description": "スロットに配置し、トリガーパルスを待ち受ける非同期リスナー。"
+        },
+        "AsyncDynamicImpulseReceiverWithData": {
+          "Description": "データ受信に対応した非同期リスナー。"
+        },
+        "AsyncDynamicImpulseTrigger": {
+          "Description": "待ち受けるスロットへ非同期インパルスを送信する。"
+        },
+        "AsyncDynamicImpulseTriggerWithData": {
+          "Description": "データ付きの非同期インパルスを送信する。"
+        },
+        "AsyncFor": {
+          "Description": "既知回数の非同期ループ実行を行う。"
+        },
+        "AsyncRangeLoopInt": {
+          "Description": "範囲/ステップ指定の非同期ループ実行を行う。"
+        },
+        "AsyncSequence": {
+          "Description": "入力パルスに応じて順番に非同期で発火する。"
+        },
+        "AsyncWhile": {
+          "Description": "条件が真の間、非同期でループ実行する。"
+        },
+        "DelayUpdates": {
+          "Description": "アップデート数で実行を遅延する。"
+        },
+        "StartAsyncTask": {
+          "Description": "Async フローの ExecutionContext を新規作成する。"
+        },
+        "UpdatesDelayWithData": {
+          "Description": "エンジンのアップデートで遅延しつつ値を保持する。"
+        },
+        "UpdatesOrTimeDelay": {
+          "Description": "アップデート数または秒で実行を遅延する。"
+        },
+        "UpdatesOrTimeDelayWithData": {
+          "Description": "アップデート数または秒で遅延しつつ値を保持する。"
+        }
+      }
+    },
+    "Events": {
+      "Summary": "ワールド/アイテムのロードや破棄などのイベント。",
+      "Components": {
+        "OnActivated": {
+          "Description": "このノード階層が有効化されたときに発火する。"
+        },
+        "OnDeactivated": {
+          "Description": "このノード階層が無効化されたときに発火する。"
+        },
+        "OnDestroy": {
+          "Description": "ノードが破壊されたときに発火する。"
+        },
+        "OnDestroying": {
+          "Description": "次のゲームティックで破壊予定にマークされたときに発火する。"
+        },
+        "OnDuplicate": {
+          "Description": "ノード階層が複製されたときに発火する。"
+        },
+        "OnLoaded": {
+          "Description": "割り当てユーザー（複製を除く）に対して発火する。"
+        },
+        "OnPackageImported": {
+          "Description": "パッケージがインポートされたときに発火する。"
+        },
+        "OnPaste": {
+          "Description": "ノードがペーストの配下に入ったときに発火する（例: ResRec URI）。"
+        },
+        "OnSaving": {
+          "Description": "アイテムが保存される直前のティックで発火する。"
+        },
+        "OnStart": {
+          "Description": "ローカルユーザーで存在し始めたときに発火する。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "DataModelBooleanToggle": {
+      "Description": "トグル/セット/リセットが可能なシンプルなトグル。"
+    },
+    "Delay": {
+      "Description": "一定時間、実行を遅延する。"
+    },
+    "DelayWithData": {
+      "Description": "一定時間、実行を遅延しデータを保持して渡す。"
+    },
+    "DynamicImpulseReceiver": {
+      "Description": "スロットに配置し、トリガーパルスを待ち受けるリスナー。"
+    },
+    "DynamicImpulseReceiverWithData": {
+      "Description": "スロットでパルスと共にデータも受信するリスナー。"
+    },
+    "DynamicImpulseTrigger": {
+      "Description": "待ち受けるスロットへインパルスを送信する。"
+    },
+    "DynamicImpulseTriggerWithData": {
+      "Description": "待ち受けるスロットへデータ付きインパルスを送信する。"
+    },
+    "FireOnChange": {
+      "Description": "値が変化したときにパルスを発火する。"
+    },
+    "FireOnFalse": {
+      "Description": "false を検出したときに発火する。"
+    },
+    "FireOnLocalChange": {
+      "Description": "ローカル値が変化したときに発火する。"
+    },
+    "FireOnLocalFalse": {
+      "Description": "ローカルで false を検出したときに発火する。"
+    },
+    "FireOnLocalTrue": {
+      "Description": "ローカルで true を検出したときに発火する。"
+    },
+    "FireOnTrue": {
+      "Description": "true を検出したときに発火する。"
+    },
+    "FireWhileTrue": {
+      "Description": "true の間、毎フレーム発火する。"
+    },
+    "For": {
+      "Description": "既知の回数でループ実行する。"
+    },
+    "If": {
+      "Description": "条件の真偽で実行フローを制御する。"
+    },
+    "ImpulseDemultiplexer": {
+      "Description": "複数入力を受け、1つの出力とインデックスを出す。"
+    },
+    "ImpulseMultiplexer": {
+      "Description": "1つの入力から選択インデックスに応じて出力を切り替える。"
+    },
+    "LocalFireWhileTrue": {
+      "Description": "ローカルで true の間、毎フレーム発火する。"
+    },
+    "LocalImpulseTimeout": {
+      "Description": "短時間の頻発パルスを抑制する。"
+    },
+    "LocalLeakyImpulseBucket": {
+      "Description": "パルスを貯めて容量を超えないように時間経過で吐き出す。"
+    },
+    "LocalUpdate": {
+      "Description": "ローカルで毎フレーム発火する。"
+    },
+    "OncePerFrame": {
+      "Description": "1フレームにつき1回のみ後続を実行させる。"
+    },
+    "PulseRandom": {
+      "Description": "入力パルス時にランダムに1つの出力を発火する。"
+    },
+    "RangeLoopInt": {
+      "Description": "開始/終了/ステップ指定で回数ループ実行する。"
+    },
+    "SecondsTimer": {
+      "Description": "指定秒数ごとに発火する。"
+    },
+    "Sequence": {
+      "Description": "入力パルス時に順番に出力を発火する。"
+    },
+    "Update": {
+      "Description": "毎フレーム発火する。"
+    },
+    "UpdatesTimer": {
+      "Description": "指定アップデート数ごとに発火する。"
+    },
+    "While": {
+      "Description": "不定回数のループ実行を行う。"
+    }
+  }
 }
 
