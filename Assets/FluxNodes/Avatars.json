@@ -1,6 +1,96 @@
 {
   "Summary": "ユーザーのボディパーツとアンカー。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Anchors": {
+      "Summary": "ユーザーとアンカーの操作。",
+      "Components": {
+        "AnchoredUser": {
+          "Description": "IAvatarAnchor から User を返す。"
+        },
+        "AnchorEvents": {
+          "Description": "ユーザーがアンカーに乗る/降りる時にイベントを発火する。"
+        },
+        "AnchorLocomotionData": {
+          "Description": "ロコモーション更新を発火し、入力アクセス状態に基づくデータを返す。"
+        },
+        "AnchorUser": {
+          "Description": "ユーザーをアンカーに固定し、成功/失敗を通知する。"
+        },
+        "GetUserAnchor": {
+          "Description": "ユーザーが現在入っているアンカーを返す。"
+        },
+        "IsAnchorOccupied": {
+          "Description": "アンカーが使用中かを確認する。"
+        },
+        "IsUserAnchored": {
+          "Description": "ユーザーがアンカーを使用中かを確認する。"
+        },
+        "ReleaseUser": {
+          "Description": "ユーザーをアンカーから解放し、成功/失敗を通知する。"
+        }
+      }
+    },
+    "BodyNodes": {
+      "Summary": "ユーザーの手足や指の読み取り。",
+      "Components": {
+        "BodyNodeChirality": {
+          "Description": "この BodyNode がアバターのどちら側にあるかを返す。"
+        },
+        "BodyNodeSlot": {
+          "Description": "この BodyNode の Slot を返す。"
+        },
+        "BodyNodeSlotInChildren": {
+          "Description": "指定した Slot 階層から、この BodyNode の Slot を返す。"
+        },
+        "ComposeFinger": {
+          "Description": "指の Enum から該当する BodyNode を返す。"
+        },
+        "FingerNodeIndex": {
+          "Description": "この指の BodyNode の指インデックスを返す。"
+        },
+        "GetFingerSegmentType": {
+          "Description": "BodyNode から指のセグメント種別を返す。"
+        },
+        "GetFingerType": {
+          "Description": "BodyNode から指の種類を返す。"
+        },
+        "GetSide": {
+          "Description": "指定した BodyNode の左右を返す。"
+        },
+        "IsEye": {
+          "Description": "BodyNode が眼の骨かどうかを返す。"
+        },
+        "OtherSide": {
+          "Description": "BodyNode の反対側を返す。"
+        },
+        "RelativeBodyNode": {
+          "Description": "BodyNode の接続先から上方向の相対ボーン接続を返す。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "DefaultUserScale": {
+      "Description": "ユーザーのアバターに設定された既定スケール。"
+    },
+    "EquipAvatar": {
+      "Description": "ユーザーのアバターを装備する。"
+    },
+    "FingerPose": {
+      "Description": "選択した指ボーンのポーズ（位置・回転）を返す。"
+    },
+    "NearestUserFoot": {
+      "Description": "指定スロットに最も近いユーザーの足を取得する。"
+    },
+    "NearestUserHand": {
+      "Description": "指定スロットに最も近いユーザーの手を取得する。"
+    },
+    "NearestUserHead": {
+      "Description": "指定スロットに最も近いユーザーの頭部を取得する。"
+    },
+    "UserFingerPoseSource": {
+      "Description": "ユーザーから IFingerPoseSource を返す。"
+    }
+  }
 }
 
