@@ -1,6 +1,43 @@
 {
   "Summary": "ProtoFluxの値操作・アニメーションなどのアクション。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Indirect": {
+      "Summary": "IVariable参照を用いた間接アクション。",
+      "Components": {
+        "IndirectDecrement": {
+          "Description": "IVariable参照を用いて値を1減少させる。"
+        },
+        "IndirectIncrement": {
+          "Description": "IVariable参照を用いて値を1増加させる。"
+        },
+        "IndirectWrite": {
+          "Description": "IVariable参照を用い、値/参照を書き込む。"
+        },
+        "IndirectWrite Latch": {
+          "Description": "IVariable参照を用い、値/参照を書き込み、リセット値/参照も設定できる。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "Decrement": {
+      "Description": "値を1減少させるノード。"
+    },
+    "Increment": {
+      "Description": "値を1増加させるノード。"
+    },
+    "Tween Value": {
+      "Description": "指定した期間内で開始値から終了値へ補間するノード。"
+    },
+    "Write": {
+      "Description": "変数やソースに値や参照を書き込むノード。"
+    },
+    "Write Latch": {
+      "Description": "値や参照を書き込み、リセット用の値や参照を持てるノード。"
+    },
+    "Indirect": {
+      "Description": "間接的に変数へ書き込むノード。Multiplexerとの併用に便利。"
+    }
+  }
 }
 
