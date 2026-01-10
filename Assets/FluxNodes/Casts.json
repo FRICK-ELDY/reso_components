@@ -1,6 +1,10 @@
 {
   "Summary": "Nullable/値からオブジェクトへのキャスト。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "ValueCast": {
+      "Description": "Nullable または値を Object にキャストする。"
+    }
+  }
 }
 
