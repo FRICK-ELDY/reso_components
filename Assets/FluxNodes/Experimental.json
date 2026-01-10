@@ -1,6 +1,13 @@
 {
   "Summary": "実験的（アルファ）ノード。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "TestFeatureUpgrade": {
+      "Description": "内部テスト用のノード（実用途は特に想定されていない）。"
+    },
+    "WriteTextToFile": {
+      "Description": "ゲームがPCにテキストを書き込むことを許可する（許可が必要）。"
+    }
+  }
 }
 
