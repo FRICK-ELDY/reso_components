@@ -1,6 +1,31 @@
 {
   "Summary": "ログ、計測、デバッグ支援。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "DebugAxes": {
+      "Description": "軸の矢印を表示するデバッグ可視化。"
+    },
+    "DebugBox": {
+      "Description": "デバッグ用のボックス可視化を表示する。"
+    },
+    "DebugLine": {
+      "Description": "デバッグ用のライン可視化を表示する。"
+    },
+    "DebugSphere": {
+      "Description": "デバッグ用のスフィア可視化を表示する。"
+    },
+    "DebugText": {
+      "Description": "デバッグ用のテキスト可視化を表示する。"
+    },
+    "DebugTriangle": {
+      "Description": "デバッグ用のトライアングル可視化を表示する。"
+    },
+    "DebugVector": {
+      "Description": "デバッグ用のベクトル可視化を表示する。"
+    },
+    "EstimatedMasterClockError": {
+      "Description": "ワールド時間（AuthorityTimeBase）の誤差率を返す。"
+    }
+  }
 }
 
