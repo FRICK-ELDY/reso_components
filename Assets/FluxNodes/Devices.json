@@ -1,6 +1,129 @@
 {
   "Summary": "キーボード/ハプティクス/マウス/ディスプレイ入出力。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Controllers": {
+      "Summary": "VRコントローラー。",
+      "Components": {
+        "CosmosController": {
+          "Description": "Cosmos コントローラーノード。"
+        },
+        "HPReverbController": {
+          "Description": "HP Reverb コントローラーノード。"
+        },
+        "IndexController": {
+          "Description": "Index コントローラーノード。"
+        },
+        "StandardController": {
+          "Description": "Standard コントローラーノード。"
+        },
+        "TouchController": {
+          "Description": "Touch コントローラーノード。"
+        },
+        "ViveController": {
+          "Description": "Vive コントローラーノード。"
+        },
+        "WindowsMRController": {
+          "Description": "Windows MR コントローラーノード。"
+        }
+      }
+    },
+    "Display": {
+      "Summary": "ディスプレイ/ウィンドウ解像度。",
+      "Components": {
+        "LocalPrimaryResolution": {
+          "Description": "ユーザーのメインモニターの解像度。"
+        },
+        "LocalWindowAspectRatio": {
+          "Description": "Resonite アプリケーションのウィンドウ縦横比。"
+        },
+        "LocalWindowResolution": {
+          "Description": "Resonite アプリケーションのウィンドウ解像度。"
+        }
+      }
+    },
+    "Haptics": {
+      "Summary": "ベストやコントローラーなどのハプティクス。",
+      "Components": {
+        "TriggerHapticsInHierarchy": {
+          "Description": "指定した Slot 階層でハプティクスをトリガーする。"
+        },
+        "TriggerHapticsOnController": {
+          "Description": "コントローラーの片側でハプティクスをトリガーする。"
+        }
+      }
+    },
+    "Keyboard": {
+      "Summary": "キーボード入力。",
+      "Components": {
+        "KeyHeld": {
+          "Description": "キーボードキーが押され続けているかを確認する。"
+        },
+        "KeyPressed": {
+          "Description": "キーボードキーが押されたかを確認する。"
+        },
+        "KeyReleased": {
+          "Description": "キーボードキーが離されたかを確認する。"
+        },
+        "TypeDelta": {
+          "Description": "このフレームでのキーの変化。"
+        }
+      }
+    },
+    "Mouse": {
+      "Summary": "マウスの移動/クリック。",
+      "Components": {
+        "DesktopMousePosition": {
+          "Description": "デスクトップ上のマウス位置（Resonite が非フォーカスでも動作）。"
+        },
+        "LeftMouseHeld": {
+          "Description": "左ボタンが押され続けているかを確認する。"
+        },
+        "LeftMousePressed": {
+          "Description": "左ボタンが押されたかを確認する。"
+        },
+        "LeftMouseReleased": {
+          "Description": "左ボタンが離されたかを確認する。"
+        },
+        "MiddleMouseHeld": {
+          "Description": "中ボタンが押され続けているかを確認する。"
+        },
+        "MiddleMousePressed": {
+          "Description": "中ボタンが押されたかを確認する。"
+        },
+        "MiddleMouseReleased": {
+          "Description": "中ボタンが離されたかを確認する。"
+        },
+        "MouseMovementDelta": {
+          "Description": "フレーム毎のマウス移動量。"
+        },
+        "MousePosition": {
+          "Description": "Resonite 内のマウス位置。"
+        },
+        "MouseScrollDelta": {
+          "Description": "フレーム毎のマウスホイールの変化量。"
+        },
+        "MouseScrollDelta2D": {
+          "Description": "フレーム毎のスクロールボール/トラックボールの変化量。"
+        },
+        "NormalizedMousePosition": {
+          "Description": "Resonite 内の正規化されたマウス位置。"
+        },
+        "RightMouseHeld": {
+          "Description": "右ボタンが押され続けているかを確認する。"
+        },
+        "RightMousePressed": {
+          "Description": "右ボタンが押されたかを確認する。"
+        },
+        "RightMouseReleased": {
+          "Description": "右ボタンが離されたかを確認する。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "GeneralHeadset": {
+      "Description": "ユーザーから汎用的なヘッドセット情報を取得する。"
+    }
+  }
 }
 
