@@ -1,21 +1,19 @@
-import { SPLIT_BASE_DIR, CATEGORY_TAGS } from "./constants.js";
-
 export function fileNameForTag(tagName) {
   const safe = String(tagName || "").replace(/\s+/g, "");
   return `${safe}.json`;
 }
 
-export async function loadInitialData() {
-  const split = await tryLoadSplitCategoryData();
+export async function loadInitialData(baseDir, tags) {
+  const split = await tryLoadSplitCategoryData(baseDir, tags);
   if (split) return split;
   return { Category: {} };
 }
 
-export async function tryLoadSplitCategoryData() {
+export async function tryLoadSplitCategoryData(baseDir, tags) {
   if (location.protocol === "file:") return null;
-  const targets = CATEGORY_TAGS.filter(t => t.toLowerCase() !== "all");
+  const targets = (tags || []).filter(t => t.toLowerCase() !== "all");
   const requests = targets.map(async (tag) => {
-    const url = SPLIT_BASE_DIR + fileNameForTag(tag);
+    const url = baseDir + fileNameForTag(tag);
     try {
       const res = await fetch(url, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -72,11 +70,11 @@ export function normalizeSplitCategoryJson(json, categoryName) {
   return null;
 }
 
-export async function mergeLocalJsonFiles(files) {
+export async function mergeLocalJsonFiles(files, tags) {
   const entries = await Promise.all(files.map(async (file) => {
     const text = await file.text();
     const json = JSON.parse(text);
-    const tag = resolveTagFromFileName(file.name);
+    const tag = resolveTagFromFileName(file.name, tags);
     return { file, json, tag };
   }));
   const merged = { Category: {} };
@@ -110,9 +108,9 @@ export async function mergeLocalJsonFiles(files) {
   return merged;
 }
 
-export function resolveTagFromFileName(fileName) {
+export function resolveTagFromFileName(fileName, tags) {
   const lower = String(fileName || "").toLowerCase();
-  for (const tag of CATEGORY_TAGS) {
+  for (const tag of (tags || [])) {
     if (tag.toLowerCase() === "all") continue;
     const expected = fileNameForTag(tag).toLowerCase();
     if (lower === expected) return tag;
@@ -120,7 +118,7 @@ export function resolveTagFromFileName(fileName) {
   const m2 = lower.match(/^(.+)\.json$/i);
   if (m2 && m2[1]) {
     const safe2 = m2[1];
-    for (const tag of CATEGORY_TAGS) {
+    for (const tag of (tags || [])) {
       if (tag.toLowerCase() === "all") continue;
       const safeTag = String(tag).replace(/\s+/g, "").toLowerCase();
       if (safeTag === safe2) return tag;

@@ -1,6 +1,7 @@
-export const SPLIT_BASE_DIR = "./Assets/components/";
+export const COMPONENTS_BASE_DIR = "./Assets/components/";
+export const FLUX_BASE_DIR = "./Assets/FluxNodes/";
 
-export const CATEGORY_TAGS = [
+export const COMPONENT_TAGS = [
   "all",
   "Assets",
   "Audio",
@@ -32,6 +33,44 @@ export const CATEGORY_TAGS = [
   "Userspace",
   "Utility",
   "Wizards",
+  "World"
+];
+
+export const FLUX_TAGS = [
+  "all",
+  "Actions",
+  "Assets",
+  "Audio",
+  "Avatars",
+  "Casts",
+  "Colors",
+  "Components",
+  "Core",
+  "Debug",
+  "Devices",
+  "Enums",
+  "Experimental",
+  "Flow",
+  "Interaction",
+  "Locomotion",
+  "Math",
+  "Media",
+  "Network",
+  "Nodes",
+  "Operators",
+  "Physics",
+  "References",
+  "Rendering",
+  "Security",
+  "Slots",
+  "Strings",
+  "Time",
+  "Tools",
+  "Transform",
+  "Undo",
+  "Users",
+  "Utility",
+  "Variables",
   "World"
 ];
 

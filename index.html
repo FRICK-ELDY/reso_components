@@ -11,7 +11,7 @@
     <div class="header-left">
       <h1>Resonite コンポーネント ビューア</h1>
       <p class="subtitle">
-        データ元: <a href="https://wiki.resonite.com/Category:Components/ja" target="_blank" rel="noopener">Resonite Wiki - カテゴリ:コンポーネント</a>
+        データ元: <a id="dataSourceLink" href="https://wiki.resonite.com/Category:Components" target="_blank" rel="noopener">Resonite Wiki - Category: Components</a>
       </p>
     </div>
   </header>
@@ -23,6 +23,10 @@
 
   <section class="content" role="region" aria-label="内容">
     <aside class="sidebar" aria-label="サイドバー">
+      <div class="mode-toggle" role="group" aria-label="表示の切り替え">
+        <button id="modeToggleComponents" type="button" aria-pressed="true" title="Components を表示">Components</button>
+        <button id="modeToggleFlux" type="button" aria-pressed="false" title="ProtoFlux ノードを表示">FluxNodes</button>
+      </div>
       <div class="tag-controls" aria-label="開く階層コントロール">
         <div class="depth-bar-inner">
           <span class="depth-label" title="ツリーの自動展開レベル">階層表示</span>

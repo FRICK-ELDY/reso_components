@@ -58,7 +58,7 @@
           "Summary": "実行に関するランタイムコンポーネント。",
           "Category": {
             "Nodes": {
-              "Summary": "ProtoFluxのノード。",
+              "Summary": "ProtoFluxのノード。(FluxNodesボタンを押して展開してください。)",
               "Components": {}
             }
           }

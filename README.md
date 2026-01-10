@@ -6,7 +6,7 @@
 - `Assets/components/<Tag>.json`: データ（分割JSON）
 
 参考: データの出典（カテゴリ情報）
-- Resonite Wiki - カテゴリ:コンポーネント: `https://wiki.resonite.com/Category:Components/ja`
+- Resonite Wiki - カテゴリ:コンポーネント: `https://wiki.resonite.com/Category:Components`
 
 ### データ配置（分割JSON対応）
 
