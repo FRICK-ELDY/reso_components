@@ -1,6 +1,6 @@
 {
   "Summary": "ユーザー入力関連。",
-  "Categorys": {
+  "Category": {
     "Controls": {
       "Summary": "コントロール関連のコンポーネント。",
       "Components": {
@@ -34,7 +34,7 @@
     },
     "Haptics": {
       "Summary": "触覚フィードバック関連のコンポーネント。",
-      "Categorys": {
+      "Category": {
         "Filters": {
           "Summary": "触覚フィードバックのフィルター。",
           "Components": {

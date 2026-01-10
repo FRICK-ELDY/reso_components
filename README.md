@@ -21,14 +21,14 @@
     ```json
     {
       "Summary": "説明",
-      "Categorys": { /* 子カテゴリ */ },
+      "Category": { /* 子カテゴリ */ },
       "Components": { /* コンポーネント */ }
     }
     ```
   - B. ラップ形式:
     ```json
     {
-      "Categorys": {
+      "Category": {
         "Assets": {
           "Summary": "説明",
           "Components": {}
@@ -56,14 +56,14 @@
 
 ### JSON 仕様
 
-例（キー名はご指定どおり `Categorys` / `Components` を使用）:
+例（キー名はご指定どおり `Category` / `Components` を使用）:
 
 ```json
 {
-  "Categorys": {
+  "Category": {
     "Assets": {
       "Summary": "カテゴリの説明テキスト",
-      "Categorys": {
+      "Category": {
         "Export": {
           "Summary": "サブカテゴリの説明",
           "Components": {
@@ -86,8 +86,8 @@
 }
 ```
 
-- ルートに `Categorys`（オブジェクト）を必須とします。
-- 各カテゴリは任意で `Summary`（文字列）、`Categorys`（子カテゴリのオブジェクト）、`Components`（コンポーネントのオブジェクト）を持てます。
+- ルートに `Category`（オブジェクト）を必須とします。
+- 各カテゴリは任意で `Summary`（文字列）、`Category`（子カテゴリのオブジェクト）、`Components`（コンポーネントのオブジェクト）を持てます。
 - 各コンポーネントは任意で `Description`（文字列）を持てます。
 
 ### 検索

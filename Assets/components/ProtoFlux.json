@@ -1,6 +1,6 @@
 {
   "Summary": "ProtoFlux関連。",
-  "Categorys": {
+  "Category": {
     "Debug": {
       "Summary": "ProtoFluxノードのデバッグに使用するコンポーネント。",
       "Components": {
@@ -11,10 +11,10 @@
     },
     "FrooxEngine": {
       "Summary": "FrooxEngineのコアノード。",
-      "Categorys": {
+      "Category": {
         "ProtoFlux": {
           "Summary": "ProtoFlux関連のコンポーネント。",
-          "Categorys": {
+          "Category": {
             "CoreNodes": {
               "Summary": "ProtoFluxのコアノード。",
               "Components": {
@@ -53,10 +53,10 @@
     },
     "Runtimes": {
       "Summary": "ProtoFluxのランタイムコンポーネント。",
-      "Categorys": {
+      "Category": {
         "Execution ": {
           "Summary": "実行に関するランタイムコンポーネント。",
-          "Categorys": {
+          "Category": {
             "Nodes": {
               "Summary": "ProtoFluxのノード。",
               "Components": {}

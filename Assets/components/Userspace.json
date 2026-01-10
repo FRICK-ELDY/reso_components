@@ -1,6 +1,6 @@
 {
   "Summary": "ユーザースペース関連。",
-  "Categorys": {
+  "Category": {
     "Virtual Keyboard": {
       "Summary": "仮想キーボード。",
       "Components": {

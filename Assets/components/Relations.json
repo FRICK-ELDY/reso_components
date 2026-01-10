@@ -1,6 +1,6 @@
 {
   "Summary": "値/参照のドライバーおよびスウィズル関連コンポーネント。",
-  "Categorys": {
+  "Category": {
     "Swizzle Drivers": {
       "Summary": "パック値の要素を入替・抽出・再配置するドライバー群。",
       "Components": {

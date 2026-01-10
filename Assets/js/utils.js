@@ -3,8 +3,8 @@ export function normalizeName(s) {
 }
 
 export function validateMinimumSchema(json) {
-  if (!json || typeof json !== "object" || !json.Categorys || typeof json.Categorys !== "object") {
-    throw new Error('必須キー "Categorys" が存在しません。');
+  if (!json || typeof json !== "object" || !json.Category || typeof json.Category !== "object") {
+    throw new Error('必須キー "Category" が存在しません。');
   }
 }
 

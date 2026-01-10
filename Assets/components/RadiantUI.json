@@ -1,6 +1,6 @@
 {
   "Summary": "Radiant UI のコンテナ、コンテキストメニュー、データフィード、ファセット、ナビゲーション、ユーティリティなど。",
-  "Categorys": {
+  "Category": {
     "Containers": {
       "Summary": "Radiant UI のコンテナ。",
       "Components": {
@@ -31,7 +31,7 @@
     },
     "Data Feeds": {
       "Summary": "Data Feeds の UI 構築に関するセット（詳細は Data Feeds を参照）。",
-      "Categorys": {
+      "Category": {
         "Feeds": {
           "Summary": "フィードデータのソースとなるフィードの一覧。",
           "Components": {
@@ -273,7 +273,7 @@
     },
     "World Browsing": {
       "Summary": "Radiant UI のワールドブラウジング関連。",
-      "Categorys": {
+      "Category": {
         "Legacy": {
           "Summary": "レガシーのワールドブラウジング関連。",
           "Components": {

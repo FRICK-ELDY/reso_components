@@ -1,6 +1,6 @@
 {
   "Summary": "ユーティリティ（リンク、保存、同期、表示、フォーマット等）。",
-  "Categorys": {
+  "Category": {
     "Entity Interfaces": {
       "Summary": "エンティティインターフェース関連のユーティリティ。",
       "Components": {

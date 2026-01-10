@@ -1,6 +1,6 @@
 {
   "Summary": "メディア関連。",
-  "Categorys": {
+  "Category": {
     "Capture": {
       "Summary": "キャプチャ関連のコンポーネント。",
       "Components": {

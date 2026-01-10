@@ -1,6 +1,6 @@
 {
   "Summary": "ツール（カメラ操作、複製、編集、計測、照明、音声、データ、ProtoFlux など）。",
-  "Categorys": {
+  "Category": {
     "Brushes": {
       "Summary": "ブラシ系ツール。",
       "Components": {

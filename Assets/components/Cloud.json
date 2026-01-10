@@ -1,6 +1,6 @@
 {
   "Summary": "クラウド関連（インベントリ、リンク、セッションオーブ、ストレージ、ログイン、提出など）。",
-  "Categorys": {
+  "Category": {
     "Indicators": {
       "Summary": "クラウドの容量や状態などを表示する指標コンポーネント。",
       "Components": {

@@ -1,6 +1,6 @@
 {
   "Summary": "トランスフォーム（位置・回転・スケール）関連。",
-  "Categorys": {
+  "Category": {
     "Drivers": {
       "Summary": "フィールドを駆動するコンポーネント。",
       "Components": {

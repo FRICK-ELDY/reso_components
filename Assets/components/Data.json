@@ -1,6 +1,6 @@
 {
   "Summary": "データ値・メタデータ・変数（動的/親/空間）、プリセット、変換。",
-  "Categorys": {
+  "Category": {
     "Conversions": {
       "Summary": "DateTime をローカルタイムゾーンへ変換するコンポーネント。",
       "Components": {
@@ -86,7 +86,7 @@
     },
     "Spatial": {
       "Summary": "空間変数（Spatial variables）と相互作用するコンポーネント。",
-      "Categorys": {
+      "Category": {
         "Box Variables": {
           "Summary": "箱形領域の空間変数。",
           "Components": {

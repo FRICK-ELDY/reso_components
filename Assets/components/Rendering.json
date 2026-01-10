@@ -1,6 +1,6 @@
 {
   "Summary": "レンダリング（カメラ/ライト/メッシュ/テキスト/可視化/リグ/反射 など）。",
-  "Categorys": {
+  "Category": {
     "Drivers": {
       "Summary": "レンダリング用のドライバー。",
       "Components": {
@@ -19,7 +19,7 @@
     },
     "Particle System": {
       "Summary": "パーティクルシステム関連コンポーネント。",
-      "Categorys": {
+      "Category": {
         "Emitters": {
           "Summary": "パーティクルを放出するエミッタ。",
           "Components": {

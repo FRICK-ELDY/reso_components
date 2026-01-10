@@ -1,6 +1,6 @@
 {
   "Summary": "オーディオ再生・出力・リスナー・リバーブなどの音響コンポーネント。",
-  "Categorys": {
+  "Category": {
     "Utility": {
       "Summary": "オーディオデバイス情報・選択に関するユーティリティ。",
       "Components": {

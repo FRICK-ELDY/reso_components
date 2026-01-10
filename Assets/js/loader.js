@@ -8,7 +8,7 @@ export function fileNameForTag(tagName) {
 export async function loadInitialData() {
   const split = await tryLoadSplitCategoryData();
   if (split) return split;
-  return { Categorys: {} };
+  return { Category: {} };
 }
 
 export async function tryLoadSplitCategoryData() {
@@ -40,7 +40,7 @@ export async function tryLoadSplitCategoryData() {
   }
   if (Object.keys(merged).length === 0) return null;
   return {
-    Categorys: merged,
+    Category: merged,
     _meta: {
       source: sources
     }
@@ -52,21 +52,21 @@ export function normalizeSplitCategoryJson(json, categoryName) {
   const looksLikeCategory =
     typeof json.Summary === "string" ||
     (json.Components && typeof json.Components === "object") ||
-    (json.Categorys && typeof json.Categorys === "object");
+    (json.Category && typeof json.Category === "object");
   if (looksLikeCategory) {
     return {
       Summary: json.Summary,
-      Categorys: json.Categorys,
+      Category: json.Category,
       Components: json.Components
     };
   }
-  if (json.Categorys && typeof json.Categorys === "object") {
-    if (json.Categorys[categoryName]) {
-      return json.Categorys[categoryName];
+  if (json.Category && typeof json.Category === "object") {
+    if (json.Category[categoryName]) {
+      return json.Category[categoryName];
     }
-    const keys = Object.keys(json.Categorys);
+    const keys = Object.keys(json.Category);
     if (keys.length === 1) {
-      return json.Categorys[keys[0]];
+      return json.Category[keys[0]];
     }
   }
   return null;
@@ -79,29 +79,29 @@ export async function mergeLocalJsonFiles(files) {
     const tag = resolveTagFromFileName(file.name);
     return { file, json, tag };
   }));
-  const merged = { Categorys: {} };
+  const merged = { Category: {} };
   for (const { json, tag } of entries) {
     const looksLikeCategory =
       json && typeof json === "object" &&
       (typeof json.Summary === "string" ||
         (json.Components && typeof json.Components === "object") ||
-        (json.Categorys && typeof json.Categorys === "object"));
+        (json.Category && typeof json.Category === "object"));
     if (looksLikeCategory) {
       const catName = tag || "Unknown";
-      merged.Categorys[catName] = {
+      merged.Category[catName] = {
         Summary: json.Summary,
-        Categorys: json.Categorys,
+        Category: json.Category,
         Components: json.Components
       };
       continue;
     }
-    if (json && typeof json === "object" && json.Categorys && typeof json.Categorys === "object") {
-      const keys = Object.keys(json.Categorys);
-      if (keys.length === 1 && tag && json.Categorys[tag]) {
-        merged.Categorys[tag] = json.Categorys[tag];
+    if (json && typeof json === "object" && json.Category && typeof json.Category === "object") {
+      const keys = Object.keys(json.Category);
+      if (keys.length === 1 && tag && json.Category[tag]) {
+        merged.Category[tag] = json.Category[tag];
       } else {
         for (const k of keys) {
-          merged.Categorys[k] = json.Categorys[k];
+          merged.Category[k] = json.Category[k];
         }
       }
       continue;

@@ -1,9 +1,9 @@
 {
   "Summary": "UIX/タッチ可能なボタンイベント、UIドライバー",
-  "Categorys": {
+  "Category": {
     "Button Interactions": {
       "Summary": "一般的なボタン操作用のコンポーネント。",
-      "Categorys": {
+      "Category": {
         "Media": {
           "Summary": "Button Events に応じて音声を再生したり、IPlayable のループ/再生/停止/シークを制御します。",
           "Components": {
@@ -121,7 +121,7 @@
     },
     "Editors": {
       "Summary": "テキストフィールドから値を解析するコンポーネント。",
-      "Categorys": {
+      "Category": {
         "Utility": {
           "Summary": "単位変換。",
           "Components": {

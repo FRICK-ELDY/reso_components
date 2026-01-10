@@ -1,9 +1,9 @@
 {
   "Summary": "ユーザー関連（スポーン、トラッキング、ストリーム、情報など）。",
-  "Categorys": {
+  "Category": {
     "Common Avatar System": {
       "Summary": "アバターのプロパティを制御します。",
-      "Categorys": {
+      "Category": {
         "Anchors": { "Summary": "アバターのアンカー/リリース。", "Components": {
           "AvatarAnchor": { "Description": "アバターをアンカー固定します。" },
           "AvatarAnchorDestroyOnRelease": { "Description": "リリース時にアンカーを破棄します。" },

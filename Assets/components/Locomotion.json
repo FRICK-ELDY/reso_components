@@ -1,6 +1,6 @@
 {
   "Summary": "移動（ロコモーション）関連。",
-  "Categorys": {
+  "Category": {
     "Footsteps": {
       "Summary": "ユーザーの足音イベントを検出し、それに応じてアクションを実行する方法。",
       "Components": {

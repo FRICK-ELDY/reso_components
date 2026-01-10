@@ -1,6 +1,6 @@
 {
   "Summary": "ネットワーク関連。",
-  "Categorys": {
+  "Category": {
     "OSC": {
       "Summary": "Open Sound Control（OSC）でResoniteにデータを送受信します。",
       "Components": {

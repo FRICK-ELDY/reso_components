@@ -1,6 +1,6 @@
 {
   "Summary": "ワールド関連（リンク、ステータス、サムネイル、セッション情報など）。",
-  "Categorys": {
+  "Category": {
     "Loading": {
       "Summary": "ワールドの読み込みに関するコンポーネント。",
       "Components": {

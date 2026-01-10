@@ -1,6 +1,6 @@
 {
   "Summary": "物理演算に関連するコンポーネント。",
-  "Categorys": {
+  "Category": {
     "Colliders": {
       "Summary": "物理的な衝突判定を行うためのコンポーネント。",
       "Components": {

@@ -2,7 +2,7 @@ import { normalizeName } from "./utils.js";
 
 export function renderTree(container, data, selectedTag, openDepth = 1) {
   container.innerHTML = "";
-  if (!data || !data.Categorys || Object.keys(data.Categorys).length === 0) {
+  if (!data || !data.Category || Object.keys(data.Category).length === 0) {
     const empty = document.createElement("div");
     empty.className = "empty-message";
     empty.textContent = "表示できるカテゴリがありません。検索条件を見直すか、JSONを読み込んでください。";
@@ -10,12 +10,12 @@ export function renderTree(container, data, selectedTag, openDepth = 1) {
     return;
   }
   const fragment = document.createDocumentFragment();
-  let categories = Object.keys(data.Categorys).sort((a, b) => a.localeCompare(b));
+  let categories = Object.keys(data.Category).sort((a, b) => a.localeCompare(b));
   if (selectedTag && selectedTag.toLowerCase() !== "all") {
     categories = categories.filter((name) => normalizeName(name) === normalizeName(selectedTag));
   }
   for (const catName of categories) {
-    const catObj = data.Categorys[catName] || {};
+    const catObj = data.Category[catName] || {};
     fragment.appendChild(renderCategory(catName, catObj, 0, openDepth));
   }
   container.appendChild(fragment);
@@ -45,7 +45,7 @@ export function renderCategory(categoryName, categoryObj, level, openDepth) {
     summary.appendChild(inline);
   }
 
-  const childCats = (categoryObj && categoryObj.Categorys) ? categoryObj.Categorys : {};
+  const childCats = (categoryObj && categoryObj.Category) ? categoryObj.Category : {};
   const childCatNames = Object.keys(childCats || {}).sort((a, b) => a.localeCompare(b));
   for (const childName of childCatNames) {
     const childObj = childCats[childName] || {};

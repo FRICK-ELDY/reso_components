@@ -1,6 +1,6 @@
 {
   "Summary": "ユーザーインターフェース（UI）コンポーネント。",
-  "Categorys": {
+  "Category": {
     "Dialogs": {
       "Summary": "ダイアログUI。",
       "Components": {

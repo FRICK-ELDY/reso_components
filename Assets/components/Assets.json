@@ -1,6 +1,6 @@
 {
   "Summary": "マテリアル、プロシージャルコンポーネント、メッシュ",
-  "Categorys": {
+  "Category": {
     "Export": {
       "Summary": "エクスポート可能なアセット。",
       "Components": {
@@ -54,7 +54,7 @@
     },
     "Materials": {
       "Summary": "マテリアル一覧",
-      "Categorys": {
+      "Category": {
         "Filters": {
           "Summary": "画像フィルタ系マテリアル。",
           "Components": {
@@ -220,7 +220,7 @@
         },
         "UI": {
           "Summary": "ユーザーインターフェース用のマテリアル。",
-          "Categorys": {
+          "Category": {
             "Circle Segment": {
               "Summary": "円弧セグメント用のUIマテリアル。",
               "Components": {
@@ -377,7 +377,7 @@
     },
     "Procedural Meshes": {
       "Summary": "プロシージャルメッシュ",
-      "Categorys": {
+      "Category": {
         "Legacy UI": {
           "Summary": "レガシーUI向けのメッシュ。",
           "Components": {

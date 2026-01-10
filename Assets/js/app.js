@@ -39,7 +39,7 @@ import { showError } from "./utils.js";
       renderTree(treeContainer, currentViewData, selectedTag, openDepth);
     }).catch((err) => {
       showError(treeContainer, "初期データの読み込みに失敗しました。空のデータで起動します。", err);
-      const empty = { Categorys: {} };
+      const empty = { Category: {} };
       originalData = empty;
       currentViewData = empty;
       renderTree(treeContainer, currentViewData, selectedTag, openDepth);

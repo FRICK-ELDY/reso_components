@@ -1,12 +1,12 @@
 export function filterData(data, query) {
-  if (!data || !data.Categorys) return { Categorys: {} };
-  const filtered = { Categorys: {} };
-  const names = Object.keys(data.Categorys);
+  if (!data || !data.Category) return { Category: {} };
+  const filtered = { Category: {} };
+  const names = Object.keys(data.Category);
   for (const catName of names) {
-    const catObj = data.Categorys[catName] || {};
+    const catObj = data.Category[catName] || {};
     const pruned = pruneCategory(catName, catObj, query);
     if (pruned) {
-      filtered.Categorys[catName] = pruned;
+      filtered.Category[catName] = pruned;
     }
   }
   return filtered;
@@ -17,7 +17,7 @@ export function pruneCategory(catName, catObj, query) {
   const catMatches = catName.toLowerCase().includes(query) || summaryText.includes(query);
 
   const resultChildCats = {};
-  const childCats = (catObj && catObj.Categorys) ? catObj.Categorys : {};
+  const childCats = (catObj && catObj.Category) ? catObj.Category : {};
   for (const childName of Object.keys(childCats || {})) {
     const childObj = childCats[childName] || {};
     const prunedChild = pruneCategory(childName, childObj, query);
@@ -43,7 +43,7 @@ export function pruneCategory(catName, catObj, query) {
     const pruned = {
       Summary: catObj.Summary
     };
-    if (hasChildCats) pruned.Categorys = resultChildCats;
+    if (hasChildCats) pruned.Category = resultChildCats;
     if (hasComponents) pruned.Components = resultComponents;
     return pruned;
   }

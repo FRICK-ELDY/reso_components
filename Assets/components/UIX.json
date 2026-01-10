@@ -1,6 +1,6 @@
 {
   "Summary": "ResoniteのUIシステムであるUIX用のコンポーネントです。",
-  "Categorys": {
+  "Category": {
     "Graphics": {
       "Summary": "UIX の見た目（レンダリング）を構成するコンポーネント。",
       "Components": {
