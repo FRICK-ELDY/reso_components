@@ -1,6 +1,103 @@
 {
   "Summary": "基礎的な表示・入出力・変換ノード。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Casts": {
+      "Summary": "キャストノード。",
+      "Components": {
+        "ObjectCast": {
+          "Description": "Object を別のオブジェクトにキャストする。"
+        },
+        "ValueCast": {
+          "Description": "Value を別の値にキャストする。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "AsyncCallInput": {
+      "Description": "非同期インパルス開始ボタン。"
+    },
+    "Box": {
+      "Description": "任意の Type を Object として扱うために変換する。"
+    },
+    "CallInput": {
+      "Description": "インパルス開始ボタン。"
+    },
+    "CallRelay": {
+      "Description": "非同期/インパルスのルーティングコネクタ。"
+    },
+    "Constant": {
+      "Description": "定数の基底クラス。"
+    },
+    "ContinuationRelay": {
+      "Description": "継続インパルスのルーティングコネクタ。"
+    },
+    "Display": {
+      "Description": "内部用の値表示。"
+    },
+    "EvaluationPoint": {
+      "Description": "ノードの評価を開始する基底。"
+    },
+    "FieldAsVariable": {
+      "Description": "IValue<T> を IVariable に変換する（間接書き込み用）。"
+    },
+    "FieldHook": {
+      "Description": "一時的にフィールドを駆動する。"
+    },
+    "FilterInput": {
+      "Description": "UIで変更可能な参照ノード。"
+    },
+    "GlobalToOutput": {
+      "Description": "Global Value/Global Reference から値を返す。"
+    },
+    "ImpulseDisplay": {
+      "Description": "インパルス線で Secondary を押して得られる表示。"
+    },
+    "Input": {
+      "Description": "入力側の値線で Secondary を押して得られる。"
+    },
+    "InputDisplay": {
+      "Description": "入力側の値線の表示ノード。"
+    },
+    "Link": {
+      "Description": "ノード群をリンクする。パック/アンパックと併用。"
+    },
+    "ObjectFieldDrive": {
+      "Description": "コンテキストメニューの Drive から作成される。"
+    },
+    "ReferenceAsVariable": {
+      "Description": "SyncRef を IVariable に変換する（間接書き込み用）。"
+    },
+    "ReferenceDrive": {
+      "Description": "コンテキストメニューの Drive から作成される。"
+    },
+    "ReferenceSource": {
+      "Description": "コンテキストメニューの Source から作成される。"
+    },
+    "ReferenceToOutput": {
+      "Description": "FieldAsVariable に類似。グローバル参照からフィールドを返す。"
+    },
+    "Relay": {
+      "Description": "値のルーティングコネクタ。"
+    },
+    "Source": {
+      "Description": "コンテキストメニューの Source から作成される。"
+    },
+    "Unbox": {
+      "Description": "Object を元の Type へ変換する。"
+    },
+    "UserReferenceAsVariable": {
+      "Description": "UserRef を IVariable として扱う。"
+    },
+    "ValueDisplay": {
+      "Description": "出力側の値線で Secondary を押して得られる表示。"
+    },
+    "ValueFieldDrive": {
+      "Description": "コンテキストメニューの Drive から作成される。"
+    },
+    "WriteToGlobal": {
+      "Description": "値/参照を Global Value/Global Reference コンポーネントに書き込む。"
+    }
+  }
 }
 
