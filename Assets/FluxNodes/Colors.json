@@ -1,6 +1,300 @@
 {
   "Summary": "色、チャンネル、色演算。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Channels": {
+      "Summary": "チャンネル/プロファイルの演算（チャンネル書き込みや数式処理）。",
+      "Components": {
+        "ColorAddAlpha": {
+          "Description": "入力 Color のアルファに値を加算する。"
+        },
+        "ColorAddBlue": {
+          "Description": "入力 Color の青チャンネルに値を加算する。"
+        },
+        "ColorAddBlueHDR": {
+          "Description": "入力 Color の青チャンネルに値を加算する（HDR）。"
+        },
+        "ColorAddGreen": {
+          "Description": "入力 Color の緑チャンネルに値を加算する。"
+        },
+        "ColorAddGreenHDR": {
+          "Description": "入力 Color の緑チャンネルに値を加算する（HDR）。"
+        },
+        "ColorAddHue": {
+          "Description": "入力 Color の色相に値を加算する。"
+        },
+        "ColorAddRed": {
+          "Description": "入力 Color の赤チャンネルに値を加算する。"
+        },
+        "ColorAddRedHDR": {
+          "Description": "入力 Color の赤チャンネルに値を加算する（HDR）。"
+        },
+        "ColorAddSaturation": {
+          "Description": "入力 Color の彩度に値を加算する。"
+        },
+        "ColorAddValue": {
+          "Description": "入力 Color の明度(Value)に値を加算する。"
+        },
+        "ColorAddValueHDR": {
+          "Description": "入力 Color の明度(Value)に値を加算する（HDR）。"
+        },
+        "ColorMulAlpha": {
+          "Description": "入力 Color のアルファを値で乗算する。"
+        },
+        "ColorMulBlue": {
+          "Description": "入力 Color の青チャンネルを値で乗算する。"
+        },
+        "ColorMulGreen": {
+          "Description": "入力 Color の緑チャンネルを値で乗算する。"
+        },
+        "ColorMulHue": {
+          "Description": "入力 Color の色相を値で乗算する。"
+        },
+        "ColorMulRed": {
+          "Description": "入力 Color の赤チャンネルを値で乗算する。"
+        },
+        "ColorMulRGB": {
+          "Description": "入力 Color のRGB全チャンネルを値で乗算する。"
+        },
+        "ColorMulSaturation": {
+          "Description": "入力 Color の彩度を値で乗算する（彩度が増す）。"
+        },
+        "ColorMulValue": {
+          "Description": "入力 Color の明度(Value)を値で乗算する。"
+        },
+        "ColorSetAlpha": {
+          "Description": "入力 Color のアルファを値に設定する。"
+        },
+        "ColorSetBlue": {
+          "Description": "入力 Color の青チャンネルを値に設定する。"
+        },
+        "ColorSetGreen": {
+          "Description": "入力 Color の緑チャンネルを値に設定する。"
+        },
+        "ColorSetHue": {
+          "Description": "入力 Color の色相を値に設定する。"
+        },
+        "ColorSetRed": {
+          "Description": "入力 Color の赤チャンネルを値に設定する。"
+        },
+        "ColorSetSaturation": {
+          "Description": "入力 Color の彩度を値に設定する。"
+        },
+        "ColorSetValue": {
+          "Description": "入力 Color の明度(Value)を値に設定する。"
+        },
+        "ColorXAddAlpha": {
+          "Description": "入力 ColorX のアルファに値を加算する。"
+        },
+        "ColorXAddBlue": {
+          "Description": "入力 ColorX の青チャンネルに値を加算する。"
+        },
+        "ColorXAddBlueHDR": {
+          "Description": "入力 ColorX の青チャンネルに値を加算する（HDR）。"
+        },
+        "ColorXAddGreen": {
+          "Description": "入力 ColorX の緑チャンネルに値を加算する。"
+        },
+        "ColorXAddGreenHDR": {
+          "Description": "入力 ColorX の緑チャンネルに値を加算する（HDR）。"
+        },
+        "ColorXAddHue": {
+          "Description": "入力 ColorX の色相に値を加算する。"
+        },
+        "ColorXAddRed": {
+          "Description": "入力 ColorX の赤チャンネルに値を加算する。"
+        },
+        "ColorXAddRedHDR": {
+          "Description": "入力 ColorX の赤チャンネルに値を加算する（HDR）。"
+        },
+        "ColorXAddSaturation": {
+          "Description": "入力 ColorX の彩度に値を加算する。"
+        },
+        "ColorXAddValue": {
+          "Description": "入力 ColorX の明度(Value)に値を加算する。"
+        },
+        "ColorXAddValueHDR": {
+          "Description": "入力 ColorX の明度(Value)に値を加算する（HDR）。"
+        },
+        "ColorXMulAlpha": {
+          "Description": "入力 ColorX のアルファを値で乗算する。"
+        },
+        "ColorXMulBlue": {
+          "Description": "入力 ColorX の青チャンネルを値で乗算する。"
+        },
+        "ColorXMulGreen": {
+          "Description": "入力 ColorX の緑チャンネルを値で乗算する。"
+        },
+        "ColorXMulHue": {
+          "Description": "入力 ColorX の色相を値で乗算する。"
+        },
+        "ColorXMulRed": {
+          "Description": "入力 ColorX の赤チャンネルを値で乗算する。"
+        },
+        "ColorXMulRGB": {
+          "Description": "入力 ColorX のRGB全チャンネルを値で乗算する。"
+        },
+        "ColorXMulSaturation": {
+          "Description": "入力 ColorX の彩度を値で乗算する（彩度が増す）。"
+        },
+        "ColorXMulValue": {
+          "Description": "入力 ColorX の明度(Value)を値で乗算する。"
+        },
+        "ColorXSetAlpha": {
+          "Description": "入力 ColorX のアルファを値に設定する。"
+        },
+        "ColorXSetBlue": {
+          "Description": "入力 ColorX の青チャンネルを値に設定する。"
+        },
+        "ColorXSetGreen": {
+          "Description": "入力 ColorX の緑チャンネルを値に設定する。"
+        },
+        "ColorXSetHue": {
+          "Description": "入力 ColorX の色相を値に設定する。"
+        },
+        "ColorXSetRed": {
+          "Description": "入力 ColorX の赤チャンネルを値に設定する。"
+        },
+        "ColorXSetSaturation": {
+          "Description": "入力 ColorX の彩度を値に設定する。"
+        },
+        "ColorXSetValue": {
+          "Description": "入力 ColorX の明度(Value)を値に設定する。"
+        }
+      }
+    },
+    "Packing": {
+      "Summary": "Color / ColorX のパック/アンパック。",
+      "Components": {
+        "PackColor": {
+          "Description": "RGBA を Color にパックする。"
+        },
+        "PackColorX": {
+          "Description": "RGBA（カラープロファイル含む）を ColorX にパックする。"
+        },
+        "UnpackColor": {
+          "Description": "Color を RGBA にアンパックする。"
+        },
+        "UnpackColorX": {
+          "Description": "ColorX を RGBA（およびカラープロファイル）にアンパックする。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "ApplyHDRGammaColorX": {
+      "Description": "ColorX にガンマ補正を適用する。"
+    },
+    "ApplyHDRInverseGammaColorX": {
+      "Description": "ColorX に逆ガンマ補正を適用する。"
+    },
+    "BlackBodyColor": {
+      "Description": "温度から Color（黒体色）を返す。"
+    },
+    "BlackBodyColorX": {
+      "Description": "温度から ColorX（黒体色）を返す。"
+    },
+    "ColorAdditiveBlend": {
+      "Description": "2つの Color を加算合成する。"
+    },
+    "ColorAlphaBlend": {
+      "Description": "2つの Color をアルファブレンドする。"
+    },
+    "ColorFromHexCode": {
+      "Description": "「#FFFFFFFF」形式のHexから Color を生成する。"
+    },
+    "ColorHue": {
+      "Description": "Color の色相（0〜1）を返す。"
+    },
+    "ColorLuminance": {
+      "Description": "Color の輝度を返す。"
+    },
+    "ColorMultiplicativeBlend": {
+      "Description": "2つの Color を乗算合成する。"
+    },
+    "ColorSoftAdditiveBlend": {
+      "Description": "2つの Color をソフト加算合成する。"
+    },
+    "ColorToHexCode": {
+      "Description": "Color を「#FFFFFFFF」形式のHexに変換する。"
+    },
+    "ColorToHSL": {
+      "Description": "Color を H/S/L の値に変換する。"
+    },
+    "ColorToHSV": {
+      "Description": "Color を H/S/V の値に変換する。"
+    },
+    "ColorXAdditiveBlend": {
+      "Description": "2つの ColorX を加算合成する。"
+    },
+    "ColorXAlphaBlend": {
+      "Description": "2つの ColorX をアルファブレンドする。"
+    },
+    "ColorXFromHexCode": {
+      "Description": "「#FFFFFFFF」形式のHexから ColorX を生成する。"
+    },
+    "ColorXHue": {
+      "Description": "ColorX の色相（0〜1）を返す。"
+    },
+    "ColorXLuminance": {
+      "Description": "ColorX の輝度を返す。"
+    },
+    "ColorXMultiplicativeBlend": {
+      "Description": "2つの ColorX を乗算合成する。"
+    },
+    "ColorXSoftAdditiveBlend": {
+      "Description": "2つの ColorX をソフト加算合成する。"
+    },
+    "ColorXToHexCode": {
+      "Description": "ColorX を「#FFFFFFFF」形式のHexに変換する。"
+    },
+    "ColorXToHSL": {
+      "Description": "ColorX を H/S/L の値に変換する。"
+    },
+    "ColorXToHSV": {
+      "Description": "ColorX を H/S/V の値に変換する。"
+    },
+    "ColorXToProfile": {
+      "Description": "ColorX と ColorProfile を用いて Color にプロファイル変換する。"
+    },
+    "ComposeColorX": {
+      "Description": "Color と ColorProfile から ColorX を合成する。"
+    },
+    "ConvertColorProfile": {
+      "Description": "ColorX を別の ColorProfile に変換する。"
+    },
+    "DecomposeColorX": {
+      "Description": "ColorX を Color と ColorProfile に分解する。"
+    },
+    "GetColorXBaseColor": {
+      "Description": "ColorX から基底の Color を返す。"
+    },
+    "GetColorXProfile": {
+      "Description": "ColorX の ColorProfile を取得する。"
+    },
+    "HSLToColor": {
+      "Description": "H/S/L の値から Color に変換する。"
+    },
+    "HSLToColorX": {
+      "Description": "H/S/L の値からプロファイル付き ColorX に変換する。"
+    },
+    "HSVToColor": {
+      "Description": "H/S/V の値から Color に変換する。"
+    },
+    "HSVToColorX": {
+      "Description": "H/S/V の値からプロファイル付き ColorX に変換する。"
+    },
+    "InvertColor": {
+      "Description": "Color を数式的に反転（白↔黒、緑↔マゼンタなど）する。"
+    },
+    "InvertColorX": {
+      "Description": "ColorX を数式的に反転（白↔黒、緑↔マゼンタなど）する。"
+    },
+    "WavelengthColor": {
+      "Description": "波長[nm]の Float から Color を生成する。"
+    },
+    "WavelengthColorX": {
+      "Description": "波長[nm]の Float から ColorX を生成する。"
+    }
+  }
 }
 
