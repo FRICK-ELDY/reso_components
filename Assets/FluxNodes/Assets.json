@@ -1,5 +1,54 @@
 {
   "Summary": "アセットの読み込み・添付・参照。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "AssetLoadProgress<A>": {
+      "Description": "アセットの読み込み進捗を返す。"
+    },
+    "AttachAudioClip": {
+      "Description": "Uri からオーディオクリップを添付する。"
+    },
+    "AttachMesh": {
+      "Description": "Uri からメッシュを添付する。"
+    },
+    "AttachSprite": {
+      "Description": "Uri からスプライトを添付する。"
+    },
+    "AttachTexture2D": {
+      "Description": "Uri から Texture2D を添付する。"
+    },
+    "BakeMeshes": {
+      "Description": "メッシュをベイクしてスポーンするノード。"
+    },
+    "FindAnimationTrackIndex": {
+      "Description": "AnimJ からアニメーショントラックのインデックスを取得する。"
+    },
+    "GetAsset<A>": {
+      "Description": "生のアセットを取得する。"
+    },
+    "GetTexture2DPixel": {
+      "Description": "2D 画像のピクセルを取得する。"
+    },
+    "GetTexture3DPixel": {
+      "Description": "3D（ボリューム）画像のピクセルを取得する。"
+    },
+    "SampleObjectAnimationTrack<T>": {
+      "Description": "文字列を用いてアニメーショントラックをサンプリングする。"
+    },
+    "SampleTexture2DUV": {
+      "Description": "UV 指定で Texture2D のピクセルをサンプリングする。"
+    },
+    "SampleTexture3DUVW": {
+      "Description": "UVW 指定で Texture3D のピクセルをサンプリングする。"
+    },
+    "SampleValueAnimationTrack<T>": {
+      "Description": "値を用いてアニメーショントラックをサンプリングする。"
+    },
+    "Texture2DFormat": {
+      "Description": "Texture2D のメタデータを返す。"
+    },
+    "Texture3DFormat": {
+      "Description": "Texture3D のメタデータを返す。"
+    }
+  }
 }
