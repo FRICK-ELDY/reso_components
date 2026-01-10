@@ -1,5 +1,15 @@
 {
   "Summary": "サウンドやメディアの制御。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "Construct Zita Parameters": {
+      "Description": "リバーブ効果で使用するデータを構築する（リバーブゾーンに類似）。"
+    },
+    "PlayOneShot": {
+      "Description": "指定したサウンドを、制御可能な値入力とともに再生する。"
+    },
+    "PlayOneShotAndWait": {
+      "Description": "指定したサウンドを、制御可能な値入力とともに再生し、任意で完了まで待機する。"
+    }
+  }
 }
