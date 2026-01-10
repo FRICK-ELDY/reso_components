@@ -1,6 +1,16 @@
 {
   "Summary": "IComponentの状態取得やユーザー取得など。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "GetComponentEnabled": {
+      "Description": "IComponent の有効状態を取得する。"
+    },
+    "GetUserFromComponent": {
+      "Description": "IComponent から User を取得する。"
+    },
+    "SetComponentEnabled": {
+      "Description": "IComponent の有効状態を設定する。"
+    }
+  }
 }
 
