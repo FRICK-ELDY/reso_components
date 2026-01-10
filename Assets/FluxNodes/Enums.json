@@ -1,6 +1,28 @@
 {
   "Summary": "列挙型の変換・巡回。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "EnumToNumber": {
+      "Description": "列挙値を数値に変換する。"
+    },
+    "NextValue": {
+      "Description": "列挙値の次の値を返す。"
+    },
+    "NumberToEnum": {
+      "Description": "数値を列挙値に変換する。"
+    },
+    "PreviousValue": {
+      "Description": "列挙値のひとつ前の値を返す。"
+    },
+    "ShiftEnum": {
+      "Description": "列挙値を指定ステップだけ巡回して返す。"
+    },
+    "TryEnumToNumber": {
+      "Description": "列挙値を数値に変換する。失敗した場合は0を返す。"
+    },
+    "TryNumberToEnum": {
+      "Description": "数値を列挙値に変換する。失敗した場合は0を返す。"
+    }
+  }
 }
 
