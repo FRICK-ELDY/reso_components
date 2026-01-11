@@ -1,6 +1,135 @@
 {
   "Summary": "多重化/分解、型の色/ID、GUID、乱択。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Binary": {
+      "Summary": "Binary 演算（ブールで数値を分解/合成）。",
+      "Components": {
+        "Adder": {
+          "Description": "2進加算器ノード。"
+        },
+        "BooleanCounter": {
+          "Description": "True/False の数と総ブール数をカウントする。"
+        },
+        "ComposeBitsByte": {
+          "Description": "複数の Bool をビットとして組み立て、Byte を生成する。"
+        },
+        "ComposeBitsInt": {
+          "Description": "複数の Bool をビットとして組み立て、Int を生成する。"
+        },
+        "ComposeBitsLong": {
+          "Description": "複数の Bool をビットとして組み立て、Long を生成する。"
+        },
+        "ComposeBitsSByte": {
+          "Description": "複数の Bool をビットとして組み立て、SByte を生成する。"
+        },
+        "ComposeBitsShort": {
+          "Description": "複数の Bool をビットとして組み立て、Short を生成する。"
+        },
+        "ComposeBitsUInt": {
+          "Description": "複数の Bool をビットとして組み立て、UInt を生成する。"
+        },
+        "ComposeBitsULong": {
+          "Description": "複数の Bool をビットとして組み立て、ULong を生成する。"
+        },
+        "ComposeBitsUShort": {
+          "Description": "複数の Bool をビットとして組み立て、UShort を生成する。"
+        },
+        "DoubleAsULong": {
+          "Description": "double を ulong に変換する。"
+        },
+        "ExtractBitsByte": {
+          "Description": "Byte をビットごとの Bool 群に展開する。"
+        },
+        "ExtractBitsInt": {
+          "Description": "Int をビットごとの Bool 群に展開する。"
+        },
+        "ExtractBitsLong": {
+          "Description": "Long をビットごとの Bool 群に展開する。"
+        },
+        "ExtractBitsSByte": {
+          "Description": "SByte をビットごとの Bool 群に展開する。"
+        },
+        "ExtractBitsShort": {
+          "Description": "Short をビットごとの Bool 群に展開する。"
+        },
+        "ExtractBitsUInt": {
+          "Description": "UInt をビットごとの Bool 群に展開する。"
+        },
+        "ExtractBitsULong": {
+          "Description": "ULong をビットごとの Bool 群に展開する。"
+        },
+        "ExtractBitsUShort": {
+          "Description": "UShort をビットごとの Bool 群に展開する。"
+        },
+        "FloatAsUInt": {
+          "Description": "float を uint に変換する。"
+        },
+        "HalfAdder": {
+          "Description": "2進半加算器ノード。"
+        },
+        "HalfAsUShort": {
+          "Description": "Half（半精度）を ushort に変換する。"
+        },
+        "UIntAsFloat": {
+          "Description": "uint を float に変換する。"
+        },
+        "ULongAsDouble": {
+          "Description": "ulong を double に変換する。"
+        },
+        "UShortAsHalf": {
+          "Description": "ushort を Half（半精度）に変換する。"
+        }
+      }
+    },
+    "GUIDs": {
+      "Summary": "GUID の生成と解析。",
+      "Components": {
+        "EmptyGUID": {
+          "Description": "空の GUID を生成する。"
+        },
+        "ParseGUID": {
+          "Description": "文字列（String）から GUID を生成する。"
+        },
+        "RandomGUID": {
+          "Description": "毎評価でランダムな GUID を生成する。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "ContinuouslyChangingRelay": {
+      "Description": "入力した値/オブジェクトをエンジンの各更新サイクルごとに再評価させる。"
+    },
+    "DelayValue": {
+      "Description": "値を指定秒だけ遅延（ラグ）させる。"
+    },
+    "Demultiplex": {
+      "Description": "入力値を複数の出力のうち1つに切り替え、残りには既定値を出力する。"
+    },
+    "GetType": {
+      "Description": "オブジェクトの型（Type）を返す。"
+    },
+    "IndexOfFirstMatch": {
+      "Description": "値がリストのどれかに一致するかを判定し、最初に一致したインデックス（int）を返す。"
+    },
+    "Multiplex": {
+      "Description": "複数の入力から1つを選択して出力する（固定長配列のような動作）。"
+    },
+    "NiceTypeName": {
+      "Description": "入力オブジェクトの型の人間が読みやすい名称を返す。"
+    },
+    "NotifyModified": {
+      "Description": "入力 IComponent の NotifyModified メソッドを呼び出す。"
+    },
+    "PickRandomObject": {
+      "Description": "与えられたオブジェクト候補から毎評価時にランダムで1つ選んで返す。"
+    },
+    "PickRandomValue": {
+      "Description": "与えられた値の候補から毎評価時にランダムで1つ選んで返す。"
+    },
+    "TypeColor": {
+      "Description": "FrooxEngine が与える型の UI ColorX を返す。"
+    }
+  }
 }
 
