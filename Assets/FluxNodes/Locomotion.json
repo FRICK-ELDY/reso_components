@@ -1,6 +1,22 @@
 {
   "Summary": "ユーザーのロコモーションモジュール操作。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "FootstepEvents": {
+      "Description": "ユーザーの足音が発生したときにイベントを発火する。"
+    },
+    "GetActiveLocomotionModule": {
+      "Description": "ユーザーのアクティブなロコモーションモジュールを取得する。"
+    },
+    "GetLocomotionArchetype": {
+      "Description": "ユーザーのロコモーションアーキタイプを取得する。"
+    },
+    "InstallLocomotionModules": {
+      "Description": "ユーザーにロコモーションモジュールをインストールする。"
+    },
+    "SwitchLocomotionModule": {
+      "Description": "ユーザーのロコモーションモジュールを名前で切り替える。"
+    }
+  }
 }
 
