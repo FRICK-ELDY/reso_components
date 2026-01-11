@@ -1,11 +1,35 @@
 {
   "Summary": "未分類（内部/汎用向け）。有用・文書化済みのものを抜粋。",
   "Components": {
+    "AddRemoveListElement<T>": {
+      "Description": "リストに要素を追加・削除する。"
+    },
+    "AdjustHDRInverseGamma22": {
+      "Description": "HDRインバースガンマ22を調整する。"
+    },
+    "AppEnder": {
+      "Description": "アプリケーションエンドャーを管理する。"
+    },
+    "AppVersionDriver": {
+      "Description": "アプリケーションバージョンを管理する。"
+    },
+    "AssetGatherSettings": {
+      "Description": "アセットギャザーの設定を管理する。"
+    },
     "AssetMetadata": {
       "Description": "アセットのメタデータを保持します。"
     },
-    "AssetProxy": {
+    "AssetProxy<A>": {
       "Description": "アセット参照のプロキシとして機能します。"
+    },
+    "AsyncDynamicImpulseReceiver+Proxy": {
+      "Description": "非同期動的インパルス受信機のプロキシを管理する。"
+    },
+    "AsyncDynamicImpulseReciverWithObject<T>+Proxy": {
+      "Description": "非同期動的インパルス受信機のオブジェクトを管理する。"
+    },
+    "AsyncDynamicImpulseReciverWithValue<T>+Proxy": {
+      "Description": "非同期動的インパルス受信機の値を管理する。"
     },
     "AudioInputDeviceSelection": {
       "Description": "オーディオ入力（マイク）デバイスを選択します。"

@@ -17,33 +17,106 @@
           "Category": {
             "CoreNodes": {
               "Summary": "ProtoFluxのコアノード。",
-              "Components": {
+              "Category": {
                 "AsyncMethodProxy": {
-                  "Description": "非同期メソッドを呼び出すためのプロキシコンポーネント。"
+                  "Summary": "非同期メソッドを呼び出すためのプロキシコンポーネント。",
+                  "Components": {
+                    "AsyncMethodProxy": {
+                      "Description": "非同期メソッドを呼び出すためのプロキシコンポーネント。"
+                    },
+                    "AsyncMethodProxy_0000<T0,T1,T2,T3,T4,T5,T6,T7>": {
+                      "Description": ""
+                    },
+                    "...": {
+                      "Description": ""
+                    },
+                    "AsyncMethodProxy_00FF<T0,T1,T2,T3,T4,T5,T6,T7>": {
+                      "Description": ""
+                    }
+                  }
                 },
-                "AsyncMethodProxy_0000<T0,T1,T2,T3,T4,T5,T6,T7>": {
-                  "Description": ""
+                "AsyncObjectFunctionProxy": {
+                  "Summary": "非同期オブジェクト関数を呼び出すためのプロキシコンポーネント。",
+                  "Components": {
+                    "AsyncObjectFunctionProxy_0000<T0,T1,T2,T3,T4,T5,T6,T7>": {
+                      "Description": ""
+                    },
+                    "...": {
+                      "Description": "..."
+                    },
+                    "AsyncObjectFunctionProxy_00FF<T0,T1,T2,T3,T4,T5,T6,T7>": {
+                      "Description": ""
+                    },
+                    "AsyncObjectFunctionProxy<TResult>": {}
+                  }
                 },
-                "AsyncMethodProxy_0000<T0,T1,T2,T3,T4,T5,T6>": {
-                  "Description": ""
+                "AsyncValueFunctionProxy": {
+                  "Summary": "非同期値関数を呼び出すためのプロキシコンポーネント。",
+                  "Components": {
+                    "AsyncValueFunctionProxy_0000<T0,T1,T2,T3,T4,T5,T6,T7,<TResult>>": {
+                      "Description": ""
+                    },
+                    "...": {
+                      "Description": "..."
+                    },
+                    "AsyncValueFunctionProxy_00FF<T0,T1,T2,T3,T4,T5,T6,T7,<TResult>>": {
+                      "Description": ""
+                    },
+                    "AsyncValueFunctionProxy<TResult>": {
+                      "Description": ""
+                    }
+                  }
                 },
-                "AsyncMethodProxy_0000<T0,T1,T2,T3,T4,T5>": {
-                  "Description": ""
-                }, 
-                "AsyncMethodProxy_0000<T0,T1,T2,T3,T4>": {
-                  "Description": ""
+                "SyncMethodProxy": {
+                  "Summary": "同期メソッドを呼び出すためのプロキシコンポーネント。",
+                  "Components": {
+                    "SyncMethodProxy": {
+                      "Description": "同期メソッドを呼び出すためのプロキシコンポーネント。"
+                    },
+                    "SyncMethodProxy_0000<T0,T1,T2,T3,T4,T5,T6,T7>": {
+                      "Description": ""
+                    },
+                    "...": {
+                      "Description": "..."
+                    },
+                    "SyncMethodProxy_00FF<T0,T1,T2,T3,T4,T5,T6,T7>": {
+                      "Description": ""
+                    }
+                  }
                 },
-                "AsyncMethodProxy_0000<T0,T1,T2,T3>": {
-                  "Description": ""
+                "SyncObjectFunctionProxy": {
+                  "Summary": "同期オブジェクト関数を呼び出すためのプロキシコンポーネント。",
+                  "Components": {
+                    "SyncObjectFunctionProxy_0000<T0,T1,T2,T3,T4,T5,T6,T7,<TResult>>": {
+                      "Description": ""
+                    },
+                    "...": {
+                      "Description": "..."
+                    },
+                    "SyncObjectFunctionProxy_00FF<T0,T1,T2,T3,T4,T5,T6,T7,<TResult>>": {
+                      "Description": ""
+                    },
+                    "SyncObjectFunctionProxy<TResult>": {
+                      "Description": "同期オブジェクト関数を呼び出すためのプロキシコンポーネント。"
+                    }
+                  }
                 },
-                "AsyncMethodProxy_0000<T0,T1,T2>": {
-                  "Description": ""
-                },
-                "AsyncMethodProxy_0000<T0,T1>": {
-                  "Description": ""
-                },
-                "AsyncMethodProxy_0000<T0>": {
-                  "Description": ""
+                "SyncValueFunctionProxy": {
+                  "Summary": "同期値関数を呼び出すためのプロキシコンポーネント。",
+                  "Components": {
+                    "SyncValueFunctionProxy_0000<T0,T1,T2,T3,T4,T5,T6,T7,<TResult>>": {
+                      "Description": ""
+                    },
+                    "...": {
+                      "Description": "..."
+                    },
+                    "SyncValueFunctionProxy_00FF<T0,T1,T2,T3,T4,T5,T6,T7,<TResult>>": {
+                      "Description": ""
+                    },
+                    "SyncValueFunctionProxy<TResult>": {
+                      "Description": "同期値関数を呼び出すためのプロキシコンポーネント。"
+                    }
+                  }
                 }
               }
             }
