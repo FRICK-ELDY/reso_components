@@ -1,6 +1,691 @@
 {
   "Summary": "補間、幾何、三角関数などの数学。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Constants": {
+      "Summary": "式や関数で使う数学定数。",
+      "Components": {
+        "Bobool3ol": {
+          "Description": "ジョーク定数。"
+        },
+        "Deg2Rad": {
+          "Description": "度→ラジアンの変換係数。"
+        },
+        "e": {
+          "Description": "オイラー数（自然対数の底）。"
+        },
+        "Feven": {
+          "Description": "ジョーク定数。"
+        },
+        "HalfPi": {
+          "Description": "π/2。"
+        },
+        "InvertedHalfPi": {
+          "Description": "1/(π/2)。"
+        },
+        "InvertedPi": {
+          "Description": "1/π。"
+        },
+        "InvertedQuarterPi": {
+          "Description": "1/(π/4)。"
+        },
+        "InvertedTau": {
+          "Description": "1/τ。"
+        },
+        "OwO": {
+          "Description": "ジョーク定数。"
+        },
+        "Phi": {
+          "Description": "黄金比 φ。"
+        },
+        "Pi": {
+          "Description": "円周率 π。"
+        },
+        "QuarterPi": {
+          "Description": "π/4。"
+        },
+        "Rad2Deg": {
+          "Description": "ラジアン→度の変換係数。"
+        },
+        "Tau": {
+          "Description": "τ（2π）。"
+        }
+      }
+    },
+    "Easing": {
+      "Summary": "さまざまなイージング曲線。",
+      "Components": {
+        "InBounce": {
+          "Description": "バウンスしながら入り始めるカーブ。"
+        },
+        "InCircular": {
+          "Description": "円弧的に入り始めるカーブ。"
+        },
+        "InCubic": {
+          "Description": "三次曲線の滑らかな入り。"
+        },
+        "InElastic": {
+          "Description": "弾性（波打つ）挙動で入り始める。"
+        },
+        "InExponential": {
+          "Description": "指数的に素早く立ち上がる入り。"
+        },
+        "InOutBounce": {
+          "Description": "前半と後半でバウンスするカーブ。"
+        },
+        "InOutCircular": {
+          "Description": "前半後半とも円弧的に滑らかなカーブ。"
+        },
+        "InOutCubic": {
+          "Description": "三次曲線の滑らかな入出。"
+        },
+        "InOutElastic": {
+          "Description": "前後半とも弾性（波打つ）挙動。"
+        },
+        "InOutExponential": {
+          "Description": "指数的に滑らかな入出。"
+        },
+        "InOutQuadratic": {
+          "Description": "二次曲線の滑らかな入出。"
+        },
+        "InOutQuartic": {
+          "Description": "四次曲線の滑らかな入出。"
+        },
+        "InOutQuintic": {
+          "Description": "五次曲線の滑らかな入出。"
+        },
+        "InOutRebound": {
+          "Description": "往復するような入出のカーブ。"
+        },
+        "InOutSine": {
+          "Description": "正弦波ベースの滑らかな入出。"
+        },
+        "InQuadratic": {
+          "Description": "二次曲線の滑らかな入り。"
+        },
+        "InQuartic": {
+          "Description": "四次曲線の滑らかな入り。"
+        },
+        "InQuintic": {
+          "Description": "五次曲線の滑らかな入り。"
+        },
+        "InRebound": {
+          "Description": "往復するような入りのカーブ。"
+        },
+        "InSine": {
+          "Description": "正弦波ベースの滑らかな入り。"
+        },
+        "OutBounce": {
+          "Description": "バウンスしながら減衰して終わる。"
+        },
+        "OutCircular": {
+          "Description": "円弧的に減速して終わる。"
+        },
+        "OutCubic": {
+          "Description": "三次曲線の滑らかな終わり。"
+        },
+        "OutElastic": {
+          "Description": "弾性（波打つ）挙動で終わる。"
+        },
+        "OutExponential": {
+          "Description": "指数的に減速して終わる。"
+        },
+        "OutQuadratic": {
+          "Description": "二次曲線の滑らかな終わり。"
+        },
+        "OutQuartic": {
+          "Description": "四次曲線の滑らかな終わり。"
+        },
+        "OutQuintic": {
+          "Description": "五次曲線の滑らかな終わり。"
+        },
+        "OutRebound": {
+          "Description": "往復するような終わりのカーブ。"
+        },
+        "OutSine": {
+          "Description": "正弦波ベースの滑らかな終わり。"
+        }
+      }
+    },
+    "Geometry2D": {
+      "Summary": "2D幾何の補助関数。",
+      "Components": {
+        "LineCircleIntersections": {
+          "Description": "円との交点を返す。"
+        },
+        "PointOnCircle": {
+          "Description": "円周上の点を返す。"
+        },
+        "RayRectangleIntersection": {
+          "Description": "Rect との交点を返す。"
+        },
+        "RayToLineIntersection": {
+          "Description": "レイと線分の交点を返す。"
+        },
+        "RayToLineIntersectionDistance": {
+          "Description": "レイが線分に当たる距離を返す。"
+        }
+      }
+    },
+    "Geometry3D": {
+      "Summary": "3D幾何の補助関数。",
+      "Components": {
+        "ClosestPointBetweenLines": {
+          "Description": "2本の直線間の最も近い点（群）を返す。"
+        },
+        "ClosestPointOnConeSurface": {
+          "Description": "定義した円錐表面上の最近点（内外判定含む）を返す。"
+        },
+        "ClosestPointOnLine": {
+          "Description": "直線上の最も近い点を返す。"
+        },
+        "ClosestPointOnSphericalSectorSurface": {
+          "Description": "定義した球セクター表面上の最近点（内外判定含む）を返す。"
+        },
+        "DistanceFromCone": {
+          "Description": "点と円錐の距離を返す。"
+        },
+        "DistanceFromSphericalSector": {
+          "Description": "点と球セクターの距離を返す。"
+        },
+        "OrientationOnUVSphere": {
+          "Description": "UV から球面上の向きを返す。"
+        },
+        "PointOnUVSphere": {
+          "Description": "球の UV から表面上の点を返す。"
+        },
+        "RayPlaneIntersection": {
+          "Description": "レイと平面の交点を返す。"
+        },
+        "RaySphereIntersection": {
+          "Description": "レイと球の交点を返す。"
+        },
+        "RotationAtTargetPoint": {
+          "Description": "対象点を見る回転を返す。"
+        },
+        "SphereForTangentLine": {
+          "Description": "接線となる球の接点を返す（Tan の逆のような動作）。"
+        },
+        "TriangleNormal": {
+          "Description": "3点から三角形の法線を返す。"
+        }
+      }
+    },
+    "Interpolation": {
+      "Summary": "時間や値に対する補間処理。",
+      "Components": {
+        "BezierCurve": {
+          "Description": "タンジェントを用いたベジエ曲線の補間値を返す。"
+        },
+        "ConstantSlerp": {
+          "Description": "毎フレーム一定速度で目標へ補間（回転など）。"
+        },
+        "CosineLerp": {
+          "Description": "コサイン波のような補間値を返す。"
+        },
+        "CubicLerp": {
+          "Description": "ベジエに類似、別計算の三次補間。"
+        },
+        "InverseLerp": {
+          "Description": "非正規化の2値間で割合位置を返す。"
+        },
+        "MultiBezierCurve": {
+          "Description": "複数入力対応のベジエ曲線補間。"
+        },
+        "MultiCosineLerp": {
+          "Description": "複数入力対応のコサイン補間。"
+        },
+        "MultiCubicLerp": {
+          "Description": "複数入力対応の三次補間。"
+        },
+        "MultiLerp": {
+          "Description": "複数入力対応の Value Lerp。"
+        },
+        "MultiSlerp": {
+          "Description": "複数入力対応の Slerp。"
+        },
+        "MultiSlerpWithMagnitude": {
+          "Description": "複数入力対応の Slerp（Magnitude付き）。"
+        },
+        "Slerp": {
+          "Description": "始点/終点から球面線形補間（回転など）。"
+        },
+        "SlerpWithMagnitude": {
+          "Description": "Magnitude付きの Slerp。"
+        },
+        "SmoothSlerp": {
+          "Description": "目標へ滑らかな速度で補間（回転など）。"
+        },
+        "ValueConstantLerp": {
+          "Description": "値を毎フレーム一定速度で補間。"
+        },
+        "ValueLerp": {
+          "Description": "始点/終点から値を線形補間。"
+        },
+        "ValueLerpUnclamped": {
+          "Description": "範囲外へ外挿も可能な線形補間。"
+        },
+        "ValueSmoothLerp": {
+          "Description": "値を毎フレーム滑らかな速度で補間。"
+        }
+      }
+    },
+    "Physics": {
+      "Summary": "物理系の数学（力/衝突カテゴリとは別）。",
+      "Components": {
+        "TorqueEstimate": {
+          "Description": "回転をシミュレートし、その値を返す。"
+        },
+        "TrajectoryPosition": {
+          "Description": "運動をシミュレートし、その位置を返す。"
+        }
+      }
+    },
+    "Quantity": {
+      "Summary": "温度・重さ・力など単位系の計算。",
+      "Components": {
+        "BaseValue": {
+          "Description": "与えた単位の基準値を返す。"
+        },
+        "FormatQuantity": {
+          "Description": "計量単位を装飾した文字列にフォーマットする。"
+        },
+        "FromBaseValue": {
+          "Description": "基準値から指定単位の値を返す。"
+        },
+        "ParseQuantity": {
+          "Description": "文字列を解析し、計量単位の値を返す。"
+        }
+      }
+    },
+    "Random": {
+      "Summary": "乱数生成。",
+      "Category": {
+        "Point": {
+          "Summary": "図形内/表面上のランダム点。",
+          "Components": {
+            "RandomPointInCircle": {
+              "Description": "ユニット円内のランダム点を返す。"
+            },
+            "RandomPointInCone": {
+              "Description": "円錐内のランダム点を返す。"
+            },
+            "RandomPointInCube": {
+              "Description": "ユニット立方体内のランダム点を返す。"
+            },
+            "RandomPointInSphere": {
+              "Description": "ユニット球内のランダム点を返す。"
+            },
+            "RandomPointInSquare": {
+              "Description": "ユニット正方形内のランダム点を返す。"
+            },
+            "RandomPointOnCircle": {
+              "Description": "ユニット円周上のランダム点を返す。"
+            },
+            "RandomPointOnCone": {
+              "Description": "円錐のシェル上のランダム点を返す。"
+            },
+            "RandomPointOnCube": {
+              "Description": "ユニット立方体の表面上のランダム点を返す。"
+            },
+            "RandomPointOnSphere": {
+              "Description": "ユニット球の表面上のランダム点を返す。"
+            },
+            "RandomPointOnSquare": {
+              "Description": "ユニット正方形の辺上のランダム点を返す。"
+            }
+          }
+        }
+      },
+      "Components": {
+        "RandomBool": {
+          "Description": "確率を指定して真偽をランダム生成する。"
+        },
+        "RandomEnum": {
+          "Description": "列挙型のランダム値を生成する。"
+        },
+        "RandomFloat": {
+          "Description": "最小/最大を指定して Float をランダム生成する。"
+        },
+        "RandomFloat2": {
+          "Description": "最小/最大を指定して Float2 をランダム生成する。"
+        },
+        "RandomFloat3": {
+          "Description": "最小/最大を指定して Float3 をランダム生成する。"
+        },
+        "RandomFloat4": {
+          "Description": "最小/最大を指定して Float4 をランダム生成する。"
+        },
+        "RandomGrayscaleColor": {
+          "Description": "グレースケールの Color をランダム生成する。"
+        },
+        "RandomGrayscaleColorX": {
+          "Description": "グレースケールの ColorX をランダム生成する。"
+        },
+        "RandomHueColor": {
+          "Description": "色相を基準に Color をランダム生成する。"
+        },
+        "RandomHueColorX": {
+          "Description": "色相を基準に ColorX をランダム生成する。"
+        },
+        "RandomInt": {
+          "Description": "最小/最大を指定して Int をランダム生成する。"
+        },
+        "RandomLerpColor": {
+          "Description": "2色の間をランダムに補間した Color を生成する。"
+        },
+        "RandomLerpColorX": {
+          "Description": "2色の間をランダムに補間した ColorX を生成する。"
+        },
+        "RandomLerpFloat2": {
+          "Description": "2点の間をランダムに補間した Float2 を生成する。"
+        },
+        "RandomLerpFloat3": {
+          "Description": "2点の間をランダムに補間した Float3 を生成する。"
+        },
+        "RandomLerpFloat4": {
+          "Description": "2点の間をランダムに補間した Float4 を生成する。"
+        },
+        "RandomRGBColor": {
+          "Description": "RGB の Color をランダム生成する。"
+        },
+        "RandomRGBColorX": {
+          "Description": "RGB の ColorX をランダム生成する。"
+        },
+        "RandomRGBAColor": {
+          "Description": "RGBA の Color をランダム生成する。"
+        },
+        "RandomRGBAColorX": {
+          "Description": "RGBA の ColorX をランダム生成する。"
+        },
+        "RandomRotation": {
+          "Description": "ランダムな回転（FloatQ）を生成する。"
+        },
+        "RandomSlerpFloatQ": {
+          "Description": "2つの回転間をランダムに Slerp した FloatQ を生成する。"
+        },
+        "RandomString": {
+          "Description": "文字集合と長さを指定してランダムな文字列を生成する。"
+        },
+        "Simplex": {
+          "Description": "シンプレックスノイズを生成する（Float）。"
+        }
+      }
+    },
+    "Rects": {
+      "Summary": "2D空間の矩形（Rect）操作。",
+      "Components": {
+        "ClipRect": {
+          "Description": "互いの内側/重なり領域を表す Rect を返す。"
+        },
+        "EncapsulateRect": {
+          "Description": "与えた Rect 群をすべて含む境界 Rect を返す。"
+        },
+        "RectFromMinMax": {
+          "Description": "最小/最大から Rect を作成する。"
+        },
+        "RectFromPositionSize": {
+          "Description": "位置とサイズから Rect を作成する。"
+        },
+        "RectFromXYWH": {
+          "Description": "x, y, 幅, 高さから Rect に変換する。"
+        },
+        "RectToMinMax": {
+          "Description": "Rect の最小/最大を取得する。"
+        },
+        "RectToPositionSize": {
+          "Description": "Rect の位置とサイズを取得する。"
+        },
+        "RectToXYWH": {
+          "Description": "Rect を x, y, 幅, 高さに変換する。"
+        },
+        "TranslateRect": {
+          "Description": "指定オフセットで Rect を平行移動する。"
+        }
+      }
+    },
+    "Rotation": {
+      "Summary": "注視点やオイラー角などの回転処理。",
+      "Components": {
+        "AngularVelocityDelta": {
+          "Description": "速度変化に対する回転（FloatQ）を返す。"
+        },
+        "AxisAngle": {
+          "Description": "軸と角度から回転（FloatQ）を返す。"
+        },
+        "EulerAngles": {
+          "Description": "回転（FloatQ）をXYZオイラー角に変換する。"
+        },
+        "FromEuler": {
+          "Description": "XYZオイラー角から回転（FloatQ）に変換する。"
+        },
+        "FromToRotation": {
+          "Description": "開始と終了の回転から回転（FloatQ）を返す。"
+        },
+        "InverseRotation": {
+          "Description": "0回転にするために加える逆回転を返す。"
+        },
+        "Lerp": {
+          "Description": "回転（FloatQ）の補間を返す。"
+        },
+        "LookRotation": {
+          "Description": "前方と上方向から回転（FloatQ）を返す。"
+        },
+        "Pow": {
+          "Description": "回転（FloatQ）をべき乗した結果を返す。"
+        },
+        "ToAxisAngle": {
+          "Description": "回転（FloatQ）から軸と角度を返す。"
+        }
+      }
+    },
+    "Shaping": {
+      "Summary": "段階的にカーブ形状を作る関数群。",
+      "Components": {
+        "SinShape": {
+          "Description": "序盤が速く終盤で減速するカーブ値を返す。"
+        },
+        "SmootherStep": {
+          "Description": "始終が速く中間で減速するカーブ（端の変化がより緩やか）。"
+        },
+        "SmoothStep": {
+          "Description": "始終が速く中間で減速する一般的なカーブ。"
+        },
+        "SymmetricPowShape": {
+          "Description": "値と指数に基づく対称的なカスタムカーブを返す。"
+        }
+      }
+    },
+    "Spherical Harmonics": {
+      "Summary": "主に照明/音響計算に用いる球面調和。",
+      "Components": {
+        "EvaluateSH": {
+          "Description": "方向を用いて球面調和を評価する。"
+        },
+        "PackSH1": {
+          "Description": "LV1 の球面調和を個別値からパックする。"
+        },
+        "PackSH2": {
+          "Description": "LV2 の球面調和を個別値からパックする。"
+        },
+        "PackSH3": {
+          "Description": "LV3 の球面調和を個別値からパックする。"
+        },
+        "PackSH4": {
+          "Description": "LV4 の球面調和を個別値からパックする。"
+        },
+        "ScaleOrdersSH1": {
+          "Description": "LV1 の球面調和の次数をスケールする。"
+        },
+        "ScaleOrdersSH2": {
+          "Description": "LV2 の球面調和の次数をスケールする。"
+        },
+        "ScaleOrdersSH3": {
+          "Description": "LV3 の球面調和の次数をスケールする。"
+        },
+        "ScaleOrdersSH4": {
+          "Description": "LV4 の球面調和の次数をスケールする。"
+        },
+        "UnpackSH1": {
+          "Description": "LV1 の球面調和を構成する個別値へアンパックする。"
+        },
+        "UnpackSH2": {
+          "Description": "LV2 の球面調和を構成する個別値へアンパックする。"
+        },
+        "UnpackSH3": {
+          "Description": "LV3 の球面調和を構成する個別値へアンパックする。"
+        },
+        "UnpackSH4": {
+          "Description": "LV4 の球面調和を構成する個別値へアンパックする。"
+        }
+      }
+    },
+    "Trigonometry": {
+      "Summary": "三角関数関連。",
+      "Components": {
+        "Acos": {
+          "Description": "アークコサイン（逆余弦）。"
+        },
+        "Asin": {
+          "Description": "アークサイン（逆正弦）。"
+        },
+        "Atan": {
+          "Description": "アークタンジェント（逆正接）。"
+        },
+        "Atan2": {
+          "Description": "2引数のアークタンジェント。"
+        },
+        "Cos": {
+          "Description": "コサイン。"
+        },
+        "PackToTangentPoint": {
+          "Description": "Bezier/Cubic Lerp 用の接線点を生成する。"
+        },
+        "Sin": {
+          "Description": "サイン。"
+        },
+        "Tan": {
+          "Description": "タンジェント。"
+        }
+      }
+    },
+    "Vectors": {
+      "Summary": "ベクトルの計算。",
+      "Components": {
+        "DeltaAngle": {
+          "Description": "2つの Float2/Double2 ベクトルの角度差を返す。"
+        },
+        "DeltaAngleRad": {
+          "Description": "DeltaAngle のラジアン版。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "Avg": {
+      "Description": "2つの値の平均を求める。"
+    },
+    "AvgMulti": {
+      "Description": "複数の値の平均を求める。"
+    },
+    "Ceil": {
+      "Description": "小数を切り上げる（例: 0.001→1）。"
+    },
+    "CeilToInt": {
+      "Description": "切り上げた整数を返す。"
+    },
+    "Clamp01": {
+      "Description": "値を0〜1の範囲に制限する。"
+    },
+    "Delta": {
+      "Description": "値の変化量を返す（フレーム依存）。"
+    },
+    "DivDeltaTime": {
+      "Description": "値をデルタタイムで除算する。"
+    },
+    "Exp": {
+      "Description": "eのx乗（e^x）を計算する。"
+    },
+    "Factorial": {
+      "Description": "階乗の積を返す。"
+    },
+    "Floor": {
+      "Description": "小数を切り捨てる（例: 0.999→0）。"
+    },
+    "FloortoInt": {
+      "Description": "切り捨てた整数を返す。"
+    },
+    "GreatestCommonDivisor": {
+      "Description": "全ての値を割り切る最大の数（最大公約数）を求める。"
+    },
+    "IsBetween": {
+      "Description": "値が指定範囲内かを判定する。"
+    },
+    "LeastCommonMultiple": {
+      "Description": "2値の最小公倍数を求める。"
+    },
+    "Log": {
+      "Description": "自然対数（底e）の対数を求める。"
+    },
+    "Log10": {
+      "Description": "底10の対数を求める。"
+    },
+    "LogN": {
+      "Description": "任意の底の対数を求める。"
+    },
+    "NthRoot": {
+      "Description": "平方根・立方根などn乗根を求める。"
+    },
+    "PingPong": {
+      "Description": "値を範囲内で往復させる。"
+    },
+    "Pow": {
+      "Description": "値を任意の指数でべき乗する。"
+    },
+    "Remap": {
+      "Description": "ある範囲の値を別の範囲にマッピングする。"
+    },
+    "Remap1101": {
+      "Description": "(-1↔1) を (0↔1) にリマップする。"
+    },
+    "Repeat01": {
+      "Description": "増加する値を 0↔1 の範囲でラップする。"
+    },
+    "Round": {
+      "Description": "四捨五入して最も近い整数に丸める。"
+    },
+    "RoundToInt": {
+      "Description": "四捨五入した整数を返す。"
+    },
+    "Sigmoid": {
+      "Description": "シグモイド曲線に基づき 0〜1 に写像する。"
+    },
+    "Sign": {
+      "Description": "値の符号（-1/0/1）を返す。"
+    },
+    "Sqrt": {
+      "Description": "平方根を求める。"
+    },
+    "ValueAbs": {
+      "Description": "0からの距離（絶対値）を求める。"
+    },
+    "ValueClamp": {
+      "Description": "指定範囲に値を制限する。"
+    },
+    "ValueMax": {
+      "Description": "2つの値の大きい方を返す。"
+    },
+    "ValueMaxMulti": {
+      "Description": "複数の値の最大を返す。"
+    },
+    "ValueMin": {
+      "Description": "2つの値の小さい方を返す。"
+    },
+    "ValueMinMulti": {
+      "Description": "複数の値の最小を返す。"
+    },
+    "ValueRepeat": {
+      "Description": "指定範囲で値をラップさせる。"
+    }
+  }
 }
 
