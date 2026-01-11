@@ -1,6 +1,19 @@
 {
   "Summary": "ユーザー参加検証。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "AllowJoin": {
+      "Description": "Join Verify System が有効なワールドへユーザーの参加を許可する。"
+    },
+    "AssignRole": {
+      "Description": "Join Verify System を利用してユーザーにロールを付与する。"
+    },
+    "DenyJoin": {
+      "Description": "Join Verify System が有効なワールドへのユーザー参加を拒否する。"
+    },
+    "VerifyJoinRequest": {
+      "Description": "ユーザーが Join Verify 有効なワールドへ参加要求した際に発火し、検証フローを開始するリスナ。"
+    }
+  }
 }
 
