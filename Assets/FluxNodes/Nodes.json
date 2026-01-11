@@ -1,6 +1,19 @@
 {
   "Summary": "パック/アンパック等のノード操作。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "PackProtoFluxFromNode": {
+      "Description": "指定スロットと開始ノードから ProtoFlux をパックする。"
+    },
+    "PackProtoFluxInPlace": {
+      "Description": "所属スロットに関わらず、その場で ProtoFlux をパックする。"
+    },
+    "PackProtoFluxNodes": {
+      "Description": "指定スロットへ ProtoFlux ノード群をパックする。"
+    },
+    "UnpackProtoFlux": {
+      "Description": "スロットから ProtoFlux ノード群をアンパックする。"
+    }
+  }
 }
 
