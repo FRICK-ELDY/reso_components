@@ -1,6 +1,186 @@
 {
   "Summary": "Δt、DateTime/TimeSpan、タイムゾーン。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "DateTime": {
+      "Summary": "日付と時刻の操作。",
+      "Components": {
+        "ConstructDateTime": {
+          "Description": "年・月・日・時・分・秒・ミリ秒から DateTime を生成する。"
+        },
+        "DateTimeDay": {
+          "Description": "指定した DateTime の「日」（月内の日）を返す。"
+        },
+        "DateTimeDayOfWeek": {
+          "Description": "指定した DateTime の曜日を返す。"
+        },
+        "DateTimeDayOfYear": {
+          "Description": "指定した DateTime の年内通算日を返す。"
+        },
+        "DateTimeHour": {
+          "Description": "指定した DateTime の時（0〜23）を返す。"
+        },
+        "DateTimeKind": {
+          "Description": "指定した DateTime の Kind（Local/UTC/Unspecified）を返す。"
+        },
+        "DateTimeMillisecond": {
+          "Description": "指定した DateTime のミリ秒（0〜999）を返す。"
+        },
+        "DateTimeMinute": {
+          "Description": "指定した DateTime の分（0〜59）を返す。"
+        },
+        "DateTimeMonth": {
+          "Description": "指定した DateTime の月を返す。"
+        },
+        "DateTimeSecond": {
+          "Description": "指定した DateTime の秒（0〜59）を返す。"
+        },
+        "DateTimeTicks": {
+          "Description": "Unix Epoch からの経過ティック数を返す。"
+        },
+        "DateTimeYear": {
+          "Description": "指定した DateTime の年を返す。"
+        },
+        "SetDateTimeKind": {
+          "Description": "指定した DateTime に DateTimeKind（Local/UTC/Unspecified）を設定する。"
+        }
+      }
+    },
+    "TimeSpan": {
+      "Summary": "時間の長さ（持続時間）の操作。",
+      "Components": {
+        "TimeSpanDays": {
+          "Description": "TimeSpan に含まれる日数を返す。"
+        },
+        "TimeSpanFromDays": {
+          "Description": "指定日数の TimeSpan を作成する。"
+        },
+        "TimeSpanFromHours": {
+          "Description": "指定時間数の TimeSpan を作成する。"
+        },
+        "TimeSpanFromMilliseconds": {
+          "Description": "指定ミリ秒数の TimeSpan を作成する。"
+        },
+        "TimeSpanFromMinutes": {
+          "Description": "指定分数の TimeSpan を作成する。"
+        },
+        "TimeSpanFromSeconds": {
+          "Description": "指定秒数の TimeSpan を作成する。"
+        },
+        "TimeSpanFromTicks": {
+          "Description": "指定ティック数の TimeSpan を作成する。"
+        },
+        "TimeSpanHours": {
+          "Description": "TimeSpan に含まれる「時間」を返す。"
+        },
+        "TimeSpanMilliseconds": {
+          "Description": "TimeSpan に含まれる「ミリ秒」を返す。"
+        },
+        "TimeSpanMinutes": {
+          "Description": "TimeSpan に含まれる「分」を返す。"
+        },
+        "TimeSpanSeconds": {
+          "Description": "TimeSpan に含まれる「秒」を返す。"
+        },
+        "TimeSpanTicks": {
+          "Description": "TimeSpan に含まれるティック数を返す。"
+        },
+        "TimeSpanTotalDays": {
+          "Description": "TimeSpan の総日数（小数）を返す。"
+        },
+        "TimeSpanTotalHours": {
+          "Description": "TimeSpan の総時間数（小数）を返す。"
+        },
+        "TimeSpanTotalMilliseconds": {
+          "Description": "TimeSpan の総ミリ秒数（小数）を返す。"
+        },
+        "TimeSpanTotalMinutes": {
+          "Description": "TimeSpan の総分数（小数）を返す。"
+        },
+        "TimeSpanTotalSeconds": {
+          "Description": "TimeSpan の総秒数（小数）を返す。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "AddDateTimeTimeSpan": {
+      "Description": "DateTime に TimeSpan を加算する。"
+    },
+    "DeltaTime": {
+      "Description": "フレーム間の経過時間（ローカル秒）。"
+    },
+    "DivDeltaTime": {
+      "Description": "入力値を DeltaTime で除算する。"
+    },
+    "ElapsedTime": {
+      "Description": "最後のインパルスからの経過時間（秒）。"
+    },
+    "FromUnixMilliseconds": {
+      "Description": "Unix ミリ秒（long）から DateTime を生成する。"
+    },
+    "FromUnixSeconds": {
+      "Description": "Unix 秒（long）から DateTime を生成する。"
+    },
+    "InvertedDeltaTime": {
+      "Description": "FPS を算出する（1/DeltaTime、ローカル）。"
+    },
+    "InvertedSmoothDeltaTime": {
+      "Description": "平滑化した FPS を算出する（ローカル）。"
+    },
+    "IsBetweenDateTime": {
+      "Description": "DateTime が指定の最小/最大の間か判定する。"
+    },
+    "IsBetweenTimeSpan": {
+      "Description": "TimeSpan が指定の最小/最大の間か判定する。"
+    },
+    "MulDeltaTime": {
+      "Description": "DeltaTime を入力値に乗算する。"
+    },
+    "SmoothDeltaTime": {
+      "Description": "平滑化したフレーム間経過時間（ローカル秒）。"
+    },
+    "Stopwatch": {
+      "Description": "開始/停止/一時停止可能なタイマー。"
+    },
+    "SubDateTime": {
+      "Description": "DateTime 同士の減算（A−B）。"
+    },
+    "SubDateTimeTimeSpan": {
+      "Description": "DateTime から TimeSpan を減算する（A−B）。"
+    },
+    "ToLocalTime": {
+      "Description": "UTC の DateTime をローカル時刻へ変換する。"
+    },
+    "ToUniversalTime": {
+      "Description": "ローカルの DateTime を UTC に変換する。"
+    },
+    "ToUnixMilliseconds": {
+      "Description": "DateTime を Unix ミリ秒（long）に変換する。"
+    },
+    "ToUnixSeconds": {
+      "Description": "DateTime を Unix 秒（long）に変換する。"
+    },
+    "UTCNow": {
+      "Description": "現在の UTC 時刻。"
+    },
+    "WorldTime10Float": {
+      "Description": "ワールド稼働時間（秒）×10 の float。"
+    },
+    "WorldTime2Float": {
+      "Description": "ワールド稼働時間（秒）×2 の float。"
+    },
+    "WorldTimeDouble": {
+      "Description": "ワールド稼働時間（秒）の double。"
+    },
+    "WorldTimeFloat": {
+      "Description": "ワールド稼働時間（秒）の float。"
+    },
+    "WorldTimeHalfFloat": {
+      "Description": "ワールド稼働時間（秒）×1/2 の float。"
+    },
+    "WorldTimeTenthFloat": {
+      "Description": "ワールド稼働時間（秒）×1/10 の float。"
+    }
+  }
 }
 
