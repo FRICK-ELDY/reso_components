@@ -1,6 +1,34 @@
 {
   "Summary": "ユーザーのUndoアクション。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "BeginUndoBatch": {
+      "Description": "Undoバッチ処理を開始する。"
+    },
+    "CreateFieldUndoStep": {
+      "Description": "フィールド作成のUndoステップを作成する。"
+    },
+    "CreateReferenceUndoStep": {
+      "Description": "参照作成のUndoステップを作成する。"
+    },
+    "CreateSpawnUndoStep": {
+      "Description": "スポーンのUndoステップを作成する。"
+    },
+    "CreateTransformUndoStep": {
+      "Description": "TransformのUndoステップを作成する。"
+    },
+    "CreateTypeFieldUndoStep": {
+      "Description": "型フィールド作成のUndoステップを作成する。"
+    },
+    "CreateUndoBatch": {
+      "Description": "Undoステップを集約し、バッチが作成されたときに発火する。"
+    },
+    "EndUndoBatch": {
+      "Description": "Undoバッチ処理を終了する。"
+    },
+    "UndoableDestroy": {
+      "Description": "スロット破壊のUndoステップを作成する。"
+    }
+  }
 }
 
