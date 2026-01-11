@@ -1,6 +1,67 @@
 {
   "Summary": "Playableメディア（AnimJ/Audio等）の制御・計測。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "ClipLength": {
+      "Description": "IPlayable の長さ（秒）を返す。"
+    },
+    "IsLooped": {
+      "Description": "IPlayable がループ設定かを返す。"
+    },
+    "IsPlaying": {
+      "Description": "IPlayable が再生中かを返す。"
+    },
+    "NormalizedPosition": {
+      "Description": "IPlayable のタイムライン進捗（0〜1）を返す。"
+    },
+    "Pause": {
+      "Description": "IPlayable を一時停止する。"
+    },
+    "Play": {
+      "Description": "IPlayable を再生する。"
+    },
+    "PlayandWait": {
+      "Description": "IPlayable を再生し、終了時に Call を送る。"
+    },
+    "PlaybackDrive": {
+      "Description": "SyncPlayback の速度/位置を強制ドライブする。"
+    },
+    "PlaybackState": {
+      "Description": "IPlayable の再生状態（ループ/再生中など）を提供する。"
+    },
+    "Position": {
+      "Description": "IPlayable の現在位置（秒）を返す。"
+    },
+    "Resume": {
+      "Description": "IPlayable の再生を再開する。"
+    },
+    "SetLoop": {
+      "Description": "IPlayable のループ設定を変更する。"
+    },
+    "SetNormalizedPosition": {
+      "Description": "IPlayable の進捗（0〜1）を設定する。"
+    },
+    "SetPosition": {
+      "Description": "IPlayable の再生位置（秒）を設定する。"
+    },
+    "SetSpeed": {
+      "Description": "IPlayable の再生速度を設定する。"
+    },
+    "ShiftPosition": {
+      "Description": "IPlayable のタイムラインを±秒だけスキップする。"
+    },
+    "Speed": {
+      "Description": "IPlayable の現在の再生速度を返す。"
+    },
+    "Stop": {
+      "Description": "IPlayable を停止する。"
+    },
+    "Toggle": {
+      "Description": "停止中なら再開、再生中なら一時停止する。"
+    },
+    "Wait": {
+      "Description": "IPlayable の終了を待ってから続行を発火する。"
+    }
+  }
 }
 
