@@ -1,6 +1,83 @@
 {
   "Summary": "変数、Dynamic/Cloud Variables。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Cloud": {
+      "Summary": "クラウド変数の操作。",
+      "Components": {
+        "ReadCloudVariable": {
+          "Description": "クラウドから値を読み取る。"
+        },
+        "WriteCloudVariable": {
+          "Description": "クラウドへ値を書き込む。"
+        }
+      }
+    },
+    "Dynamic": {
+      "Summary": "Dynamic Variables の操作。",
+      "Components": {
+        "ClearDynamicVariables": {
+          "Description": "スペースからすべての変数を削除する。"
+        },
+        "ClearDynamicVariablesOfType": {
+          "Description": "スペースから指定型の変数をすべて削除する。"
+        },
+        "CreateDynamicVariable": {
+          "Description": "スペースに動的変数を作成する。"
+        },
+        "DeleteDynamicVariable": {
+          "Description": "スペースから特定の動的変数を削除する。"
+        },
+        "DynamicVariableInput": {
+          "Description": "自身の Slot を用いて動的変数を読み取る。"
+        },
+        "DynamicVariableInputWithEvents": {
+          "Description": "スペース接続イベント付きの入力。"
+        },
+        "ReadDynamicVariable": {
+          "Description": "スペースから動的変数を読み取る。"
+        },
+        "WriteDynamicVariable": {
+          "Description": "スペースへ動的変数を書き込む。"
+        },
+        "WriteOrCreateDynamicVariable": {
+          "Description": "既存がなくてもスペースへ動的変数を書き込む（必要なら作成）。"
+        }
+      }
+    },
+    "Spatial": {
+      "Summary": "Spatial Variables の操作。",
+      "Components": {
+        "SampleSpatialVariable": {
+          "Description": "グローバル空間の点をサンプリングし、一致する Spatial Variable の値を返す。"
+        },
+        "SampleBooleanSpatialVariable": {
+          "Description": "ブールの Spatial Variable をブール交差モードに従ってサンプリングする。"
+        },
+        "SampleMinMaxSpatialVariable": {
+          "Description": "数値の Spatial Variable をサンプリングし、その点での最小値と最大値を返す。"
+        },
+        "SampleNumericSpatialVariable": {
+          "Description": "数値の Spatial Variable を数種のブレンドモードに従ってサンプリングする。"
+        },
+        "SampleSpatialVariablePartialDerivative": {
+          "Description": "数値の Spatial Variable をサンプリングし、3軸の偏微分を返す。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "DataModelBooleanToggle": {
+      "Description": "トグル（切替/セット/リセット）が可能な単純なブールトグル。"
+    },
+    "DataModelStore": {
+      "Description": "型の値/参照を保持する変数。他のユーザーからグローバルに可視。"
+    },
+    "Local": {
+      "Description": "型の値/参照を保持する変数。現在のパルス（コンテキスト）限定。"
+    },
+    "Store": {
+      "Description": "型の値/参照を保持する変数。自分ローカルのみ可視。"
+    }
+  }
 }
 
