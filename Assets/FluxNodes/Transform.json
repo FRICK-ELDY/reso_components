@@ -1,6 +1,173 @@
 {
   "Summary": "座標空間、方向、境界ボックス。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Bounds": {
+      "Summary": "バウンディングボックスの計算・拡張・縮小。",
+      "Components": {
+        "BoundingBoxProperties": {
+          "Description": "指定したバウンディングボックスの情報を提供する。"
+        },
+        "ComputeBoundingBox": {
+          "Description": "指定したスロット階層のバウンディングボックスを計算する。"
+        },
+        "Empty": {
+          "Description": "空のバウンディングボックスを返す。"
+        },
+        "EncapsulateBounds": {
+          "Description": "あるバウンディングボックスを別のバウンディングボックスで包含/拡張する。"
+        },
+        "EncapsulatePoint": {
+          "Description": "指定した点を含むようにバウンディングボックスを拡張する。"
+        },
+        "FromCenterSize": {
+          "Description": "中心とサイズからバウンディングボックスを生成する。"
+        },
+        "TransformBounds": {
+          "Description": "バウンディングボックスを別の座標空間へ変換する。"
+        }
+      }
+    },
+    "Conversion": {
+      "Summary": "変換の別座標空間への変換。",
+      "Components": {
+        "GlobalDirectionToLocal": {
+          "Description": "グローバル空間の方向を指定した Slot のローカル空間へ変換する。"
+        },
+        "GlobalPointToLocal": {
+          "Description": "グローバル空間の点を指定した Slot のローカル空間へ変換する。"
+        },
+        "GlobalRotationToLocal": {
+          "Description": "グローバル空間の回転を指定した Slot のローカル空間へ変換する。"
+        },
+        "GlobalScaleToLocal": {
+          "Description": "グローバル空間のスケールを指定した Slot のローカル空間へ変換する。"
+        },
+        "GlobalVectorToLocal": {
+          "Description": "グローバル空間のベクトルを指定した Slot のローカル空間へ変換する。"
+        },
+        "LocalDirectionToGlobal": {
+          "Description": "指定した Slot のローカル空間の方向をグローバル空間へ変換する。"
+        },
+        "LocalPointToGlobal": {
+          "Description": "指定した Slot のローカル空間の点をグローバル空間へ変換する。"
+        },
+        "LocalRotationToGlobal": {
+          "Description": "指定した Slot のローカル空間の回転をグローバル空間へ変換する。"
+        },
+        "LocalScaleToGlobal": {
+          "Description": "指定した Slot のローカル空間のスケールをグローバル空間へ変換する。"
+        },
+        "LocalScreenPointToDirection": {
+          "Description": "ユーザーのスクリーン上の点を向いているワールド方向ベクトルへ変換する。"
+        },
+        "LocalScreenPointToWorld": {
+          "Description": "ユーザーのスクリーン上の点と距離から、向いているワールド空間での位置を算出する。"
+        },
+        "LocalVectorToGlobal": {
+          "Description": "指定した Slot のローカル空間のベクトルをグローバル空間へ変換する。"
+        },
+        "TransformDirection": {
+          "Description": "Slot A のローカル空間の方向を Slot B のローカル空間へ変換する。"
+        },
+        "TransformPoint": {
+          "Description": "Slot A のローカル空間の点を Slot B のローカル空間へ変換する。"
+        },
+        "TransformRotation": {
+          "Description": "Slot A のローカル空間の回転を Slot B のローカル空間へ変換する。"
+        },
+        "TransformScale": {
+          "Description": "Slot A のローカル空間のスケールを Slot B のローカル空間へ変換する。"
+        },
+        "TransformVector": {
+          "Description": "Slot A のローカル空間のベクトルを Slot B のローカル空間へ変換する。"
+        }
+      }
+    },
+    "Direction": {
+      "Summary": "スロットの向き（方向）の取得・設定。",
+      "Components": {
+        "GetBackward": {
+          "Description": "Slot のグローバル後方（Backward）方向を返す。"
+        },
+        "GetDown": {
+          "Description": "Slot のグローバル下方向（Down）を返す。"
+        },
+        "GetForward": {
+          "Description": "Slot のグローバル前方（Forward）方向を返す。"
+        },
+        "GetLeft": {
+          "Description": "Slot のグローバル左方向（Left）を返す。"
+        },
+        "GetRight": {
+          "Description": "Slot のグローバル右方向（Right）を返す。"
+        },
+        "GetUp": {
+          "Description": "Slot のグローバル上方向（Up）を返す。"
+        },
+        "SetBackward": {
+          "Description": "Slot のグローバル後方（Backward）方向を設定する。"
+        },
+        "SetDown": {
+          "Description": "Slot のグローバル下方向（Down）を設定する。"
+        },
+        "SetForward": {
+          "Description": "Slot のグローバル前方（Forward）方向を設定する。"
+        },
+        "SetLeft": {
+          "Description": "Slot のグローバル左方向（Left）を設定する。"
+        },
+        "SetRight": {
+          "Description": "Slot のグローバル右方向（Right）を設定する。"
+        },
+        "SetUp": {
+          "Description": "Slot のグローバル上方向（Up）を設定する。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "GlobalTransform": {
+      "Description": "Slot のグローバル変換（位置・回転・スケール）を返す。"
+    },
+    "LocalTransform": {
+      "Description": "Slot のローカル変換（位置・回転・スケール）を返す。"
+    },
+    "SetGlobalPosition": {
+      "Description": "Slot のグローバル位置を指定位置に設定する。"
+    },
+    "SetGlobalPositionRotation": {
+      "Description": "Slot のグローバル位置と回転を指定の値に設定する。"
+    },
+    "SetGlobalRotation": {
+      "Description": "Slot のグローバル回転を指定の回転に設定する。"
+    },
+    "SetGlobalScale": {
+      "Description": "Slot のグローバルスケールを指定値に設定する。"
+    },
+    "SetGlobalTransform": {
+      "Description": "Slot のグローバル変換（位置・回転・スケール）を設定する。"
+    },
+    "SetGlobalTransformMatrix": {
+      "Description": "Slot のグローバル変換を TRS 行列で設定する。"
+    },
+    "SetLocalPosition": {
+      "Description": "Slot のローカル位置を指定位置に設定する。"
+    },
+    "SetLocalPositionRotation": {
+      "Description": "Slot のローカル位置と回転を指定の値に設定する。"
+    },
+    "SetLocalRotation": {
+      "Description": "Slot のローカル回転を指定の回転に設定する。"
+    },
+    "SetLocalScale": {
+      "Description": "Slot のローカルスケールを指定値に設定する。"
+    },
+    "SetLocalTransform": {
+      "Description": "Slot のローカル変換（位置・回転・スケール）を設定する。"
+    },
+    "SetTRS": {
+      "Description": "Slot のローカル TRS 行列を設定する。"
+    }
+  }
 }
 
