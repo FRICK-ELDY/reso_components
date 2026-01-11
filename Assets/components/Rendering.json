@@ -54,95 +54,142 @@
         },
         "Modules": {
           "Summary": "パーティクルシステムの挙動を定義するモジュール。",
-          "Components": {
-            "AlphaOverLifetimeLinearGradient": { "Description": "寿命に応じてアルファを線形グラデーションで変化させます。" },
-            "AngularVelocity3DConstantInitializer": { "Description": "初期角速度（3D）を一定値で設定します。" },
-            "AngularVelocity3DRangeInitializer": { "Description": "初期角速度（3D）を範囲からランダムに設定します。" },
-            "AngularVelocityConstantInitializer": { "Description": "初期角速度を一定値で設定します。" },
-            "AngularVelocityDrag": { "Description": "角速度にドラッグ（減衰）を与えます。" },
-            "AngularVelocityRangeInitializer": { "Description": "初期角速度を範囲からランダムに設定します。" },
-            "ColorByOrientationDirection": { "Description": "向きの方向に基づいて色を適用します。" },
-            "ColorByOrientationDirectionSH1": { "Description": "向きの方向（SH1）に基づいて色を適用します。" },
-            "ColorByOrientationDirectionSH2": { "Description": "向きの方向（SH2）に基づいて色を適用します。" },
-            "ColorByOrientationDirectionSH3": { "Description": "向きの方向（SH3）に基づいて色を適用します。" },
-            "ColorByOrientationDirectionSH4": { "Description": "向きの方向（SH4）に基づいて色を適用します。" },
-            "ColorBySpeedMinMax": { "Description": "速度の最小/最大に基づいて色を適用します。" },
-            "ColorBySpeedMinMaxHSV": { "Description": "速度の最小/最大に基づき HSV で色を適用します。" },
-            "ColorBySpeedTexture": { "Description": "速度に基づきテクスチャから色をサンプルします。" },
-            "ColorByThreadDiagnosticModule": { "Description": "スレッド診断用に色分けします。" },
-            "ColorByVelocityDirection": { "Description": "速度方向に基づいて色を適用します。" },
-            "ColorByVelocityDirectionSH1": { "Description": "速度方向（SH1）に基づいて色を適用します。" },
-            "ColorByVelocityDirectionSH2": { "Description": "速度方向（SH2）に基づいて色を適用します。" },
-            "ColorByVelocityDirectionSH3": { "Description": "速度方向（SH3）に基づいて色を適用します。" },
-            "ColorByVelocityDirectionSH4": { "Description": "速度方向（SH4）に基づいて色を適用します。" },
-            "ColorConstantInitializer": { "Description": "初期色を一定値で設定します。" },
-            "ColorFromTexture3D": { "Description": "3Dテクスチャから色を取得します。" },
-            "ColorHSV OverLifetimeStartEnd": { "Description": "寿命に応じて HSV の開始/終了で色を補間します。" },
-            "ColorHSV RangeInitializer": { "Description": "初期 HSV 色を範囲から設定します。" },
-            "ColorListInitializer": { "Description": "(no docs)色リストを初期化します。" },
-            "ColorOverLifetimeLinearGradient": { "Description": "寿命に応じて色を線形グラデーションで変化させます。" },
-            "ColorOverLifetimeStartEnd": { "Description": "寿命に応じて開始色から終了色へ変化させます。" },
-            "ColorOverLifetimeTexture": { "Description": "寿命に応じてテクスチャから色を取得します。" },
-            "ColorRangeInitializer": { "Description": "初期色を範囲からランダムに設定します。" },
-            "ConstantAngularVelocityForce": { "Description": "一定の角速度を与える力を適用します。" },
-            "GravityForce": { "Description": "重力の力を適用します。" },
-            "LifetimeConstantInitializer": { "Description": "寿命を一定値で設定します。" },
-            "LifetimeRangeInitializer": { "Description": "寿命を範囲からランダムに設定します。" },
-            "LinearForce": { "Description": "一定方向の線形力を適用します。" },
-            "OrientAtPoint": { "Description": "特定の点に向くように向きを調整します。" },
-            "OrientByVelocity": { "Description": "速度方向に基づいて向きを調整します。" },
-            "OriginRadialForce": { "Description": "原点からの放射状の力を適用します。" },
-            "ParticleBirthSubEmitter": { "Description": "(no docs)パーティクルの誕生時にサブエミッタを発火します。" },
-            "ParticleDeathSubEmitter": { "Description": "(no docs)パーティクルの死亡時にサブエミッタを発火します。" },
-            "ParticleLifetimeSubEmitter": { "Description": "(no docs)パーティクルの寿命時にサブエミッタを発火します。" },
-            "ParticleLightsModule": { "Description": "パーティクルがライトを発するようにします。" },
-            "ParticleRibbonsModule": { "Description": "リボン（帯）状のパーティクルを生成します。" },
-            "ParticleTrailsModule": { "Description": "パーティクルの軌跡（トレイル）を生成します。" },
-            "PivotFromVelocityMagnitude": { "Description": "速度の大きさからピボットを決定します。" },
-            "PivotModule": { "Description": "ピボット位置を制御します。" },
-            "PositionSimulatorModule": { "Description": "位置のシミュレーションを行います。" },
-            "RadialForce": { "Description": "中心からの放射状の力を適用します。" },
-            "RibbonColorConstantInitializer": { "Description": "リボンの色を一定値で初期化します。" },
-            "RibbonColorRangeInitializer": { "Description": "リボンの色を範囲から初期化します。" },
-            "RibbonFollowerColorConstantInitializer": { "Description": "リボンフォロワーの色を一定値で初期化します。" },
-            "RibbonFollowerColorRangeInitializer": { "Description": "リボンフォロワーの色を範囲から初期化します。" },
-            "RibbonFollowerWidthConstantInitializer": { "Description": "リボンフォロワーの幅を一定値で初期化します。" },
-            "RibbonFollowerWidthRangeInitializer": { "Description": "リボンフォロワーの幅を範囲から初期化します。" },
-            "RibbonWidthConstantInitializer": { "Description": "リボンの幅を一定値で初期化します。" },
-            "RibbonWidthRangeInitializer": { "Description": "リボンの幅を範囲から初期化します。" },
-            "Rotation3DConstantInitializer": { "Description": "初期回転（3D）を一定値で設定します。" },
-            "Rotation3DEulerRangeInitializer": { "Description": "初期回転（オイラー角）を範囲から設定します。" },
-            "RotationConstantInitializer": { "Description": "初期回転を一定値で設定します。" },
-            "RotationRangeInitializer": { "Description": "初期回転を範囲から設定します。" },
-            "RotationSimulatorModule": { "Description": "回転のシミュレーションを行います。" },
-            "SequenceRibbonSplitter": { "Description": "シーケンスに基づきリボンを分割します。" },
-            "SimplexTurbulentForce": { "Description": "Simplex ノイズに基づく乱流の力を適用します。" },
-            "SizeConstantInitializer": { "Description": "初期サイズを一定値で設定します。" },
-            "SizeModifier": { "Description": "サイズを変化させる修飾を適用します。" },
-            "SizeMultiplierByVelocity": { "Description": "速度に応じてサイズ倍率を適用します。" },
-            "SizeOffsetByVelocity": { "Description": "速度に応じてサイズオフセットを適用します。" },
-            "SizeOverLifetimeStartEnd": { "Description": "寿命に応じてサイズを開始/終了間で変化させます。" },
-            "SizeOverLifetimeTexture": { "Description": "(no docs)寿命に応じてテクスチャからサイズを取得します。" },
-            "SizeRangeInitializer": { "Description": "初期サイズを範囲からランダムに設定します。" },
-            "SizeSineMultiplier": { "Description": "サイン波に基づいてサイズを変調します。" },
-            "SpeedConstantInitializer": { "Description": "初期速度を一定値で設定します。" },
-            "SpeedRangeInitializer": { "Description": "初期速度を範囲からランダムに設定します。" },
-            "Texture3D Force": { "Description": "3Dテクスチャに基づく力を適用します。" },
-            "TextureSheetAnimator": { "Description": "テクスチャシートを用いてアニメーションします。" },
-            "TimeProximityRibbonSplitter": { "Description": "時間的近接に基づいてリボンを分割します。" },
-            "TrailColorConstantInitializer": { "Description": "トレイルの色を一定値で初期化します。" },
-            "TrailColorRangeInitializer": { "Description": "トレイルの色を範囲から初期化します。" },
-            "TrailLifetimeConstantInitializer": { "Description": "トレイルの寿命を一定値で初期化します。" },
-            "TrailLifetimeFromSizeInitializer": { "Description": "サイズからトレイルの寿命を導出して初期化します。" },
-            "TrailLifetimeRangeInitializer": { "Description": "トレイルの寿命を範囲から初期化します。" },
-            "TrailWidthConstantInitializer": { "Description": "トレイルの幅を一定値で初期化します。" },
-            "TrailWidthRangeInitializer": { "Description": "トレイルの幅を範囲から初期化します。" },
-            "UniformSizeConstantInitializer": { "Description": "一様サイズを一定値で初期化します。" },
-            "UniformSizeOverLifetimeStartEnd": { "Description": "寿命に応じて一様サイズを開始/終了間で変化させます。" },
-            "UniformSizeRangeInitializer": { "Description": "一様サイズを範囲から初期化します。" },
-            "UniformSizeSineMultiplier": { "Description": "サイン波に基づいて一様サイズを変調します。" },
-            "VelocityDrag": { "Description": "速度にドラッグ（減衰）を与えます。" }
-          }
+          "Category": {
+            "Color": {
+              "Summary": "色/アルファの時間変化・方向/速度依存・テクスチャ駆動・初期化。",
+              "Components": {
+                "AlphaOverLifetimeLinearGradient": { "Description": "寿命に応じてアルファを線形グラデーションで変化させます。" },
+                "ColorByOrientationDirection": { "Description": "向きの方向に基づいて色を適用します。" },
+                "ColorByOrientationDirectionSH1": { "Description": "向きの方向（SH1）に基づいて色を適用します。" },
+                "ColorByOrientationDirectionSH2": { "Description": "向きの方向（SH2）に基づいて色を適用します。" },
+                "ColorByOrientationDirectionSH3": { "Description": "向きの方向（SH3）に基づいて色を適用します。" },
+                "ColorByOrientationDirectionSH4": { "Description": "向きの方向（SH4）に基づいて色を適用します。" },
+                "ColorBySpeedMinMax": { "Description": "速度の最小/最大に基づいて色を適用します。" },
+                "ColorBySpeedMinMaxHSV": { "Description": "速度の最小/最大に基づき HSV で色を適用します。" },
+                "ColorBySpeedTexture": { "Description": "速度に基づきテクスチャから色をサンプルします。" },
+                "ColorByVelocityDirection": { "Description": "速度方向に基づいて色を適用します。" },
+                "ColorByVelocityDirectionSH1": { "Description": "速度方向（SH1）に基づいて色を適用します。" },
+                "ColorByVelocityDirectionSH2": { "Description": "速度方向（SH2）に基づいて色を適用します。" },
+                "ColorByVelocityDirectionSH3": { "Description": "速度方向（SH3）に基づいて色を適用します。" },
+                "ColorByVelocityDirectionSH4": { "Description": "速度方向（SH4）に基づいて色を適用します。" },
+                "ColorFromTexture3D": { "Description": "3Dテクスチャから色を取得します。" },
+                "ColorHSV OverLifetimeStartEnd": { "Description": "寿命に応じて HSV の開始/終了で色を補間します。" },
+                "ColorOverLifetimeLinearGradient": { "Description": "寿命に応じて色を線形グラデーションで変化させます。" },
+                "ColorOverLifetimeStartEnd": { "Description": "寿命に応じて開始色から終了色へ変化させます。" },
+                "ColorOverLifetimeTexture": { "Description": "寿命に応じてテクスチャから色を取得します。" },
+                "ColorConstantInitializer": { "Description": "初期色を一定値で設定します。" },
+                "ColorHSV RangeInitializer": { "Description": "初期 HSV 色を範囲から設定します。" },
+                "ColorListInitializer": { "Description": "(no docs)色リストを初期化します。" },
+                "ColorRangeInitializer": { "Description": "初期色を範囲からランダムに設定します。" }
+              }
+            },
+            "Size": {
+              "Summary": "サイズ/スケールの初期化・時間変化・速度依存。",
+              "Components": {
+                "SizeModifier": { "Description": "サイズを変化させる修飾を適用します。" },
+                "SizeMultiplierByVelocity": { "Description": "速度に応じてサイズ倍率を適用します。" },
+                "SizeOffsetByVelocity": { "Description": "速度に応じてサイズオフセットを適用します。" },
+                "SizeOverLifetimeStartEnd": { "Description": "寿命に応じてサイズを開始/終了間で変化させます。" },
+                "SizeOverLifetimeTexture": { "Description": "(no docs)寿命に応じてテクスチャからサイズを取得します。" },
+                "SizeSineMultiplier": { "Description": "サイン波に基づいてサイズを変調します。" },
+                "UniformSizeOverLifetimeStartEnd": { "Description": "寿命に応じて一様サイズを開始/終了間で変化させます。" },
+                "UniformSizeSineMultiplier": { "Description": "サイン波に基づいて一様サイズを変調します。" },
+                "SizeConstantInitializer": { "Description": "初期サイズを一定値で設定します。" },
+                "SizeRangeInitializer": { "Description": "初期サイズを範囲からランダムに設定します。" },
+                "UniformSizeConstantInitializer": { "Description": "一様サイズを一定値で初期化します。" },
+                "UniformSizeRangeInitializer": { "Description": "一様サイズを範囲から初期化します。" }
+              }
+            },
+            "Rotation": {
+              "Summary": "回転/角速度の初期化・減衰・シミュレーション。",
+              "Components": {
+                "AngularVelocityDrag": { "Description": "角速度にドラッグ（減衰）を与えます。" },
+                "RotationSimulatorModule": { "Description": "回転のシミュレーションを行います。" },
+                "AngularVelocity3DConstantInitializer": { "Description": "初期角速度（3D）を一定値で設定します。" },
+                "AngularVelocity3DRangeInitializer": { "Description": "初期角速度（3D）を範囲からランダムに設定します。" },
+                "AngularVelocityConstantInitializer": { "Description": "初期角速度を一定値で設定します。" },
+                "AngularVelocityRangeInitializer": { "Description": "初期角速度を範囲からランダムに設定します。" },
+                "Rotation3DConstantInitializer": { "Description": "初期回転（3D）を一定値で設定します。" },
+                "Rotation3DEulerRangeInitializer": { "Description": "初期回転（オイラー角）を範囲から設定します。" },
+                "RotationConstantInitializer": { "Description": "初期回転を一定値で設定します。" },
+                "RotationRangeInitializer": { "Description": "初期回転を範囲から設定します。" }
+              }
+            },
+            "Orientation": {
+              "Summary": "向き合わせ/ピボット制御。",
+              "Components": {
+                "OrientAtPoint": { "Description": "特定の点に向くように向きを調整します。" },
+                "OrientByVelocity": { "Description": "速度方向に基づいて向きを調整します。" },
+                "PivotFromVelocityMagnitude": { "Description": "速度の大きさからピボットを決定します。" },
+                "PivotModule": { "Description": "ピボット位置を制御します。" }
+              }
+            },
+            "Forces": {
+              "Summary": "力場/ドラッグ/ノイズ/テクスチャ駆動力。",
+              "Components": {
+                "ConstantAngularVelocityForce": { "Description": "一定の角速度を与える力を適用します。" },
+                "GravityForce": { "Description": "重力の力を適用します。" },
+                "LinearForce": { "Description": "一定方向の線形力を適用します。" },
+                "OriginRadialForce": { "Description": "原点からの放射状の力を適用します。" },
+                "RadialForce": { "Description": "中心からの放射状の力を適用します。" },
+                "SimplexTurbulentForce": { "Description": "Simplex ノイズに基づく乱流の力を適用します。" },
+                "Texture3D Force": { "Description": "3Dテクスチャに基づく力を適用します。" },
+                "VelocityDrag": { "Description": "速度にドラッグ（減衰）を与えます。" }
+              }
+            },
+            "Ribbon": {
+              "Summary": "リボン生成と色/幅の初期化、分割。",
+              "Components": {
+                "ParticleRibbonsModule": { "Description": "リボン（帯）状のパーティクルを生成します。" },
+                "SequenceRibbonSplitter": { "Description": "シーケンスに基づきリボンを分割します。" },
+                "TimeProximityRibbonSplitter": { "Description": "時間的近接に基づいてリボンを分割します。" },
+                "RibbonColorConstantInitializer": { "Description": "リボンの色を一定値で初期化します。" },
+                "RibbonColorRangeInitializer": { "Description": "リボンの色を範囲から初期化します。" },
+                "RibbonFollowerColorConstantInitializer": { "Description": "リボンフォロワーの色を一定値で初期化します。" },
+                "RibbonFollowerColorRangeInitializer": { "Description": "リボンフォロワーの色を範囲から初期化します。" },
+                "RibbonFollowerWidthConstantInitializer": { "Description": "リボンフォロワーの幅を一定値で初期化します。" },
+                "RibbonFollowerWidthRangeInitializer": { "Description": "リボンフォロワーの幅を範囲から初期化します。" },
+                "RibbonWidthConstantInitializer": { "Description": "リボンの幅を一定値で初期化します。" },
+                "RibbonWidthRangeInitializer": { "Description": "リボンの幅を範囲から初期化します。" }
+              }
+            },
+            "Trail": {
+              "Summary": "トレイル生成と色/幅/寿命の初期化。",
+              "Components": {
+                "ParticleTrailsModule": { "Description": "パーティクルの軌跡（トレイル）を生成します。" },
+                "TrailColorConstantInitializer": { "Description": "トレイルの色を一定値で初期化します。" },
+                "TrailColorRangeInitializer": { "Description": "トレイルの色を範囲から初期化します。" },
+                "TrailLifetimeConstantInitializer": { "Description": "トレイルの寿命を一定値で初期化します。" },
+                "TrailLifetimeFromSizeInitializer": { "Description": "サイズからトレイルの寿命を導出して初期化します。" },
+                "TrailLifetimeRangeInitializer": { "Description": "トレイルの寿命を範囲から初期化します。" },
+                "TrailWidthConstantInitializer": { "Description": "トレイルの幅を一定値で初期化します。" },
+                "TrailWidthRangeInitializer": { "Description": "トレイルの幅を範囲から初期化します。" }
+              }
+            },
+            "SubEmitters": {
+              "Summary": "サブエミッタの発火タイミング。",
+              "Components": {
+                "ParticleBirthSubEmitter": { "Description": "(no docs)パーティクルの誕生時にサブエミッタを発火します。" },
+                "ParticleDeathSubEmitter": { "Description": "(no docs)パーティクルの死亡時にサブエミッタを発火します。" },
+                "ParticleLifetimeSubEmitter": { "Description": "(no docs)パーティクルの寿命時にサブエミッタを発火します。" }
+              }
+            },
+            "Simulation": {
+              "Summary": "シミュレーション/アニメーション制御。",
+              "Components": {
+                "PositionSimulatorModule": { "Description": "位置のシミュレーションを行います。" },
+                "TextureSheetAnimator": { "Description": "テクスチャシートを用いてアニメーションします。" }
+              }
+            },
+            "Lighting": {
+              "Summary": "ライティングとデバッグ可視化。",
+              "Components": {
+                "ParticleLightsModule": { "Description": "パーティクルがライトを発するようにします。" },
+                "ColorByThreadDiagnosticModule": { "Description": "スレッド診断用に色分けします。" }
+              }
+            }
+          },
+          "Components": {}
         },
         "Renderers": {
           "Summary": "パーティクルの描画方法を定義するレンダラー。",
