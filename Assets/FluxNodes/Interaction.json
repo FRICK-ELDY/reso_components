@@ -1,6 +1,81 @@
 {
   "Summary": "UI/オブジェクト/ボタン/グラブ/コンテキストメニューのイベント。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Grabbable": {
+      "Summary": "Grabber/Grabbable/GrabbableReceiverSurface に関するイベント。",
+      "Components": {
+        "CanBeGrabbed": {
+          "Description": "ユーザーのグラバーでスロットがグラブ可能か確認する。"
+        },
+        "GetUserGrabber": {
+          "Description": "ボディノードからユーザーのグラバーを取得する。"
+        },
+        "GrabbableGrabber": {
+          "Description": "スロットの Grabbable から、誰がグラブしているか取得する。"
+        },
+        "GrabbablePriority": {
+          "Description": "スロットのグラバブル優先度を返す（高いほど優先）。"
+        },
+        "GrabberBodyNode": {
+          "Description": "任意のグラバーから対応するボディノードを返す。"
+        },
+        "IsGrabbableGrabbed": {
+          "Description": "スロットが現在グラブされているか確認する。"
+        },
+        "IsGrabbableReceivable": {
+          "Description": "スロットの Grabbable が受け取り可能か確認する。"
+        },
+        "IsGrabbableScalable": {
+          "Description": "スロットの Grabbable がスケーラブルか確認する。"
+        },
+        "OnGrabbableGrabbed": {
+          "Description": "グラバブルスロットがユーザーにグラブされた時に発火する。"
+        },
+        "OnGrabbableReceiverSurfaceReceived": {
+          "Description": "グラバブルサーフェスで受け取られた時に発火する。"
+        },
+        "OnGrabbableReleased": {
+          "Description": "グラバブルスロットがリリースされた時に発火する。"
+        },
+        "ReleaseAllGrabbed": {
+          "Description": "ユーザーのボディノードから全てのグラブ対象を解放する。"
+        }
+      }
+    },
+    "UI": {
+      "Summary": "UIやテキストエディタのフォーカス/フォーカス解除イベント。",
+      "Components": {
+        "ClearFocus": {
+          "Description": "ユーザーの全ての IFocusable UI のフォーカスを解除する。"
+        },
+        "DefocusFocusable": {
+          "Description": "ユーザーから対象の IFocusable UI のフォーカスを外す。"
+        },
+        "FocusFocusable": {
+          "Description": "ユーザーの対象 IFocusable UI にフォーカスを当てる。"
+        },
+        "HasLocalFocus": {
+          "Description": "ローカルユーザーが対象 IFocusable UI にフォーカスしているか確認する。"
+        },
+        "TextEditorEvents": {
+          "Description": "TextEditor の編集/送信イベントを発火する。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "ButtonEvents": {
+      "Description": "Button コンポーネントでのユーザー操作を取得する。"
+    },
+    "CloseContextMenu": {
+      "Description": "ユーザーのコンテキストメニューを閉じる。"
+    },
+    "IsContextMenuOpen": {
+      "Description": "コンテキストメニューが開いているかを確認する。"
+    },
+    "TouchableEvents": {
+      "Description": "TouchButton の物理タッチイベントを検出する。"
+    }
+  }
 }
 
