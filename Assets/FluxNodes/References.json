@@ -1,6 +1,37 @@
 {
   "Summary": "フィールド参照、RefID、要素の削除状態。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Elements": {
+      "Summary": "要素が Disposed/Destroyed/Exists/Local かの判定。",
+      "Components": {
+        "ElementExists": {
+          "Description": "IWorldElement が存在するかを確認する。"
+        },
+        "IsDestroyed": {
+          "Description": "破壊可能な IDestroyable が破壊済みかを確認する。"
+        },
+        "IsDisposed": {
+          "Description": "Worker 系の IWorldElement が破棄済みかを確認する。"
+        },
+        "IsLocalElement": {
+          "Description": "IWorldElement がローカル（Data Model外）かを確認する。"
+        },
+        "IsRemoved": {
+          "Description": "IWorldElement が削除済みかを確認する。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "AllocatingUser": {
+      "Description": "指定された IWorldElement を作成した User を返す。"
+    },
+    "ReferenceID": {
+      "Description": "指定された参照の RefID を返す。"
+    },
+    "ReferenceTarget": {
+      "Description": "指定された IField が指す参照先を返す。"
+    }
+  }
 }
 
