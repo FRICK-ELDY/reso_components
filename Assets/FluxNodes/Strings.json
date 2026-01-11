@@ -1,6 +1,253 @@
 {
   "Summary": "文字列/文字の操作。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Characters": {
+      "Summary": "1文字（記号・文字）の操作。",
+      "Components": {
+        "CharToString": {
+          "Description": "Char を String に変換する。"
+        },
+        "ConcatenateChars": {
+          "Description": "複数の Char を連結して文字列にする。"
+        },
+        "FromUTF16": {
+          "Description": "16ビットのコードポイントから Char に変換する。"
+        },
+        "FromUTF32": {
+          "Description": "UTF32 コードポイントから文字列に変換する。"
+        },
+        "GetCharacter": {
+          "Description": "文字列の指定インデックスにある Char を取得する。"
+        },
+        "IsControl": {
+          "Description": "Char が制御（非印字）文字かを判定する。"
+        },
+        "IsDigit": {
+          "Description": "Char が数字かを判定する。"
+        },
+        "IsLetter": {
+          "Description": "Char が文字（英字）かを判定する。"
+        },
+        "IsLetterOrDigit": {
+          "Description": "Char が英字または数字かを判定する。"
+        },
+        "IsLower": {
+          "Description": "Char が小文字かを判定する。"
+        },
+        "IsNumber": {
+          "Description": "Char が数を表す文字かを判定する。"
+        },
+        "IsPunctuation": {
+          "Description": "Char が句読点/記号（punctuation）かを判定する。"
+        },
+        "IsSeparator": {
+          "Description": "Char が区切り（separator）かを判定する。"
+        },
+        "IsSurrogate": {
+          "Description": "Char がサロゲートかを判定する。"
+        },
+        "IsSymbol": {
+          "Description": "Char がシンボル（symbol）かを判定する。"
+        },
+        "IsUpper": {
+          "Description": "Char が大文字かを判定する。"
+        },
+        "IsWhiteSpace": {
+          "Description": "Char が空白文字かを判定する。"
+        },
+        "StringToUTF32": {
+          "Description": "文字列の指定位置の Char を UTF32 コードポイントに変換する。"
+        },
+        "SurrogatePairToUTF32": {
+          "Description": "サロゲートペアを UTF32 コードポイントに変換する。"
+        },
+        "ToLower": {
+          "Description": "入力の文字を小文字に変換する。"
+        },
+        "ToUpper": {
+          "Description": "入力の文字を大文字に変換する。"
+        },
+        "ToUTF16": {
+          "Description": "Char を 16ビットのコードポイントに変換する。"
+        }
+      }
+    },
+    "Constants": {
+      "Summary": "空文字や改行など不変の値。",
+      "Components": {
+        "Backspace": {
+          "Description": "Backspace の文字リテラル定数。"
+        },
+        "Bell": {
+          "Description": "Bell（ベル）の文字リテラル定数。"
+        },
+        "CarriageReturn": {
+          "Description": "復帰（Carriage Return）の文字リテラル定数。"
+        },
+        "FormFeed": {
+          "Description": "フォームフィードの文字リテラル定数。"
+        },
+        "NewLine": {
+          "Description": "改行の Char と String の定数。"
+        },
+        "Space": {
+          "Description": "スペースの文字リテラル定数。"
+        },
+        "Tab": {
+          "Description": "タブの文字リテラル定数。"
+        },
+        "VerticalTab": {
+          "Description": "垂直タブの文字リテラル定数。"
+        }
+      }
+    },
+    "Formatting": {
+      "Summary": "マーカー位置に文字列を差し込む整形。",
+      "Components": {
+        "Capitalize": {
+          "Description": "文字列の先頭文字を大文字化する。"
+        },
+        "FormatAsRecolorNotFunctional": {
+          "Description": "文字列を色付き形式に整形する（再色付け用途、機能限定）。"
+        },
+        "FormatAsTime": {
+          "Description": "文字列を時刻表記にフォーマットする。"
+        },
+        "FormatDateTimeasDate": {
+          "Description": "DateTime を日付の文字列表現にフォーマットする。"
+        },
+        "FormatDateTimeasTime": {
+          "Description": "DateTime を時刻の文字列表現にフォーマットする。"
+        },
+        "FormatString": {
+          "Description": "文字列中の {0},{1},… プレースホルダーを値で置換する。"
+        },
+        "FormatTimespan": {
+          "Description": "TimeSpan を文字列にフォーマットする。"
+        },
+        "ToLower": {
+          "Description": "文字列を小文字に変換する。"
+        },
+        "ToUpper": {
+          "Description": "文字列を大文字に変換する。"
+        }
+      }
+    },
+    "Localization": {
+      "Summary": "カルチャ（ローカライズ）関連。",
+      "Components": {
+        "CurrentCulture": {
+          "Description": "ユーザーのローカルなカルチャ情報を返す。"
+        },
+        "FormatLocaleString": {
+          "Description": "ロケールとキーを受け取り、対応する翻訳文字列を返す。"
+        },
+        "InvariantCulture": {
+          "Description": "不変カルチャ（Invariant Culture）を返す。"
+        },
+        "LocaleMessageCount": {
+          "Description": "指定したロケールに含まれる翻訳キーの数を返す。"
+        }
+      }
+    },
+    "Parsing": {
+      "Summary": "文字列から数値/値を生成。",
+      "Components": {
+        "Parse": {
+          "Description": "文字列から数値型にパースして返す。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "Add": {
+      "Description": "文字列同士を結合する（このカテゴリに含まれる）。"
+    },
+    "CompareStrings": {
+      "Description": "2つの文字列を比較する。"
+    },
+    "ConcatenateMultiString": {
+      "Description": "複数の文字列を1つに結合する。"
+    },
+    "Contains": {
+      "Description": "Str が Substring を含むか判定する。"
+    },
+    "CountOccurrences": {
+      "Description": "入力文字列が出現する回数を数える。"
+    },
+    "EmptyString": {
+      "Description": "中身が空（nullではない）の定数文字列。"
+    },
+    "EndsWith": {
+      "Description": "文字列が指定の文字列で終わるか判定する。"
+    },
+    "EscapeString": {
+      "Description": "パス用途にバックスラッシュをエスケープ（\\ を追加）する。"
+    },
+    "GreaterOrEqualString": {
+      "Description": "文字列Aが文字列B以上（>=）か比較する。"
+    },
+    "GreaterThanString": {
+      "Description": "文字列Aが文字列Bより大きい（>）か比較する。"
+    },
+    "IndexOfString": {
+      "Description": "インデックスが文字列内のどこにあるか取得する。"
+    },
+    "IsStringEmpty": {
+      "Description": "指定の文字列が空文字（EmptyString）かを判定する。"
+    },
+    "LessOrEqualString": {
+      "Description": "文字列Aが文字列B以下（<=）か比較する。"
+    },
+    "LessThanString": {
+      "Description": "文字列Aが文字列Bより小さい（<）か比較する。"
+    },
+    "MultiplyString": {
+      "Description": "指定回数だけ文字列を繰り返す。"
+    },
+    "NullString": {
+      "Description": "null に相当する文字列。"
+    },
+    "ReplaceFirstSubstring": {
+      "Description": "最初に一致した部分文字列のみを新しい文字列で置換する。"
+    },
+    "ReplaceSubstring": {
+      "Description": "一致する全ての部分文字列を新しい文字列で置換する。"
+    },
+    "ReverseString": {
+      "Description": "文字列の文字の並びを反転する。"
+    },
+    "StartsWith": {
+      "Description": "文字列が指定の文字列で始まるか判定する。"
+    },
+    "StringInsert": {
+      "Description": "指定位置に文字列を差し込む。"
+    },
+    "StringJoin": {
+      "Description": "セパレータ付きで文字列を結合する。"
+    },
+    "StringLength": {
+      "Description": "文字列の文字数を返す。"
+    },
+    "StringRemove": {
+      "Description": "インデックスと長さを指定して部分文字列を削除する。"
+    },
+    "StripRTFTags": {
+      "Description": "文字列からリッチテキストタグを除去する。"
+    },
+    "Substring": {
+      "Description": "文字列の一部を切り出す。"
+    },
+    "ToString": {
+      "Description": "値（オブジェクト含む）を文字列化する。"
+    },
+    "TrimString": {
+      "Description": "前後の空白/不可視文字を取り除く。"
+    },
+    "UnescapeString": {
+      "Description": "エスケープされた \\ を元に戻す。"
+    }
+  }
 }
+
 
