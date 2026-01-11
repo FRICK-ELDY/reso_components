@@ -1,6 +1,22 @@
 {
   "Summary": "メッシュ、カメラ、レンダリング処理。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "BakeReflectionProbe": {
+      "Description": "反射プローブを1つベイクする。"
+    },
+    "BakeReflectionProbes": {
+      "Description": "複数の反射プローブをバッチでベイクする。"
+    },
+    "FlashHighlightHierarchy": {
+      "Description": "ヒエラルキーをハイライト表示（メッシュ/被弾エフェクトの確認に便利）。"
+    },
+    "RenderToTextureAsset": {
+      "Description": "Camera のビューをレンダーしてテクスチャアセットとして出力する（スクリーンショットのようなイメージ生成）。"
+    },
+    "SampleColorX": {
+      "Description": "レイキャストで環境から ColorX を取得する。"
+    }
+  }
 }
 
