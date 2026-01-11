@@ -1,6 +1,120 @@
 {
   "Summary": "スロットの追加・削除・走査・情報取得。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Info": {
+      "Summary": "スロットに関する情報の取得・設定。",
+      "Components": {
+        "GetSlotActive": {
+          "Description": "指定した Slot の階層がアクティブかを取得する。"
+        },
+        "GetSlotActiveSelf": {
+          "Description": "指定した Slot の active フィールドの値を取得する。"
+        },
+        "GetSlotName": {
+          "Description": "指定した Slot の name フィールドを取得する。"
+        },
+        "GetSlotPersistent": {
+          "Description": "指定した Slot の階層が Persistent かを取得する。"
+        },
+        "GetSlotPersistentSelf": {
+          "Description": "指定した Slot の persistent フィールドの値を取得する。"
+        },
+        "GetTag": {
+          "Description": "指定した Slot の tag フィールドを取得する。"
+        },
+        "HasTag": {
+          "Description": "指定した Slot が特定のタグを持つか確認する。"
+        },
+        "SetSlotActiveSelf": {
+          "Description": "指定した Slot の active フィールドを設定する。"
+        },
+        "SetSlotName": {
+          "Description": "指定した Slot の name フィールドを設定する。"
+        },
+        "SetSlotOrderOffset": {
+          "Description": "指定した Slot の order offset フィールドを設定する。"
+        },
+        "SetSlotPersistentSelf": {
+          "Description": "指定した Slot の persistent フィールドを設定する。"
+        },
+        "SetTag": {
+          "Description": "指定した Slot の tag フィールドを設定する。"
+        }
+      }
+    },
+    "Searching": {
+      "Summary": "スロットの検索。",
+      "Components": {
+        "FindChildByName": {
+          "Description": "指定した Slot の子 Slot を、指定した再帰深度で名前により検索する。"
+        },
+        "FindChildByTag": {
+          "Description": "指定した Slot の子 Slot を、指定したタグで再帰的に検索する。"
+        },
+        "FindParentByName": {
+          "Description": "指定した Slot の親 Slot を、指定した再帰深度で名前により検索する。"
+        },
+        "FindParentByTag": {
+          "Description": "指定した Slot の親 Slot を、指定したタグで再帰的に検索する。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "ChildrenCount": {
+      "Description": "指定した Slot の子スロット数を返す。"
+    },
+    "DestroySlot": {
+      "Description": "指定した Slot を破壊する。"
+    },
+    "DestroySlot Children": {
+      "Description": "指定した Slot の子スロットを破壊する。"
+    },
+    "DuplicateSlot": {
+      "Description": "指定した Slot を複製する。"
+    },
+    "GetActiveUser": {
+      "Description": "指定した Slot の最も近い親 User を取得する。"
+    },
+    "GetActiveUserRoot": {
+      "Description": "指定した Slot の最も近い親 User の UserRoot を取得する。"
+    },
+    "GetActiveUserSelf": {
+      "Description": "このノードが属する Slot の最も近い親 User を取得する。"
+    },
+    "GetChild": {
+      "Description": "指定したインデックス（0始まり）の子 Slot を取得する。"
+    },
+    "GetObjectRoot": {
+      "Description": "最も近いオブジェクトルートの Slot を取得する。"
+    },
+    "GetParent Slot": {
+      "Description": "指定した Slot の親 Slot を取得する（ルートの場合は null）。"
+    },
+    "GetSlot": {
+      "Description": "指定した Component が属する Slot を取得する。"
+    },
+    "GetSlotOrderOffset": {
+      "Description": "Slot の OrderOffset（long値）を取得する。"
+    },
+    "IndexOfChild": {
+      "Description": "子 Slot のインデックス（0始まり）を取得する。"
+    },
+    "IsChildOf": {
+      "Description": "ある Slot が別の Slot の子孫かどうかを判定する。"
+    },
+    "RootSlot": {
+      "Description": "ワールドの Root Slot（定数）。"
+    },
+    "SetChildIndex": {
+      "Description": "子 Slot の表示順（インデックス）を設定する。"
+    },
+    "SetParent": {
+      "Description": "指定した Instance の親 Slot を設定する。"
+    },
+    "SlotChildrenEvents": {
+      "Description": "指定した Slot の直下の子に変化があったときにインパルスを送る。"
+    }
+  }
 }
 
