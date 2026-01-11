@@ -1,6 +1,85 @@
 {
   "Summary": "衝突、キャラクター物理、レイキャスト。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Events": {
+      "Summary": "衝突・クライミングなどのイベント。",
+      "Components": {
+        "OnContactEnd": {
+          "Description": "指定コライダーで衝突終了時に発火する。"
+        },
+        "OnContactStart": {
+          "Description": "指定コライダーで衝突開始時に発火する。"
+        },
+        "OnContactStay": {
+          "Description": "指定コライダーと接触中、毎フレーム発火する。"
+        },
+        "OnGripEnd": {
+          "Description": "ユーザーが指定コライダーでのクライミングを終了したとき発火。"
+        },
+        "OnGripStart": {
+          "Description": "ユーザーが指定コライダーでのクライミングを開始したとき発火。"
+        },
+        "OnGripStay": {
+          "Description": "ユーザーが指定コライダーをクライミング中、毎フレーム発火。"
+        },
+        "OnLocomotionGripBegin": {
+          "Description": "指定ロコモーションがコライダーでのグリップを開始したとき発火。"
+        },
+        "OnLocomotionGripEnd": {
+          "Description": "指定ロコモーションがコライダーでのグリップを終了したとき発火。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "ApplyCharacterForce": {
+      "Description": "Character Controller を参照し、一定時間方向へ力を加える。"
+    },
+    "ApplyCharacterImpulse": {
+      "Description": "Character Controller を参照し、方向へインパルスを与える。"
+    },
+    "AsCharacterController": {
+      "Description": "ICollider から対応する Character Controller を返す。"
+    },
+    "CharacterControllerUser": {
+      "Description": "Character Controller をシミュレートしているユーザーを返す。"
+    },
+    "CharacterGravity": {
+      "Description": "Character Controller の重力値を返す。"
+    },
+    "CharacterGroundCollider": {
+      "Description": "Character Controller の足下にあるコライダーを返す。"
+    },
+    "CharacterLinearVelocity": {
+      "Description": "Character Controller の速度を返す。"
+    },
+    "FindCharacterControllerFromSlot": {
+      "Description": "指定スロットの Character Controller を取得する。"
+    },
+    "FindCharacterControllerFromUser": {
+      "Description": "ユーザーが使用している Character Controller を取得する。"
+    },
+    "HitUVCoordinate": {
+      "Description": "ヒットした ICollider のUV座標を取得する。"
+    },
+    "IsCharacterController": {
+      "Description": "Collider が Character Controller シミュレーションの一部か判定する。"
+    },
+    "IsCharacterOnGround": {
+      "Description": "Character Controller が地面上にいるか判定する。"
+    },
+    "Raycaster": {
+      "Description": "指定スロットから指定方向に継続的にレイキャストし、ヒット結果を返す。"
+    },
+    "RaycastOne": {
+      "Description": "指定スロットから指定方向にレイキャストし、Call時にヒット結果を返す。"
+    },
+    "SetCharacterGravity": {
+      "Description": "指定の Character Controller の重力値フィールドを設定する。"
+    },
+    "SetCharacterVelocity": {
+      "Description": "指定の Character Controller の速度を設定する。"
+    }
+  }
 }
 
