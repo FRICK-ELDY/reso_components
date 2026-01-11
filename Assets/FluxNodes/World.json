@@ -1,6 +1,82 @@
 {
   "Summary": "ワールド URI/URL、可視性、名称、フォーカス/オープン。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Info": {
+      "Summary": "ワールドの可視性/名称/パス/URI/ユーザー数など。",
+      "Components": {
+        "WorldAccessLevel": {
+          "Description": "このセッションの SessionAccessLevel を返す。"
+        },
+        "WorldActiveUserCount": {
+          "Description": "現在フォーカスしているユーザー数を返す。"
+        },
+        "WorldAwayKickEnabled": {
+          "Description": "AFK キックタイマーが有効かどうかを返す。"
+        },
+        "WorldAwayKickInterval": {
+          "Description": "ユーザーがキックされるまでの時間を TimeSpan で返す。"
+        },
+        "WorldAwayKickMinutes": {
+          "Description": "ユーザーがキックされるまでの時間を float で返す。"
+        },
+        "WorldDescription": {
+          "Description": "ワールドブラウザ（Dash）に表示されるセッションの説明（string）を返す。"
+        },
+        "WorldHideFromListing": {
+          "Description": "『Hide In Session Lists』が有効かどうかを返す。"
+        },
+        "WorldMaxUsers": {
+          "Description": "このセッションのユーザー上限（int、最大255）を返す。"
+        },
+        "WorldMobileFriendly": {
+          "Description": "このワールドが Android ビルド向けかどうかを返す。"
+        },
+        "WorldName": {
+          "Description": "セッション名（string）を返す。"
+        },
+        "WorldPath": {
+          "Description": "ワールドパス（string）を返す。"
+        },
+        "WorldRecordURL": {
+          "Description": "現在のワールドの resrec リンク（string）を返す。"
+        },
+        "WorldSessionID": {
+          "Description": "現在のワールドのセッションIDを返す。"
+        },
+        "WorldSessionURL": {
+          "Description": "ワールドのセッション URL を返す（フォーカスに有用）。"
+        },
+        "WorldSessionWebURL": {
+          "Description": "ワールドのセッション Web URL を返す。"
+        },
+        "WorldUserCount": {
+          "Description": "セッションの総ユーザー数を返す。"
+        },
+        "WorldWebURL": {
+          "Description": "ワールドの Web URL を返す。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "FocusWorld": {
+      "Description": "ローカルユーザーを指定のワールドURLへフォーカスさせる。"
+    },
+    "OpenWorld": {
+      "Description": "ローカルユーザーに指定のワールドURLを開かせる。"
+    },
+    "UserJoined": {
+      "Description": "ユーザーが現在のセッションに参加したとき発火し、そのユーザーを返す。"
+    },
+    "UserLeft": {
+      "Description": "ユーザーが現在のセッションを離脱したとき発火し、そのユーザーを返す。"
+    },
+    "UserSpawn": {
+      "Description": "ユーザーが現在のセッションにスポーンしたとき発火し、そのユーザーを返す。"
+    },
+    "WorldSaved": {
+      "Description": "現在のセッションのホストユーザーが変更を保存したときに発火する。"
+    }
+  }
 }
 
