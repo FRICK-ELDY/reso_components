@@ -1,6 +1,40 @@
 {
   "Summary": "ツールの装備/使用/状況取得。",
   "Category": {},
-  "Components": {}
+  "Components": {
+    "DequipTool": {
+      "Description": "ユーザーからツールを解除する。"
+    },
+    "EquipTool": {
+      "Description": "ユーザーにツールを装備する。"
+    },
+    "GetRawDataToolHit": {
+      "Description": "Raycaster / Raycast One と同様にレイキャストしてヒットを検出する。"
+    },
+    "GetTool": {
+      "Description": "ユーザーのツール参照を取得する。"
+    },
+    "HasTool": {
+      "Description": "ユーザーがツールを所持しているか確認する。"
+    },
+    "IsToolEquipped": {
+      "Description": "ツールがユーザーに装備されているか確認する。"
+    },
+    "IsToolInUse": {
+      "Description": "ツールが現在使用中かどうかを確認する。"
+    },
+    "RawDataToolEvents": {
+      "Description": "ツール固有のイベントを発火する。"
+    },
+    "ToolEquippingSide": {
+      "Description": "ユーザーがどちらの手（Chirality）にツールを装備しているか取得する。"
+    },
+    "ToolEquippingSlot": {
+      "Description": "このツールを保持している Slot を取得する。"
+    },
+    "ToolEvents": {
+      "Description": "ツールの装備/解除に関するイベント。"
+    }
+  }
 }
 
