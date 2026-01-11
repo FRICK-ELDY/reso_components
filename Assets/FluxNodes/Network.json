@@ -1,6 +1,72 @@
 {
   "Summary": "HTTP/WS、URI/URL 操作。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Twitch": {
+      "Summary": "Twitch連携（リワード/サブスク/フォロー/チャット/レイド）。",
+      "Components": {
+        "TwitchChatMessageEvent": {
+          "Description": "Twitchのチャットメッセージ受信時にイベントを発火する。"
+        },
+        "TwitchFollowEvent": {
+          "Description": "Twitchのフォロー受信時にイベントを発火する。"
+        },
+        "TwitchRaidEvent": {
+          "Description": "Twitchのレイド受信時にイベントを発火する。"
+        },
+        "TwitchRewardRedeemEvent": {
+          "Description": "Twitchのリワードのリディーム受信時にイベントを発火する。"
+        },
+        "TwitchSubscriptionEvent": {
+          "Description": "Twitchのサブスクリプション受信時にイベントを発火する。"
+        }
+      }
+    },
+    "Websockets": {
+      "Summary": "WebSocketの接続・送受信。",
+      "Components": {
+        "WebsocketConnect": {
+          "Description": "WebSocket クライアントへの接続を開始する。"
+        },
+        "WebsocketConnectionEvents": {
+          "Description": "WebSocket クライアントの接続/切断時にイベントを発火する。"
+        },
+        "WebsocketTextMessageReceiver": {
+          "Description": "WebSocket クライアントからの受信時にイベントを発火する。"
+        },
+        "WebsocketTextMessageSender": {
+          "Description": "WebSocket クライアントへテキストデータを送信する。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "EscapeUriDataString": {
+      "Description": "アプリで読み取り可能なよう文字列をエンコードする。"
+    },
+    "GETString": {
+      "Description": "サーバから文字列を取得する（HTTP GET）。"
+    },
+    "IsHostAccessAllowed": {
+      "Description": "IPとポートでサーバコンテンツへのアクセス可否を確認する。"
+    },
+    "IsHostAccessAllowedUrl": {
+      "Description": "URLでサーバコンテンツへのアクセス可否を確認する。"
+    },
+    "POSTString": {
+      "Description": "サーバへ文字列を送信する（HTTP POST）。"
+    },
+    "RequestHostAccess": {
+      "Description": "IPとポートでホストアクセスを要求する。"
+    },
+    "RequestHostAccessUri": {
+      "Description": "URLでホストアクセスを要求する。"
+    },
+    "StringtoAbsoluteURI": {
+      "Description": "文字列リテラルを Uri/Url に変換する。"
+    },
+    "UnescapeUriDataString": {
+      "Description": "エンコードされた文字列を人間可読な形にデコードする。"
+    }
+  }
 }
 
