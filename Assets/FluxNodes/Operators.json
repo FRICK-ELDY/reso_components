@@ -1,6 +1,300 @@
 {
   "Summary": "算術、ベクトル、論理演算。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "BoolVectors": {
+      "Summary": "Bool2/3/4 に対する Any/All/None。",
+      "Components": {
+        "All": {
+          "Description": "パック内のすべてが true のときに true を返す。"
+        },
+        "Any": {
+          "Description": "パック内のいずれかが true のときに true を返す。"
+        },
+        "None": {
+          "Description": "パック内に true がひとつもないときに true を返す。"
+        },
+        "XorElements": {
+          "Description": "true が奇数個の場合に true を返す。"
+        }
+      }
+    },
+    "Boolean": {
+      "Summary": "ブール演算（論理ゲート）。",
+      "Components": {
+        "AND": {
+          "Description": "両入力が true のときのみ true。"
+        },
+        "MultiAND": {
+          "Description": "全入力が true のときのみ true。"
+        },
+        "MultiNAND": {
+          "Description": "全入力が true のときのみ false。"
+        },
+        "MultiNOR": {
+          "Description": "全て false または全て true の場合を除き true。"
+        },
+        "MultiOR": {
+          "Description": "少なくとも1つが true なら true。"
+        },
+        "MultiXNOR": {
+          "Description": "入力数に応じて交互に結果を返す（XORの反対）。"
+        },
+        "MultiXOR": {
+          "Description": "入力数に応じて true/false を交互に返す。"
+        },
+        "NAND": {
+          "Description": "両入力が true のときのみ false。"
+        },
+        "NOR": {
+          "Description": "OR の否定。両入力が false のとき true。"
+        },
+        "NOT": {
+          "Description": "入力の否定を返す。"
+        },
+        "OR": {
+          "Description": "少なくとも一方が true のとき true。"
+        },
+        "RotateLeft": {
+          "Description": "ビットを左に循環シフト。"
+        },
+        "RotateRight": {
+          "Description": "ビットを右に循環シフト。"
+        },
+        "ShiftLeft": {
+          "Description": "ビットを左シフト（端のビットは破棄）。"
+        },
+        "ShiftRight": {
+          "Description": "ビットを右シフト（端のビットは破棄）。"
+        },
+        "XNOR": {
+          "Description": "全入力が同じとき true。"
+        },
+        "XOR": {
+          "Description": "OR に似るが両方 true の場合は除外。"
+        }
+      }
+    },
+    "Matrix": {
+      "Summary": "2x2/3x3/4x4 の変換行列（TRS）。",
+      "Components": {
+        "ComposeRotation": {
+          "Description": "回転を行列に変換する。"
+        },
+        "ComposeScale": {
+          "Description": "スケールを行列に変換する。"
+        },
+        "ComposeScaleRotation": {
+          "Description": "スケールと回転を行列に変換する。"
+        },
+        "ComposeTRS": {
+          "Description": "TRS 行列を作成する（ローカル/グローバルは不問）。"
+        },
+        "DecomposedPosition": {
+          "Description": "行列から位置を取り出す。"
+        },
+        "DecomposedRotation": {
+          "Description": "行列から回転を取り出す。"
+        },
+        "DecoposedScale": {
+          "Description": "行列からスケールを取り出す。"
+        },
+        "Determinant": {
+          "Description": "行列式（面積/体積の尺度）を返す。"
+        },
+        "Inverse": {
+          "Description": "行列の逆行列を返す（変換の反転）。"
+        },
+        "MatrixElement": {
+          "Description": "行列内の要素を取得する。"
+        },
+        "PackColumns": {
+          "Description": "列ベクトル群を行列にパックする。"
+        },
+        "PackRows": {
+          "Description": "行ベクトル群を行列にパックする。"
+        },
+        "Transpose": {
+          "Description": "行列を転置する（行/列の入替）。"
+        },
+        "UnpackColumns": {
+          "Description": "行列から列ベクトル群をアンパックする。"
+        },
+        "UnpackRows": {
+          "Description": "行列から行ベクトル群をアンパックする。"
+        }
+      }
+    },
+    "Packing": {
+      "Summary": "float3/bool2/int4 などのパック/分割。",
+      "Components": {
+        "Pack2": {
+          "Description": "2つの値を value2（例: float2）にパックする。"
+        },
+        "Pack3": {
+          "Description": "3つの値を value3（例: float3）にパックする。"
+        },
+        "Pack4": {
+          "Description": "4つの値を value4（例: float4）にパックする。"
+        },
+        "PackNullable": {
+          "Description": "プリミティブ型を null 許容の値に変換する。"
+        },
+        "Unpack2": {
+          "Description": "value2（例: float2）を2つの値にアンパックする。"
+        },
+        "Unpack3": {
+          "Description": "value3（例: float3）を3つの値にアンパックする。"
+        },
+        "Unpack4": {
+          "Description": "value4（例: float4）を4つの値にアンパックする。"
+        },
+        "UnpackNullable": {
+          "Description": "null許容の値を元の型＋HasValueに展開する。"
+        }
+      }
+    },
+    "Vectors": {
+      "Summary": "2D/3D ベクトル演算（ドット・射影など）。",
+      "Components": {
+        "Angle": {
+          "Description": "2つのベクトルの角度差（度）を返す。"
+        },
+        "Cross": {
+          "Description": "2つのベクトルから外積（第3のベクトル）を返す。"
+        },
+        "Distance": {
+          "Description": "2点間の距離（2D/3D）を返す。"
+        },
+        "Dot": {
+          "Description": "2つの方向ベクトルの内積（-1〜1）を返す。"
+        },
+        "Magnitude": {
+          "Description": "ベクトルの長さ（速度の大きさなど）を返す。"
+        },
+        "Normalized": {
+          "Description": "同方向で長さ1の正規化ベクトルを返す。"
+        },
+        "Project": {
+          "Description": "第1ベクトルを第2ベクトルへ射影したベクトルを返す。"
+        },
+        "Reflect": {
+          "Description": "表面で反射するベクトル（反射ベクトル）を返す。"
+        },
+        "SqrMagnitude": {
+          "Description": "ベクトルの長さの二乗を返す。"
+        }
+      }
+    }
+  },
+  "Components": {
+    "Add": {
+      "Description": "2つの値を加算する（文字列連結にも対応）。"
+    },
+    "Approximately": {
+      "Description": "2値が許容誤差内で等しいか。"
+    },
+    "ApproximatelyNot": {
+      "Description": "2値が許容誤差内で等しくないか。"
+    },
+    "Conditional": {
+      "Description": "三項演算子: 条件CでA/Bを切替。"
+    },
+    "Distance": {
+      "Description": "2値の絶対距離（常に非負）。"
+    },
+    "Div": {
+      "Description": "AをBで除算する。"
+    },
+    "Equals": {
+      "Description": "2値が等しいか。"
+    },
+    "GreaterOrEqual": {
+      "Description": "A >= B か。"
+    },
+    "GreaterThan": {
+      "Description": "A > B か。"
+    },
+    "IsInfinity": {
+      "Description": "浮動小数がInfinityか。"
+    },
+    "IsNaN": {
+      "Description": "浮動小数がNaNか。"
+    },
+    "IsNull": {
+      "Description": "参照が存在しない（null）か。"
+    },
+    "LessOrEqual": {
+      "Description": "A <= B か。"
+    },
+    "LessThan": {
+      "Description": "A < B か。"
+    },
+    "Mask": {
+      "Description": "パックの特定成分を別パックで置換する。"
+    },
+    "Mul": {
+      "Description": "AとBを乗算する。"
+    },
+    "MultiNullCoalesce": {
+      "Description": "複数入力の最初の非nullを返す。"
+    },
+    "NotEquals": {
+      "Description": "2値が等しくないか。"
+    },
+    "NotNull": {
+      "Description": "参照が存在するか。"
+    },
+    "NullCoalesce": {
+      "Description": "2値のうち最初の非nullを返す。"
+    },
+    "Sub": {
+      "Description": "AからBを減算する。"
+    },
+    "ValueAddMulti": {
+      "Description": "全入力を加算する。"
+    },
+    "ValueCube": {
+      "Description": "入力を3乗する。"
+    },
+    "ValueDec": {
+      "Description": "入力を1減少させる。"
+    },
+    "ValueDivMulti": {
+      "Description": "先頭から順に除算する。"
+    },
+    "ValueFilterInvalid": {
+      "Description": "Infinity/NaNなら代替値に置換。"
+    },
+    "ValueInc": {
+      "Description": "入力を1増加させる。"
+    },
+    "ValueMod": {
+      "Description": "AをBで割った余りを返す。"
+    },
+    "ValueMulMulti": {
+      "Description": "全入力を乗算する。"
+    },
+    "ValueNegate": {
+      "Description": "入力に-1を掛ける。"
+    },
+    "ValueOneMinus": {
+      "Description": "1 - x を計算する。"
+    },
+    "ValuePlusMinus": {
+      "Description": "A±Bを同時に出力する。"
+    },
+    "ValueReciprocal": {
+      "Description": "1/x を計算する。"
+    },
+    "ValueSquare": {
+      "Description": "入力を2乗する。"
+    },
+    "ValueSubMulti": {
+      "Description": "先頭から順に減算する。"
+    },
+    "ZeroOne": {
+      "Description": "boolをtrue=1/false=0に変換。"
+    }
+  }
 }
 
