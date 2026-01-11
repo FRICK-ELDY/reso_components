@@ -1,6 +1,310 @@
 {
   "Summary": "ユーザー属性（FPS、Ping、Slotsなど）。",
-  "Category": {},
-  "Components": {}
+  "Category": {
+    "Info": {
+      "Summary": "ユーザーのFPS/キュー済みパケット/時間/プラットフォーム等の情報。",
+      "Components": {
+        "LocalTimeOffset": {
+          "Description": "このノードを見ているユーザーのタイムオフセット（TimeSpan）を返す。"
+        },
+        "UserActiveViewTargettingController": {
+          "Description": "ユーザーのビュー移動手段（デスクトップのみの可能性あり）を返す。"
+        },
+        "UserControlMessages": {
+          "Description": "ユーザーのコントロールメッセージを返す。"
+        },
+        "UserDeltaMessages": {
+          "Description": "ユーザーのデルタメッセージを返す。"
+        },
+        "UserDownloadedBytes": {
+          "Description": "指定ユーザーが合計でダウンロードしたバイト数を返す。"
+        },
+        "UserDownloadSpeed": {
+          "Description": "指定ユーザーの現在のダウンロード速度を返す。"
+        },
+        "UserDownloadSpeedMax": {
+          "Description": "指定ユーザーの本セッションにおける最大ダウンロード速度を返す。"
+        },
+        "UserEngineVersion": {
+          "Description": "指定ユーザーが使用している FrooxEngine のバージョン文字列を返す。"
+        },
+        "UserFPS": {
+          "Description": "ユーザーの現在のフレームレート（FPS）を返す。"
+        },
+        "UserHeadOutputDevice": {
+          "Description": "指定ユーザーが Resonite を表示している出力デバイスを返す。"
+        },
+        "UserNetworkStatistic": {
+          "Description": "指定タイプのネットワーク統計を返す。"
+        },
+        "UserPacketLoss": {
+          "Description": "ネットワーク通信中の推定パケット損失数を返す。"
+        },
+        "UserPing": {
+          "Description": "ホストへの現在の Ping（ミリ秒）を返す。"
+        },
+        "UserPlatform": {
+          "Description": "プラットフォーム（例: Linux / Windows / macOS）を返す。"
+        },
+        "UserPrimaryHand": {
+          "Description": "ユーザーの利き手（筆記に使う手）を返す。"
+        },
+        "UserQueuedMessages": {
+          "Description": "ユーザーのキューパケット（Queued Packets）を返す。"
+        },
+        "UserRecordingVoiceMessage": {
+          "Description": "ユーザーが Dash で音声メッセージを録音中かを返す。"
+        },
+        "UserRendererName": {
+          "Description": "使用中のレンダラーのバージョン文字列を返す。"
+        },
+        "UserRuntimeVersion": {
+          "Description": "使用中の .NET ランタイムのバージョン文字列を返す。"
+        },
+        "UserStreamMessages": {
+          "Description": "ユーザーのストリームメッセージを返す。"
+        },
+        "UserTime": {
+          "Description": "指定ユーザーにとっての現在時刻（DateTime）を返す。"
+        },
+        "UserTimeOffset": {
+          "Description": "指定ユーザーのタイムオフセット（TimeSpan）を返す。"
+        },
+        "UserUploadedBytes": {
+          "Description": "指定ユーザーが合計でアップロードしたバイト数を返す。"
+        },
+        "UserUploadSpeed": {
+          "Description": "指定ユーザーの現在のアップロード速度を返す。"
+        },
+        "UserUploadSpeedMax": {
+          "Description": "指定ユーザーの本セッションにおける最大アップロード速度を返す。"
+        },
+        "UserViewReferenceActive": {
+          "Description": "アクティブユーザーのビュー参照を返す。"
+        },
+        "UserViewVoiceActive": {
+          "Description": "アクティブユーザーの音声（ボイス）を返す。"
+        },
+        "UserVoiceMode": {
+          "Description": "指定ユーザーの VoiceMode 列挙値を返す。"
+        },
+        "UserVRActive": {
+          "Description": "指定ユーザーがVRかどうか（Bool）を返す。"
+        }
+      }
+    },
+    "LocalOutput": {
+      "Summary": "ユーザーの耳/視点位置とデスクトップFOVに関する情報。",
+      "Components": {
+        "DesktopFOV": {
+          "Description": "ローカルユーザーのデスクトップ視野角（設定と連動）を返す。"
+        },
+        "EarsOverriden": {
+          "Description": "このノードを見ているユーザーの耳が AvatarUserRootOverrideAssigner により上書きされているかを返す。"
+        },
+        "EarsPosition": {
+          "Description": "このノードを見ているユーザーの耳の位置を返す。"
+        },
+        "EarsRotation": {
+          "Description": "このノードを見ているユーザーの耳の回転を返す。"
+        },
+        "EarsScale": {
+          "Description": "このノードを見ているユーザーの耳のスケールを返す。"
+        },
+        "ViewOverriden": {
+          "Description": "このノードを見ているユーザーの視点が AvatarUserRootOverrideAssigner により上書きされているかを返す。"
+        },
+        "ViewPosition": {
+          "Description": "このノードを見ているユーザーの視点位置を返す。"
+        },
+        "ViewRotation": {
+          "Description": "このノードを見ているユーザーの視点回転を返す。"
+        },
+        "ViewScale": {
+          "Description": "このノードを見ているユーザーの視点スケールを返す。"
+        }
+      }
+    },
+    "Status": {
+      "Summary": "ユーザーのPatreon/配信/Dash/プレゼンスなどの状態。",
+      "Components": {
+        "AreAppFacetsOpened": {
+          "Description": "ユーザーの Facet アンカーが開いているかを返す。"
+        },
+        "IsAppDashOpened": {
+          "Description": "指定ユーザーの Dash（メニュー）が開いているかを返す。"
+        },
+        "IsLocalUser": {
+          "Description": "指定ユーザーがこのノードを見ているローカルユーザーかを返す。"
+        },
+        "IsPlatformDashOpen": {
+          "Description": "指定ユーザーの Steam または Oculus のオーバーレイが開いているかを返す。"
+        },
+        "IsHostUser": {
+          "Description": "指定ユーザーがセッションのホストかを返す。"
+        },
+        "IsUserInEditMode": {
+          "Description": "指定ユーザーが Dash のセッションタブで Edit Mode を有効化しているかを返す。"
+        },
+        "IsUserInKioskMode": {
+          "Description": "指定ユーザーが Resonite のキオスクモードかどうかをチェックする。"
+        },
+        "IsUserLagging": {
+          "Description": "指定ユーザーがラグ状態かどうかをチェックする。"
+        },
+        "IsUserLive": {
+          "Description": "指定ユーザーが『Show Live Badge』または配信カメラの『Mirror to display』を有効にしているかを返す。"
+        },
+        "IsUserPatreon": {
+          "Description": "指定ユーザーが今月 YDMS の Patreon に加入しているかを返す。"
+        },
+        "IsUserPresent": {
+          "Description": "指定ユーザーが HMD/デスクトップで在席し、ワールド内にいるかを返す。"
+        },
+        "IsUserPresentInHeadset": {
+          "Description": "指定ユーザーが VR ヘッドセットを外しているか（該当する場合）を返す。"
+        },
+        "IsUserPresentInWorld": {
+          "Description": "指定ユーザーがセッションにフォーカスしているかを返す。"
+        },
+        "IsUserSilenced": {
+          "Description": "指定ユーザーが権限者により Dash のセッションタブからサイレンスされているかを返す。"
+        }
+      }
+    },
+    "UserRoot": {
+      "Summary": "ユーザーの手足の末端やグローバルスケールに関する情報。",
+    "Components": {
+      "ActiveUserRootUser": {
+        "Description": "指定した UserRoot に対応するユーザー参照を返す。"
+      },
+      "ControllerSlot": {
+        "Description": "ユーザーの UserRoot 上にあるコントローラーの Slot を返す。"
+      },
+      "FeetPosition": {
+        "Description": "指定ユーザーの両足の平均位置（グローバル）を取得する。"
+      },
+      "FeetRotation": {
+        "Description": "指定ユーザーの両足の平均回転（グローバル）を取得する。"
+      },
+      "GetActiveUserRoot": {
+        "Description": "最も近い親ユーザーの UserRoot を返す。"
+      },
+      "HandSlot": {
+        "Description": "ユーザーの UserRoot から手の Slot を返す。"
+      },
+      "HeadFacingDirection": {
+        "Description": "指定ユーザーの頭部の前方ベクトル（グローバル）を取得する。"
+      },
+      "HeadFacingRotation": {
+        "Description": "指定ユーザーの頭部の回転（グローバル）を取得する。"
+      },
+      "HeadPosition": {
+        "Description": "指定ユーザーの頭部の位置（グローバル）を取得する。"
+      },
+      "HeadRotation": {
+        "Description": "指定ユーザーの頭部の回転（ローカル）を取得する。"
+      },
+      "HeadSlot": {
+        "Description": "ユーザーの UserRoot から頭部の Slot を返す。"
+      },
+      "HipsPosition": {
+        "Description": "指定ユーザーの腰の位置（グローバル）を取得する。"
+      },
+      "HipsRotation": {
+        "Description": "指定ユーザーの腰の回転（グローバル）を取得する。"
+      },
+      "LeftHandPosition": {
+        "Description": "指定ユーザーの左手の位置（グローバル）を取得する。"
+      },
+      "LeftHandRotation": {
+        "Description": "指定ユーザーの左手の回転（グローバル）を取得する。"
+      },
+      "RightHandPosition": {
+        "Description": "指定ユーザーの右手の位置（グローバル）を取得する。"
+      },
+      "RightHandRotation": {
+        "Description": "指定ユーザーの右手の回転（グローバル）を取得する。"
+      },
+      "SetFeetPosition": {
+        "Description": "指定ユーザーの両足の平均位置（グローバル）を設定する。"
+      },
+      "SetFeetRotation": {
+        "Description": "指定ユーザーの両足の平均回転（グローバル）を設定する。"
+      },
+      "SetHeadFacingDirection": {
+        "Description": "指定ユーザーの頭部の前方ベクトル（グローバル）を設定する。"
+      },
+      "SetHeadFacingRotation": {
+        "Description": "指定ユーザーの頭部の回転（グローバル）を設定する。"
+      },
+      "SetHeadPosition": {
+        "Description": "指定ユーザーの頭部の位置（グローバル）を設定する。"
+      },
+      "SetHeadRotation": {
+        "Description": "指定ユーザーの頭部の回転（ローカル）を設定する。"
+      },
+      "SetHipsPosition": {
+        "Description": "指定ユーザーの腰の位置（グローバル）を設定する。"
+      },
+      "SetHipsRotation": {
+        "Description": "指定ユーザーの腰の回転（グローバル）を設定する。"
+      },
+      "UserRootGlobalScale": {
+        "Description": "指定ユーザーの Root Slot のスケール（グローバル）を取得する。"
+      }
+    }
+    }
+  },
+  "Components": {
+    "GetActiveUser": {
+      "Description": "指定した Slot の最も近い親ユーザーを返す。"
+    },
+    "GetActiveUserSelf": {
+      "Description": "このノードの Slot の最も近い親ユーザーを返す。"
+    },
+    "GetUserFromComponent": {
+      "Description": "指定した Component の Slot の最も近い親ユーザーを返す。"
+    },
+    "HostUser": {
+      "Description": "セッションのホストユーザーを返す。"
+    },
+    "LocalUser": {
+      "Description": "このノードを見ているローカルユーザーを返す。"
+    },
+    "LocalUserRoot": {
+      "Description": "このノードを見ているユーザーの UserRoot を返す。"
+    },
+    "LocalUserSlot": {
+      "Description": "このノードを見ているユーザーのルート Slot を返す。"
+    },
+    "LocalUserSpace": {
+      "Description": "このノードを見ているユーザーの親 Slot を返す。"
+    },
+    "SetUserScale": {
+      "Description": "指定したユーザーのスケール倍率を設定する（Call 時）。"
+    },
+    "UserFromID": {
+      "Description": "指定した UserID（string）からユーザーを返す。"
+    },
+    "UserFromUsername": {
+      "Description": "指定した Username（string）からユーザーを返す。"
+    },
+    "UserMachineID": {
+      "Description": "指定したユーザーの MachineID（string）を返す。"
+    },
+    "UserRootSlot": {
+      "Description": "指定したユーザーのルート Slot を返す。"
+    },
+    "UserUserID": {
+      "Description": "指定したユーザーの UserID（string）を返す。"
+    },
+    "UserUsername": {
+      "Description": "指定したユーザーの Username（string）を返す。"
+    },
+    "UserUserRoot": {
+      "Description": "指定したユーザーの UserRoot を返す。"
+    }
+  }
 }
 
